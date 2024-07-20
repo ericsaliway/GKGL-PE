@@ -1,21 +1,5 @@
 This repository provides the code for our research project "GKGL-PE: a GNN-based Knowledge Graph Learning framework for Pathway Embedding".
 
-prediction/
-│
-├── data/
-│   └── neo4j_graph.json
-│
-├── results/
-│
-├── src/
-│   ├── __init__.py
-│   ├── data_loader.py
-│   ├── models.py
-│   ├── utils.py
-│   └── train.py
-│
-└── main.py
-
 ## python link_prediction_gat/main.py --out-feats 128 --num-heads 4 --num-layers 2 --lr 0.01 --input-size 2 --hidden-size 16 --feat-drop 0.1 --attn-drop 0.1 --epochs 213
 
 python auc_sagegraph_bkg/main.py --learning-rate 0.0005 --input-size 2 --hidden-size 128 --epochs 20000
