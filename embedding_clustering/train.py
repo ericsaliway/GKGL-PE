@@ -1,7 +1,5 @@
 import copy
-import json
 import os
-import csv
 import pickle
 import matplotlib.pyplot as plt
 import numpy as np
@@ -24,12 +22,6 @@ import matplotlib.colors as mcolors
 import matplotlib.patches as mpatches
 from py2neo import Graph, Node, Relationship
 from neo4j import GraphDatabase
-
-import torch
-import torch.nn as nn
-
-import torch
-import torch.nn as nn
 
 class FocalLoss(nn.Module):
     def __init__(self, alpha=1, gamma=2, reduction='mean'):
@@ -60,10 +52,9 @@ class FocalLoss(nn.Module):
         else:
             return F_loss
 
-def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
+def train(hyperparams=None, data_path='gat/data/emb', plot=True):
     num_epochs = hyperparams['num_epochs']
-    ##feat_drop = hyperparams['feat_drop']
-    ##in_feats = hyperparams['in_feats']
+    in_feats = hyperparams['in_feats']
     out_feats = hyperparams['out_feats']
     num_layers = hyperparams['num_layers']
     num_heads = hyperparams['num_heads']
@@ -74,33 +65,28 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
     neo4j_user = "neo4j"
     neo4j_password = "0vZCoYqO6E9YkZRSFsdKPwHcziXu1-b0h8O9edAzWjM"
 
-    reactome_file_path = "gat/data/NCBI2Reactome.csv"
-    output_file_path = "gat/data/NCBI_pathway_map.csv"
-    gene_names_file_path = "gat/data/gene_names.csv"
-    pathway_map = create_pathway_map(reactome_file_path, output_file_path)
-    gene_id_to_name_mapping, gene_id_to_symbol_mapping = read_gene_names(gene_names_file_path)
-    
     model_path = os.path.join(data_path, 'models')
     model_path = os.path.join(model_path, f'model_dim{out_feats}_lay{num_layers}_epo{num_epochs}.pth')
     
+  
     ds = dataset.PathwayDataset(data_path)
     ds_train = [ds[0]]
     ds_valid = [ds[1]]
     dl_train = GraphDataLoader(ds_train, batch_size=batch_size, shuffle=True)
     dl_valid = GraphDataLoader(ds_valid, batch_size=batch_size, shuffle=False)
 
-    net = model.GATModel(out_feats=out_feats, num_layers=num_layers, num_heads=num_heads, do_train=True).to(device)
+
+    net = model.GATModel(in_feats=in_feats, out_feats=out_feats, num_layers=num_layers, num_heads=num_heads, do_train=True).to(device)
     optimizer = optim.Adam(net.parameters(), lr=learning_rate)
 
-    best_model = model.GATModel(out_feats=out_feats, num_layers=num_layers, num_heads=num_heads, do_train=True)
+    best_model = model.GATModel(in_feats=in_feats, out_feats=out_feats, num_layers=num_layers, num_heads=num_heads, do_train=True)
     best_model.load_state_dict(copy.deepcopy(net.state_dict()))
 
     loss_per_epoch_train, loss_per_epoch_valid = [], []
     f1_per_epoch_train, f1_per_epoch_valid = [], []
 
-    criterion = FocalLoss(alpha=0.25, gamma=2.0, reduction='mean')
     ##criterion = nn.BCEWithLogitsLoss(reduction='none')
-    
+    criterion = FocalLoss(alpha=0.25, gamma=2.0, reduction='mean')
     weight = torch.tensor([0.00001, 0.99999]).to(device)
 
     best_train_loss, best_valid_loss = float('inf'), float('inf')
@@ -109,13 +95,12 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
     max_f1_scores_train = []
     max_f1_scores_valid = []
     
-    results_path = 'embedding/results/node_embeddings/'
-    os.makedirs(results_path, exist_ok=True)
+    ##results_path = os.path.join(data_path, 'results')
+    results_path = 'gat/results/node_embeddings'
 
     all_embeddings_initial, cluster_labels_initial = calculate_cluster_labels(best_model, dl_train, device)
     all_embeddings_initial = all_embeddings_initial.reshape(all_embeddings_initial.shape[0], -1)  # Flatten 
     save_path_heatmap_initial= os.path.join(results_path, f'heatmap_stId_dim{out_feats}_lay{num_layers}_epo{num_epochs}_initial.png')
-    save_path_matrix_initial= os.path.join(results_path, f'matrix_stId_dim{out_feats}_lay{num_layers}_epo{num_epochs}_initial.png')
     save_path_pca_initial = os.path.join(results_path, f'pca_dim{out_feats}_lay{num_layers}_epo{num_epochs}_initial.png')
     save_path_t_SNE_initial = os.path.join(results_path, f't-SNE_dim{out_feats}_lay{num_layers}_epo{num_epochs}_initial.png')
         
@@ -126,26 +111,27 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
         nx_graph = pickle.load(open(graph_path, 'rb'))
 
         assert len(cluster_labels_initial) == len(nx_graph.nodes), "Cluster labels and number of nodes must match"
-        node_to_index_initial = {node: idx for idx, node in enumerate(nx_graph.nodes)}
+        node_to_index = {node: idx for idx, node in enumerate(nx_graph.nodes)}
         first_node_stId_in_cluster_initial= {}
         first_node_embedding_in_cluster_initial= {}
+
 
         stid_dic_initial= {}
 
         # Populate stid_dic with node stIds mapped to embeddings
         for node in nx_graph.nodes:
-            stid_dic_initial[nx_graph.nodes[node]['stId']] = node_embeddings_initial[node_to_index_initial[node]]
+            stid_dic_initial[nx_graph.nodes[node]['stId']] = node_embeddings_initial[node_to_index[node]]
             
         for node, cluster in zip(nx_graph.nodes, cluster_labels_initial):
             if cluster not in first_node_stId_in_cluster_initial:
                 first_node_stId_in_cluster_initial[cluster] = nx_graph.nodes[node]['stId']
-                first_node_embedding_in_cluster_initial[cluster] = node_embeddings_initial[node_to_index_initial[node]]
+                first_node_embedding_in_cluster_initial[cluster] = node_embeddings_initial[node_to_index[node]]
+                ##print("nx_graph.nodes[node]['stId']------------------\n", nx_graph.nodes[node]['stId'])
 
         print('first_node_stId_in_cluster_initial-------------------------------\n', first_node_stId_in_cluster_initial)
         stid_list = list(first_node_stId_in_cluster_initial.values())
         embedding_list_initial = list(first_node_embedding_in_cluster_initial.values())
         create_heatmap_with_stid(embedding_list_initial, stid_list, save_path_heatmap_initial)
-        plot_cosine_similarity_matrix_for_clusters_with_values(embedding_list_initial, stid_list, save_path_matrix_initial)
 
         break
 
@@ -156,11 +142,10 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
     summary_  = f"Silhouette Score: {silhouette_avg_}\n"
     summary_ += f"Davies-Bouldin Index: {davies_bouldin_}\n"
 
-    save_file_= os.path.join(results_path, f'head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}_initial.txt')
+    save_file_= os.path.join(results_path, f'dim{out_feats}_lay{num_layers}_epo{num_epochs}_initial.txt')
     with open(save_file_, 'w') as f:
         f.write(summary_)
-      
-    # Start training  
+        
     with tqdm(total=num_epochs, desc="Training", unit="epoch", leave=False) as pbar:
         for epoch in range(num_epochs):
             loss_per_graph = []
@@ -177,15 +162,12 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
                 loss_weighted = loss * weight_
                 loss_weighted = loss_weighted.mean()
 
-                # Update parameters
                 optimizer.zero_grad()
                 loss_weighted.backward()
                 optimizer.step()
-                
-                # Append output metrics
+
                 loss_per_graph.append(loss_weighted.item())
-                ##preds = (logits.sigmoid() > 0.5).squeeze(1).int()
-                preds = (logits.sigmoid() > 0.5).int()
+                preds = (logits.sigmoid() > 0.5).squeeze(1).int()
                 labels = labels.squeeze(1).int()
                 f1 = metrics.f1_score(labels, preds)
                 f1_per_graph.append(f1)
@@ -195,7 +177,7 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
             loss_per_epoch_train.append(running_loss)
             f1_per_epoch_train.append(running_f1)
 
-            # Validation iteration
+
             with torch.no_grad():
                 loss_per_graph = []
                 f1_per_graph = []
@@ -210,8 +192,7 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
                     loss_weighted = loss * weight_
                     loss_weighted = loss_weighted.mean()
                     loss_per_graph.append(loss_weighted.item())
-                    ##preds = (logits.sigmoid() > 0.5).squeeze(1).int()
-                    preds = (logits.sigmoid() > 0.5).int()
+                    preds = (logits.sigmoid() > 0.5).squeeze(1).int()
                     labels = labels.squeeze(1).int()
                     f1 = metrics.f1_score(labels, preds)
                     f1_per_graph.append(f1)
@@ -236,6 +217,7 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
             pbar.update(1)
             print(f"Epoch {epoch + 1} - Max F1 Train: {max_f1_train}, Max F1 Valid: {max_f1_valid}")
 
+    
     all_embeddings, cluster_labels = calculate_cluster_labels(best_model, dl_train, device)
     all_embeddings = all_embeddings.reshape(all_embeddings.shape[0], -1)  # Flatten 
     print('cluster_labels=========================\n', cluster_labels)
@@ -245,26 +227,29 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
     cos_sim /= np.outer(norms, norms)
 
     if plot:
-        loss_path = os.path.join(results_path, f'loss_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
-        f1_path = os.path.join(results_path, f'f1_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
-        max_f1_path = os.path.join(results_path, f'max_f1_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
-        matrix_path = os.path.join(results_path, f'matrix_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+        plot_path = os.path.join(data_path, 'results')
+        loss_path = os.path.join(plot_path, f'loss_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+        f1_path = os.path.join(plot_path, f'f1_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+        max_f1_path = os.path.join(plot_path, f'max_f1_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+        matrix_path = os.path.join(plot_path, f'matrix_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
  
+        display_and_save_similarity_matrix(cos_sim, matrix_path)
         draw_loss_plot(loss_per_epoch_train, loss_per_epoch_valid, loss_path)
         draw_max_f1_plot(max_f1_scores_train, max_f1_scores_valid, max_f1_path)
         draw_f1_plot(f1_per_epoch_train, f1_per_epoch_valid, f1_path)
 
     torch.save(best_model.state_dict(), model_path)
 
-    save_path_pca = os.path.join(results_path, f'pca_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
-    save_path_t_SNE = os.path.join(results_path, f't-SNE_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
-    save_path_heatmap_= os.path.join(results_path, f'heatmap_stId_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
-    save_path_matrix = os.path.join(results_path, f'matrix_stId_head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
-    
-    cluster_stId_dict = {}  # Dictionary to store clusters and corresponding stIds
-    significant_stIds = []  # List to store significant stIds
-    clusters_with_significant_stId = {}  # Dictionary to store clusters and corresponding significant stIds
-    clusters_node_info = {}  # Dictionary to store node info for each cluster
+
+    ##results_path = os.path.join(data_path, 'results')
+    if not os.path.exists(results_path):
+        os.makedirs(results_path)
+
+    save_path_pca = os.path.join(results_path, f'pca_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+    save_path_t_SNE = os.path.join(results_path, f't-SNE_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+    save_path_heatmap = os.path.join(results_path, f'heatmap_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+    save_path_heatmap_= os.path.join(results_path, f'heatmap_stId_dim{out_feats}_lay{num_layers}_epo{num_epochs}.png')
+    save_path_heatmap__= os.path.join(results_path, f'heatmap_stId_dim{out_feats}_lay{num_layers}_epo{num_epochs}_.png')
     
     for data in dl_train:
         graph, _ = data
@@ -277,49 +262,24 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
         first_node_stId_in_cluster = {}
         first_node_embedding_in_cluster = {}
 
+
         stid_dic = {}
 
         # Populate stid_dic with node stIds mapped to embeddings
         for node in nx_graph.nodes:
             stid_dic[nx_graph.nodes[node]['stId']] = node_embeddings[node_to_index[node]]
-            # Check if the node's significance is 'significant' and add its stId to the list
-            if graph.ndata['significance'][node_to_index[node]].item() == 'significant':
-                significant_stIds.append(nx_graph.nodes[node]['stId'])
-                
+            
         for node, cluster in zip(nx_graph.nodes, cluster_labels):
             if cluster not in first_node_stId_in_cluster:
                 first_node_stId_in_cluster[cluster] = nx_graph.nodes[node]['stId']
                 first_node_embedding_in_cluster[cluster] = node_embeddings[node_to_index[node]]
-                
-            # Populate cluster_stId_dict
-            if cluster not in cluster_stId_dict:
-                cluster_stId_dict[cluster] = []
-            cluster_stId_dict[cluster].append(nx_graph.nodes[node]['stId'])
+                ##print("nx_graph.nodes[node]['stId']------------------\n", nx_graph.nodes[node]['stId'])
 
-            # Populate clusters_with_significant_stId
-            if cluster not in clusters_with_significant_stId:
-                clusters_with_significant_stId[cluster] = []
-            if nx_graph.nodes[node]['stId'] in significant_stIds:
-                clusters_with_significant_stId[cluster].append(nx_graph.nodes[node]['stId'])
-            
-            # Populate clusters_node_info with node information for each cluster
-            if cluster not in clusters_node_info:
-                clusters_node_info[cluster] = []
-            node_info = {
-                'stId': nx_graph.nodes[node]['stId'],
-                'significance': graph.ndata['significance'][node_to_index[node]].item(),
-                'other_info': nx_graph.nodes[node]  # Add other relevant info if necessary
-            }
-            clusters_node_info[cluster].append(node_info)
-        
         print(first_node_stId_in_cluster)
         stid_list = list(first_node_stId_in_cluster.values())
         embedding_list = list(first_node_embedding_in_cluster.values())
         heatmap_data = pd.DataFrame(embedding_list, index=stid_list)
         create_heatmap_with_stid(embedding_list, stid_list, save_path_heatmap_)
-        # Call the function to plot cosine similarity matrix for cluster representatives with similarity values
-        plot_cosine_similarity_matrix_for_clusters_with_values(embedding_list, stid_list, save_path_matrix)
-
         break
 
     visualize_embeddings_tsne(all_embeddings, cluster_labels, stid_list, save_path_t_SNE)
@@ -337,101 +297,69 @@ def train(hyperparams=None, data_path='embedding/data/emb', plot=True):
     summary += f"Silhouette Score: {silhouette_avg}\n"
     summary += f"Davies-Bouldin Index: {davies_bouldin}\n"
 
-    save_file = os.path.join(results_path, f'head{num_heads}_dim{out_feats}_lay{num_layers}_epo{num_epochs}.txt')
+    save_file = os.path.join(results_path, f'dim{out_feats}_lay{num_layers}_epo{num_epochs}.txt')
     with open(save_file, 'w') as f:
         f.write(summary)
 
-    graph_train, graph_test = utils.create_embedding_with_markers()  
+    '''graph_train, graph_test = utils.create_embedding_with_markers()  # 创建训练和测试的图
 
-    # Get stid_mapping from save_graph_to_neo4j
+    # 从 save_graph_to_neo4j 获取 stid_mapping
     stid_mapping = utils.get_stid_mapping(graph_train)
+    print('node_embeddings------------------\n', node_embeddings)
+
+    # 使用 stid_mapping 将嵌入和聚类标签保存到 Neo4j
+    save_to_neo4j(graph_train, stid_dic, stid_mapping, neo4j_uri, neo4j_user, neo4j_password)'''
+    ##save_to_neo4j(graph_train, node_embeddings, cluster_labels, stid_list, stid_dic, stid_mapping, neo4j_uri, neo4j_user, neo4j_password)
     
-    # Save significant stIds to JSON
-    clusters_info_path = os.path.join(results_path, 'clusters_info.json')
-    with open(clusters_info_path, 'w') as f:
-        json.dump(significant_stIds, f)
-
-    # Save cluster_stId_dict to JSON
-    cluster_json_path = os.path.join(results_path, 'clusters.json')
-    cluster_stId_dict_str_keys = {str(k): v for k, v in cluster_stId_dict.items()}
-    with open(cluster_json_path, 'w') as f:
-        json.dump(cluster_stId_dict_str_keys, f)
-
-    # Save clusters_with_significant_stId to JSON
-    clusters_with_significant_stId_path = os.path.join(results_path, 'clusters_with_significant_stId.json')
-    clusters_with_significant_stId_str_keys = {str(k): v for k, v in clusters_with_significant_stId.items()}
-    with open(clusters_with_significant_stId_path, 'w') as f:
-        json.dump(clusters_with_significant_stId_str_keys, f)
-
-    # Save clusters_node_info to JSON
-    clusters_node_info_path = os.path.join(results_path, 'clusters_node_info.json')
-    clusters_node_info_str_keys = {str(k): v for k, v in clusters_node_info.items()}
-    with open(clusters_node_info_path, 'w') as f:
-        json.dump(clusters_node_info_str_keys, f)
-
     return model_path
 
-def plot_cosine_similarity_matrix_for_clusters_with_values(embeddings, stids, save_path):
-    cos_sim = np.dot(embeddings, np.array(embeddings).T)
-    norms = np.linalg.norm(embeddings, axis=1)
-    cos_sim /= np.outer(norms, norms)
 
-    plt.figure(figsize=(10, 8))
-    
-    vmin = cos_sim.min()
-    vmax = cos_sim.max()
-    # Create the heatmap with a custom color bar
-    ##sns.heatmap(data, cmap='cividis')
-    ##sns.heatmap(data, cmap='Blues') 'Greens' sns.heatmap(data, cmap='Spectral') 'coolwarm') 'YlGnBu') viridis cubehelix inferno
+def save_to_neo4j_cluster(graph, node_embeddings, cluster_labels, stid_list, stid_dic, stid_mapping, uri, user, password):
+    from neo4j import GraphDatabase
 
-    ax = sns.heatmap(cos_sim, cmap="Spectral", annot=True, fmt=".3f", annot_kws={"size": 6},
-                     xticklabels=stids, yticklabels=stids,
-                     cbar_kws={"shrink": 0.2, "aspect": 15, "ticks": [vmin, vmax]})
+    # Connect to Neo4j
+    driver = GraphDatabase.driver(uri, auth=(user, password))
+    session = driver.session()
 
-    # Highlight the diagonal squares with value 1 by setting their background color to black
-    for i in range(len(stids)):
-        ax.add_patch(plt.Rectangle((i, i), 1, 1, fill=True, color='black', alpha=0.5, zorder=3))
-        
-    ax.xaxis.tick_top()  # Move x-axis labels to the top
-    ax.xaxis.set_label_position('top')  # Set x-axis label position to top
-    plt.xticks(rotation=-30, fontsize=8, ha='right')  # Rotate x-axis labels, set font size, and align to the right
-    plt.yticks(fontsize=8)  # Set font size for y-axis labels
+    # Clean the database
+    session.run("MATCH (n) DETACH DELETE n")
 
-    # Set the title below the plot
-    ax.text(x=0.5, y=-0.03, s="Pathway-pathway similarities", fontsize=12, ha='center', va='top', transform=ax.transAxes)
+    try:
+        # Create nodes with embeddings and cluster labels
+        for node_id in stid_dic:
+            if node_id not in node_embeddings or node_id not in cluster_labels:
+                continue  # Skip if node_id is not in embeddings or cluster labels
 
-    plt.savefig(save_path)
-    ##plt.show()
-    plt.close()
-    
-def create_pathway_map(reactome_file, output_file):
-    """
-    Extracts gene IDs with the same pathway STID and saves them to a new CSV file.
+            embedding = node_embeddings[node_id]
+            cluster = cluster_labels[node_id]
+            stId = graph.nodes[node_id].get('stId', None)  # Use .get() to avoid KeyError
+            name = graph.nodes[node_id].get('name', None)
+            weight = graph.nodes[node_id].get('weight', None)
+            significance = graph.nodes[node_id].get('significance', None)
+            node_labels = stid_list[cluster] if cluster in stid_list else []  # Get labels for cluster
 
-    Parameters:
-    reactome_file (str): Path to the NCBI2Reactome.csv file.
-    output_file (str): Path to save the output CSV file.
-    """
-    pathway_map = {}  # Dictionary to store gene IDs for each pathway STID
+            session.run(
+                "CREATE (n:Node {embedding: $embedding, cluster: $cluster, stId: $stId, name: $name, weight: $weight, significance: $significance}) "
+                "SET n :PathwayNode" + (":%s" % (":".join(node_labels)) if node_labels else ""),  # Add labels to node
+                embedding=embedding.tolist(), cluster=cluster, stId=stId, name=name, weight=weight, significance=significance
+            )
 
-    # Read the NCBI2Reactome.csv file and populate the pathway_map
-    with open(reactome_file, 'r') as file:
-        reader = csv.reader(file, delimiter='\t')
-        for row in reader:
-            gene_id = row[0]
-            pathway_stid = row[1]
-            pathway_map.setdefault(pathway_stid, []).append(gene_id)
+        # Create relationships using the stId mapping
+        for source, target in graph.graph_nx.edges():
+            source_stId = stid_mapping[source]
+            target_stId = stid_mapping[target]
+            session.run(
+                "MATCH (a {stId: $source_stId}), (b {stId: $target_stId}) "
+                "CREATE (a)-[:CONNECTED]->(b)",
+                source_stId=source_stId, target_stId=target_stId
+            )
 
-    # Write the pathway_map to the output CSV file
-    with open(output_file, 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Pathway STID", "Gene IDs"])  # Write header
-        for pathway_stid, gene_ids in pathway_map.items():
-            writer.writerow([pathway_stid, ",".join(gene_ids)])
-    
-    return pathway_map
-        
-def save_to_neo4j(graph, stid_dic, stid_mapping, pathway_map, gene_id_to_name_mapping, gene_id_to_symbol_mapping, uri, user, password):
+    finally:
+        session.close()
+        driver.close()
+
+
+def save_to_neo4j(graph, stid_dic, stid_mapping, uri, user, password):
     from neo4j import GraphDatabase
 
     # Connect to Neo4j
@@ -454,34 +382,6 @@ def save_to_neo4j(graph, stid_dic, stid_mapping, pathway_map, gene_id_to_name_ma
                 embedding=embedding, stId=stId, name=name, weight=weight, significance=significance
             )
 
-            # Create gene nodes and relationships
-            ##genes = get_genes_by_pathway_stid(node_id, reactome_file, gene_names_file)
-            genes = pathway_map.get(node_id, [])
-
-
-            ##print('stid_to_gene_info=========================-----------------------------\n', genes)
-    
-            # Create gene nodes and relationships
-            for gene_id in genes:
-                gene_name = gene_id_to_name_mapping.get(gene_id, None)
-                gene_symbol = gene_id_to_symbol_mapping.get(gene_id, None)
-                if gene_name:  # Only create node if gene name exists
-                    session.run(
-                        "MERGE (g:Gene {id: $gene_id, name: $gene_name, symbol: $gene_symbol})",
-                        gene_id=gene_id, gene_name=gene_name, gene_symbol = gene_symbol
-                    )
-                    session.run(
-                        "MATCH (p:Pathway {stId: $stId}), (g:Gene {id: $gene_id}) "
-                        "MERGE (p)-[:INVOLVES]->(g)",
-                        stId=stId, gene_id=gene_id
-                    )
-                
-                session.run(
-                    "MATCH (p:Pathway {stId: $stId}), (g:Gene {id: $gene_id}) "
-                    "MERGE (p)-[:INVOLVES]->(g)",
-                    stId=stId, gene_id=gene_id
-                )
-                
         # Create relationships using the stId mapping
         for source, target in graph.graph_nx.edges():
             source_stId = stid_mapping[source]
@@ -496,65 +396,54 @@ def save_to_neo4j(graph, stid_dic, stid_mapping, pathway_map, gene_id_to_name_ma
         session.close()
         driver.close()
 
-def read_gene_names(file_path):
-    """
-    Reads the gene names from a CSV file and returns a dictionary mapping gene IDs to gene names.
-
-    Parameters:
-    file_path (str): Path to the gene names CSV file.
-
-    Returns:
-    dict: A dictionary mapping gene IDs to gene names.
-    """
-    gene_id_to_name_mapping = {}
-    gene_id_to_symbol_mapping = {}
-
-    # Read the gene names CSV file and populate the dictionary
-    with open(file_path, 'r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            gene_id = row['NCBI_Gene_ID']
-            gene_name = row['Name']
-            gene_symbol = row['Approved symbol']
-            gene_id_to_name_mapping[gene_id] = gene_name
-            gene_id_to_symbol_mapping[gene_id] = gene_symbol
-
-    return gene_id_to_name_mapping, gene_id_to_symbol_mapping
 
 def create_heatmap_with_stid(embedding_list, stid_list, save_path):
-    # Convert the embedding list to a DataFrame
-    heatmap_data = pd.DataFrame(embedding_list, index=stid_list)
-    
-    # Create a clustermap
-    ax = sns.clustermap(heatmap_data, cmap='tab20', standard_scale=1, figsize=(10, 10))
-    # Set smaller font sizes for various elements
-    ax.ax_heatmap.tick_params(axis='both', which='both', labelsize=8)  # Tick labels
-    ax.ax_heatmap.set_xlabel(ax.ax_heatmap.get_xlabel(), fontsize=8)  # X-axis label
-    ax.ax_heatmap.set_ylabel(ax.ax_heatmap.get_ylabel(), fontsize=8)  # Y-axis label
-    ax.ax_heatmap.collections[0].colorbar.ax.tick_params(labelsize=8)  # Color bar labels
-    
-    # Save the clustermap to a file
-    plt.savefig(save_path)
-
-    plt.close()
-
-def create_heatmap_with_stid_ori(embedding_list, stid_list, save_path):
     # Create DataFrame
     heatmap_data = pd.DataFrame(embedding_list, index=stid_list)
     
     # Transpose DataFrame to rotate 90 degrees clockwise
     heatmap_data = heatmap_data.T
 
-    # Generate distinct colors using Seaborn color palette
+    # Generate distinct colors using Seaborn color palette palette = sns.color_palette('dark', num_colors)
+
     num_colors = len(stid_list)
-    palette = sns.color_palette('dark', num_colors)  # Using 'dark' palette for distinct colors
+    palette = sns.color_palette('dark', num_colors)  # Using 'hsv' palette for distinct colors
     color_dict = {stid: palette[i] for i, stid in enumerate(stid_list)}
+
+    # Create heatmap
+    ##sns.heatmap(data, cmap='cividis')
+    ##sns.heatmap(data, cmap='Blues') 'Greens' sns.heatmap(data, cmap='Spectral') 'coolwarm') 'YlGnBu') viridis cubehelix inferno
+
 
     plt.figure(figsize=(10, 10))  # Square figure size
     ax = sns.heatmap(heatmap_data, cmap='tab20', cbar_kws={'label': 'Mean embedding value', 'orientation': 'horizontal', 'fraction': 0.046, 'pad': 0.04})
+    '''
+    ax = sns.heatmap(heatmap_data, cmap='plasma', cbar_kws={
+                                    'label': 'Mean embedding value',
+                                    'orientation': 'vertical',
+                                    'fraction': 0.046,
+                                    'pad': 0.04
+                                })
+    sns.set(style="white")
+    ax = sns.heatmap(heatmap_data, cmap='cubehelix', cbar_kws={
+                                    'label': 'Mean embedding value',
+                                    'orientation': 'horizontal',
+                                    'fraction': 0.046,
+                                    'pad': 0.04
+                                })
     
+    sns.set(style="white")
+    ax = sns.heatmap(heatmap_data, cmap='plasma', cbar_kws={
+                                    'label': 'Mean embedding value',
+                                    'orientation': 'horizontal',
+                                    'fraction': 0.1,
+                                    'pad': 0.05,
+                                    ##'ticks': [0, 0.25, 0.5, 0.75, 1]  # Example of custom ticks
+                                })
+    '''
+
     plt.xlabel('Human pathways')
-    plt.ylabel('Dimension of the embeddings', labelpad=0) 
+    plt.ylabel('Dimension of the embeddings')
     
     # Customize the color bar to be small and on top
     cbar = ax.collections[0].colorbar
@@ -572,69 +461,17 @@ def create_heatmap_with_stid_ori(embedding_list, stid_list, save_path):
     ax.set_xlim(0, len(stid_list))
     ax.set_ylim(0, heatmap_data.shape[0] + 1.5)
 
-    # Custom x-axis labels with shorter ticks
-    ax.set_xticks(np.arange(len(stid_list)) + 0.5)
-    ax.set_xticklabels(stid_list, rotation=45, fontsize=8, ha='right')
-    ax.tick_params(axis='x', length=5)  # Shorten the x-axis ticks
-
-    # Custom y-axis labels, only plot the first and last dimension numbers
-    y_tick_labels = [heatmap_data.index[0], heatmap_data.index[-1]]
-    y_ticks = [0.5, len(heatmap_data.index) - 0.5]
-    ax.set_yticks(y_ticks)
-    ax.set_yticklabels(y_tick_labels, fontsize=8)
-    ax.tick_params(axis='y', length=0)  # Remove y-axis ticks
-
-    plt.savefig(save_path)
-    plt.close()
-
-def create_heatmap_with_stid_(embedding_list, stid_list, save_path):
-    # Create DataFrame
-    heatmap_data = pd.DataFrame(embedding_list, index=stid_list)
-    
-    # Transpose DataFrame to rotate 90 degrees clockwise
-    heatmap_data = heatmap_data.T
-
-    # Generate distinct colors using Seaborn color palette
-    num_colors = len(stid_list)
-    palette = sns.color_palette('dark', num_colors)  # Using 'dark' palette for distinct colors
-    color_dict = {stid: palette[i] for i, stid in enumerate(stid_list)}
-
-    plt.figure(figsize=(10, 10))  # Square figure size
-    ax = sns.heatmap(heatmap_data, cmap='tab20', cbar_kws={'label': 'Mean embedding value', 'orientation': 'horizontal', 'fraction': 0.046, 'pad': 0.04})
-    
-    plt.xlabel('Human pathways')
-    plt.ylabel('Dimension of the embeddings', labelpad=0) 
-    
-    # Customize the color bar to be small and on top
-    cbar = ax.collections[0].colorbar
-    cbar.ax.tick_params(size=0, labelsize=8)
-    cbar.set_label('Mean embedding value', size=10)
-    cbar.ax.set_position([0.2, 0.92, 0.6, 0.03])  # [left, bottom, width, height]
-
-    # Add custom color patches above each column
-    for i, stid in enumerate(stid_list):
-        color = color_dict[stid]
-        rect = mpatches.Rectangle((i, heatmap_data.shape[0]), 1, 2, color=color, transform=ax.get_xaxis_transform(), clip_on=False)
-        ax.add_patch(rect)
-
-    # Adjust the axis limits to make space for the patches
-    ax.set_xlim(0, len(stid_list))
-    ax.set_ylim(0, heatmap_data.shape[0] + 1.5)
-
-    # Custom x-axis labels with shorter ticks
+    # Custom x-axis labels
     ax.set_xticks(np.arange(len(stid_list)) + 1.0)
     ax.set_xticklabels(stid_list, rotation=30, fontsize=8, ha='right')
-    ax.tick_params(axis='x', length=5)  # Shorten the x-axis ticks
 
-    # Custom y-axis labels, only plot the first and last dimension numbers
-    y_tick_labels = [heatmap_data.index[0], heatmap_data.index[-1]]
-    y_ticks = [0.5, len(heatmap_data.index) - 0.5]
-    ax.set_yticks(y_ticks)
-    ax.set_yticklabels(y_tick_labels, fontsize=8)
-    ax.tick_params(axis='y', length=0)  # Remove y-axis ticks
+    # Custom y-axis labels
+    ax.set_yticks(np.arange(heatmap_data.shape[0]) + 1.0)
+    ax.set_yticklabels(heatmap_data.index, fontsize=6)
 
     plt.savefig(save_path)
-    plt.close()   
+    plt.close()
+    
 
 def calculate_cluster_labels(net, dataloader, device, num_clusters=20):
     all_embeddings = []
@@ -653,47 +490,6 @@ def calculate_cluster_labels(net, dataloader, device, num_clusters=20):
 
 
 def visualize_embeddings_pca(embeddings, cluster_labels, stid_list, save_path):
-    pca = PCA(n_components=2)
-    embeddings_2d = pca.fit_transform(embeddings)
-
-    plt.figure(figsize=(10, 10))  # Square figure
-
-    # Set the style
-    sns.set(style="whitegrid")
-
-    # Define unique clusters and sort them
-    unique_clusters = np.unique(cluster_labels)
-    sorted_clusters = sorted(unique_clusters)  # Sort the clusters
-
-    # Define a color palette
-    palette = sns.color_palette("viridis", len(sorted_clusters))
-
-    # Create a scatter plot with a continuous colormap
-    for i, cluster in enumerate(sorted_clusters):
-        cluster_points = embeddings_2d[cluster_labels == cluster]
-        plt.scatter(cluster_points[:, 0], cluster_points[:, 1], label=f'{stid_list[cluster]}', s=20, color=palette[i], edgecolor='k')
-
-    # Add labels and title
-    plt.xlabel('PC1')
-    plt.ylabel('PC2')
-    plt.title('PCA of Embeddings')
-
-    # Customize the grid and background
-    ax = plt.gca()
-    ax.set_facecolor('#eae6f0')
-    ax.grid(True, which='both', color='white', linestyle='-', linewidth=1.0, alpha=0.9)  # Light grid lines with low alpha for near invisibility
-
-    # Ensure the plot is square
-    ax.set_aspect('equal', adjustable='box')
-
-    # Create a custom legend with dot shapes and stid labels
-    handles = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=palette[i], markersize=8, label=stid_list[cluster]) for i, cluster in enumerate(sorted_clusters)]
-    plt.legend(handles=handles, title='Label', bbox_to_anchor=(1.02, 0.5), loc='center left', borderaxespad=0., fontsize='small', handlelength=0.5, handletextpad=0.5)
-
-    plt.savefig(save_path, bbox_inches='tight')
-    plt.close()
-    
-def visualize_embeddings_pca_ori(embeddings, cluster_labels, stid_list, save_path):
     pca = PCA(n_components=2)
     embeddings_2d = pca.fit_transform(embeddings)
 
@@ -794,6 +590,17 @@ def export_to_cytoscape(node_embeddings, cluster_labels, stid_list, output_path)
     df.to_csv(output_path, index=False)
     print(f"Data exported to {output_path} for Cytoscape visualization.")
 
+    
+def display_and_save_similarity_matrix(cos_sim, matrix_path):
+    plt.figure(figsize=(8, 8))
+    plt.imshow(cos_sim, cmap='viridis', origin='lower', vmin=0, vmax=1.0)
+    plt.colorbar()
+    plt.title('Similarity Matrix')
+    plt.xlabel('Pathway Entities')
+    plt.ylabel('Pathway Entities')
+
+    plt.savefig(matrix_path)
+    plt.close()
 
 def draw_loss_plot(train_loss, valid_loss, save_path):
     plt.figure()
@@ -803,12 +610,6 @@ def draw_loss_plot(train_loss, valid_loss, save_path):
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.legend()
-    
-    # Customize the grid and background
-    ax = plt.gca()
-    ax.set_facecolor('#eae6f0')
-    ax.grid(True, which='both', color='white', linestyle='-', linewidth=1.0, alpha=0.9)  # Light grid lines with low alpha for near invisibility
-    
     plt.savefig(f'{save_path}')
     plt.close()
 
@@ -831,12 +632,6 @@ def draw_f1_plot(train_f1, valid_f1, save_path):
     plt.xlabel('Epoch')
     plt.ylabel('F1-score')
     plt.legend()
-
-    # Customize the grid and background
-    ax = plt.gca()
-    ax.set_facecolor('#eae6f0')
-    ax.grid(True, which='both', color='white', linestyle='-', linewidth=1.0, alpha=0.9)  # Light grid lines with low alpha for near invisibility
-
     plt.savefig(f'{save_path}')
     plt.close()
 
