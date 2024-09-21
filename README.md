@@ -1,6 +1,6 @@
 This repository provides the code for our research project "GKGL-PE: a GNN-based Knowledge Graph Learning framework for Pathway Embedding".
 
-python auc_sagegraph_bkg/main.py --learning-rate 0.0005 --input-size 2 --hidden-size 128 --epochs 20000
+## python gat_embedding.py --in_feats 20 --out_feats 128 --num_layers 2 --num_heads 1 --batch_size 1 --lr 0.0001 --num_epochs 20002
 
 ## Data resources
 The different dataset and KG used in this project are located in data directory. These files include:
@@ -8,22 +8,6 @@ The different dataset and KG used in this project are located in data directory.
 -) The data about pathways from https://reactome.org/download/current/ReactomePathways.txt, relationships between pathways from https://reactome.org/download/current/ReactomePathwaysRelation.txt and pathway-protein relations from https://reactome.org/download/current/NCBI2Reactome.txt on 24 March 2024.
 
 -) The built knowledge graph including pathway-pathway and pathway-protein relationships.
-
-
-## Scripts
-The code directory contains the following scripts:
-
--)The scripts for processing data download from Reactome
-
--)The scripts for building KG for training embeddings and edge prediction.
-
-
-## Setup
--)conda create -n kg python=3.9 -y
-
--)conda activate kg
-
--)pip install -r requirements.txt
 
 
 ## Get start
