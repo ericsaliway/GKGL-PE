@@ -11,6 +11,8 @@ The different dataset and KG used in this project are located in data directory.
 
 
 ## Get start
+python GKGL-PE/embedding_clustering/gat_embedding.py --in_feats 128 --out_feats 128 --num_layers 4 --num_heads 1 --batch_size 1 --lr 0.01 --num_epochs 203
+
 python embedding_clustering/gat_embedding.py --in_feats 20 --out_feats 128 --num_layers 2 --num_heads 1 --batch_size 1 --lr 0.0001 --num_epochs 20000
 
 python embedding/embedding.py --out_feats 128 --num_layers 4 --num_heads 2 --batch_size 1 --lr 0.01 --num_epochs 1000
