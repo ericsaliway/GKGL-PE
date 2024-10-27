@@ -1,6 +1,7 @@
 ## GKGL-PE: a GNN-based Knowledge Graph Learning framework for Pathway Embedding
 
-This repository provides the code for our research project "GKGL-PE: a GNN-based Knowledge Graph Learning framework for Pathway Embedding".
+
+This repository contains the code for our paper, "GKGL-PE: A GNN-based Knowledge Graph Learning Framework for Pathway Embedding," presented at the International Conference on Intelligent Biology and Medicine (ICIBM) 2024, held from October 10-12, 2024 in Houston, Texas, United States.
 
 ## Data resources
 The different dataset and KG used in this project are located in data directory. These files include:
@@ -9,6 +10,26 @@ The different dataset and KG used in this project are located in data directory.
 
 -) The built knowledge graph including pathway-pathway and pathway-protein relationships.
 
+## Setup
+
+-) conda create -n gnn python=3.11 -y
+
+-) conda activate gnn 
+
+-) conda install pytorch::pytorch torchvision torchaudio -c pytorch
+
+-) pip install pandas
+
+-) pip install py2neo pandas matplotlib scikit-learn
+
+-) pip install tqdm
+
+-) conda install -c dglteam dgl
+
+-) pip install seaborn
+
+##
+pip install -r requirements.txt
 
 ## Get start
 python GKGL-PE/embedding_clustering/gat_embedding.py --in_feats 128 --out_feats 128 --num_layers 4 --num_heads 1 --batch_size 1 --lr 0.01 --num_epochs 203
