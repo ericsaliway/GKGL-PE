@@ -1,6 +1,7 @@
 ## GKGL-PE: a GNN-based Knowledge Graph Learning framework for Pathway Embedding
 
-This repository provides the code for our research project "GKGL-PE: a GNN-based Knowledge Graph Learning framework for Pathway Embedding".
+
+This repository contains the code for our paper, "GKGL-PE: A GNN-based Knowledge Graph Learning Framework for Pathway Embedding," presented at the International Conference on Intelligent Biology and Medicine (ICIBM) 2024, October 10-12.
 
 ## Data resources
 The different dataset and KG used in this project are located in data directory. These files include:
