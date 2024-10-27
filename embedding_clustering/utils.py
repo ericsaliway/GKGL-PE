@@ -90,9 +90,7 @@ def create_network_from_markers_(marker_list, p_value, kge):
     return graph
 
 def save_to_disk(graph, save_dir):
-    ##save_dir = "GKGL-PE/"+save_dir
     print("save_dir==============\n",save_dir)
-    
     assert os.path.isdir(save_dir), 'Directory does not exist!'
     save_path = os.path.join(save_dir, graph.kge + '.pkl')
     pickle.dump(graph.graph_nx, open(save_path, 'wb'))
@@ -126,12 +124,10 @@ def create_embedding_with_markers(p_value=0.05, save=True, data_dir='GKGL-PE/emb
     
     # Split the symbols into train and test sets
     emb_train, emb_test = train_test_split(symbols, test_size=0.3, random_state=42)
-    ##print("emb_test------------------\n",emb_test)
 
     # Create networks for train and test sets
     graph_train = create_network_from_markers(emb_train, p_value, 'emb_train')
     graph_test = create_network_from_markers(emb_test, p_value, 'emb_test')
-   
 
     if save:
         save_dir = os.path.join(data_dir, 'raw')
