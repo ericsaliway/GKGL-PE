@@ -8,7 +8,7 @@ from dgl.data import DGLDataset
 
 class PathwayDataset(DGLDataset):
 
-    def __init__(self, root='data'):
+    def __init__(self, root='GKGL-PE/embedding_clustering/data/emb'):
         self.root = os.path.abspath(root)
         if 'processed' not in os.listdir(self.root):
             subprocess.run(f"mkdir 'tmp'", shell=True, cwd=self.root)

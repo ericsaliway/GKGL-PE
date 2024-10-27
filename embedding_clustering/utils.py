@@ -5,6 +5,7 @@ import json
 from collections import defaultdict, namedtuple
 from datetime import datetime
 import networkx as nx
+import pandas as pd
 from py2neo import Graph, Node, Relationship
 import torch
 from torch import nn
@@ -15,6 +16,7 @@ import network
 import dataset
 import model
 import train
+from sklearn.model_selection import train_test_split
 
 def get_stid_mapping(graph):
     stid_mapping = {}  # Mapping of node_id to stId
@@ -88,6 +90,9 @@ def create_network_from_markers_(marker_list, p_value, kge):
     return graph
 
 def save_to_disk(graph, save_dir):
+    ##save_dir = "GKGL-PE/"+save_dir
+    print("save_dir==============\n",save_dir)
+    
     assert os.path.isdir(save_dir), 'Directory does not exist!'
     save_path = os.path.join(save_dir, graph.kge + '.pkl')
     pickle.dump(graph.graph_nx, open(save_path, 'wb'))
@@ -99,7 +104,7 @@ def save_stid_to_csv(graph, save_dir):
     csv_path = os.path.join(save_dir, 'stId_nodes.csv')
     df.to_csv(csv_path, index=False)
 
-def create_embedding_with_markers(p_value=0.05, save=True, data_dir='gat/data/emb'):
+def create_embedding_with_markers_no_whole_markers(p_value=0.05, save=True, data_dir='GKGL-PE/embedding_clustering/data/emb'):
     emb_train = ['MS4A1', 'CD8A', 'CD4', 'KRT19', 'PCNA', 'CD68', 'PDCD1', 'PTRPC', 'KRT8', 'HER2', 'FOXP3', 'KRT5', 'H3F3A', 'H3F3B', 'RPS6', 'ESR1', 'CD44', 'KRT17', 'PDPN', 'PECAM1', 'GZMB', 'VIM', 'pAb', 'RB1', 'CD3', 'ACTA2', 'PARP1', 'H2AFX', 'CDH1', 'KRT7', 'KRT14', 'COL4A1', 'LMNA', 'H3K27', 'CD274', 'MKI67', 'PGR', 'LMNB1', 'H3K4', 'LMNB2', 'COL1A1', 'CD34', 'AR', 'HIF1A', 'FOXP3']
     emb_test = ['AKT1', 'BMP2', 'BMP4', 'MAPK1', 'MAPK3', 'BRD4', 'CASP3', 'NCAM1', 'MTOR']
     
@@ -113,7 +118,29 @@ def create_embedding_with_markers(p_value=0.05, save=True, data_dir='gat/data/em
 
     return graph_train, graph_test
 
-def create_embeddings(load_model=True, save=True, data_dir='gat/data/emb', hyperparams=None, plot=True):
+def create_embedding_with_markers(p_value=0.05, save=True, data_dir='GKGL-PE/embedding_clustering/data/emb'):
+    # Read symbols from the CSV file
+    csv_path = 'data/genes_pathways.csv'
+    data = pd.read_csv(csv_path)
+    symbols = data['symbol'].tolist()
+    
+    # Split the symbols into train and test sets
+    emb_train, emb_test = train_test_split(symbols, test_size=0.3, random_state=42)
+    ##print("emb_test------------------\n",emb_test)
+
+    # Create networks for train and test sets
+    graph_train = create_network_from_markers(emb_train, p_value, 'emb_train')
+    graph_test = create_network_from_markers(emb_test, p_value, 'emb_test')
+   
+
+    if save:
+        save_dir = os.path.join(data_dir, 'raw')
+        save_to_disk(graph_train, save_dir)
+        save_to_disk(graph_test, save_dir)
+
+    return graph_train, graph_test
+
+def create_embeddings(load_model=True, save=True, data_dir='GKGL-PE/embedding_clustering/data/emb', hyperparams=None, plot=True):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     data = dataset.PathwayDataset(data_dir)
     emb_dir = os.path.abspath(os.path.join(data_dir, 'embeddings'))

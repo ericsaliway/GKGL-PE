@@ -8,12 +8,13 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='Create embeddings and save to disk.')
-    parser.add_argument('--data_dir', type=str, default='gat/data/emb', help='Directory to save the data.')
-    parser.add_argument('--output-file', type=str, default='gat/data/emb/embeddings.pkl', help='File to save the embeddings')
+    parser.add_argument('--data_dir', type=str, default='GKGL-PE/embedding_clustering/data/emb', help='Directory to save the data.')
+    parser.add_argument('--output-file', type=str, default='GKGL-PE/embedding_clustering/data/emb/embeddings.pkl', help='File to save the embeddings')
     parser.add_argument('--p_value', type=float, default=0.05, help='P-value threshold for creating embeddings.')
     parser.add_argument('--save', type=bool, default=True, help='Flag to save embeddings.')
     parser.add_argument('--num_epochs', type=int, default=20000, help='Number of epochs for training.')
-    parser.add_argument('--in_feats', type=int, default=20, help='Number of input features.')
+    parser.add_argument('--in_feats', type=int, default=128, help='Number of input features.')
+    parser.add_argument('--hidden_feats', type=int, default=128, help='Number of hidden_feats.')
     parser.add_argument('--out_feats', type=int, default=128, help='Number of output features.')
     parser.add_argument('--num_layers', type=int, default=2, help='Number of layers in the model.')
     parser.add_argument('--num_heads', type=int, default=1, help='Number of heads for GAT model.')
@@ -33,6 +34,7 @@ def main():
     hyperparameters = {
         'num_epochs': args.num_epochs,
         'in_feats': args.in_feats,
+        'hidden_feats': args.hidden_feats,
         'out_feats': args.out_feats,
         'num_layers': args.num_layers,
         'num_heads': args.num_heads,  # Added num_heads to hyperparameters
@@ -60,5 +62,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-## python gat_copy_8/gat_embedding.py --in_feats 20 --out_feats 128 --num_layers 2 --num_heads 1 --batch_size 1 --lr 0.0001 --num_epochs 1011
-## python gat/gat_embedding.py --in_feats 20 --out_feats 128 --num_layers 2 --num_heads 1 --batch_size 1 --lr 0.0001 --num_epochs 20002
+## python GKGL-PE/embedding_clustering/gat_embedding.py --in_feats 128 --out_feats 64 --num_layers 4 --num_heads 1 --batch_size 1 --lr 0.01 --num_epochs 103

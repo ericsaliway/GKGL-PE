@@ -99,13 +99,13 @@ class Network:
         return name_to_id
 
     def save_name_to_id(self):
-        file_path = 'gat/data/emb/info/name_to_id.txt'
+        file_path = 'GKGL-PE/embedding_clustering/data/emb/info/name_to_id.txt'
         with open(file_path, 'w') as f:
             for name, id in self.name_to_id.items():
                 f.write(f"{name}: {id}\n")
 
     def save_sorted_stids(self):
-        file_path = 'gat/data/emb/info/sorted_stids.txt'
+        file_path = 'GKGL-PE/embedding_clustering/data/emb/info/sorted_stids.txt'
         stids = sorted(self.pathway_info.keys())
         with open(file_path, 'w') as f:
             for stid in stids:

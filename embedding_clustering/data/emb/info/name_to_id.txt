@@ -45,11 +45,19 @@ PINK1-PRKN Mediated Mitophagy: R-HSA-5205685
 Pink1 is recruited from the cytoplasm to the mitochondria: R-HSA-5205661
 Pink1 is cleaved on healthy mitochondria: R-HSA-5205681
 Uncleaved Pink1 accumulates in damaged mitochondria: R-HSA-5205672
-Pink1 recruits Parkin to the outer mitochondrial membrane.: R-HSA-5205652
-Parkin promotes the ubiquitination of mitochondrial substrates: R-HSA-5205682
+PINK1 is autophosphorylated: R-HSA-9834076
+PINK1 phosphorylates Ub on MOM proteins: R-HSA-9834945
+PRKN binds p-S-Ub:MOM proteins: R-HSA-9835009
+PINK1 phosphorylates PRKN at S65: R-HSA-9835011
+PRKN ubiquitinates MOM substrates: R-HSA-9834070
 p62 binds ubiquitinated mitochondrial substrates: R-HSA-5205673
 p62 links damaged mitochondria to LC3: R-HSA-5205649
 LC3 binds the autophagosome membrane Atg5-Atg12 complex: R-HSA-8959571
+OPTN, TBK1 bind ubiquitinated MOM proteins: R-HSA-9824888
+TBK1 is phosphorylated within TBK1:OPTN:Ub-mitochondrial proteins: R-HSA-9824894
+p-S-TBK1 phosphorylates OPTN: R-HSA-9824897
+MAP1LC3B binds p-S-OPTN bound to Ub-mitochondria : R-HSA-9824892
+OPTN binds ATG9A: R-HSA-9840807
 Receptor Mediated Mitophagy: R-HSA-8934903
 FUNDC1 is phosphorylated by CK2: R-HSA-8948039
 p-S13, FUNDC1 is phosphorylated by CK2 at Tyr18: R-HSA-8948143
@@ -207,9 +215,9 @@ DREAM complex binds the E2F1 gene promoter: R-HSA-8964482
 E2F1 gene transcription is inhibited by the DREAM complex, RBL1 and RBL2: R-HSA-8964513
 PCNA gene expression is stimulated by E2F1 and repressed by the DREAM complex: R-HSA-8961665
 DREAM complex binds the PCNA gene promoter: R-HSA-8964465
+The CDC25A gene transcription is stimulated by MYC and E2F1 and inhibited by the DREAM complex: R-HSA-188345
 DREAM complex binds the RBL1 gene promoter: R-HSA-8964492
 RBL1 gene expression is repressed by the DREAM complex: R-HSA-8964525
-The CDC25A gene transcription is stimulated by MYC and E2F1 and inhibited by the DREAM complex: R-HSA-188345
 DREAM complex binds the TOP2A gene promoter: R-HSA-8964475
 TOP2A gene gene expression is repressed by the DREAM complex: R-HSA-8964531
 Recruitment of HDAC1 by p107 (RBL1): R-HSA-1227671
@@ -252,7 +260,6 @@ Formation of Cyclin E:Cdk2 complexes: R-HSA-69191
 Translocation of Cyclin E:Cdk2 complex to the nucleus: R-HSA-157906
 Translocation of p21 to the nucleus: R-HSA-187828
 Translocation of p27 to the nucleoplasm: R-HSA-187506
-AKT phosphorylates p21Cip1 and p27Kip1: R-HSA-198613
 SCF(Skp2)-mediated degradation of p27/p21: R-HSA-187577
 Cyclin E/A:Cdk2-mediated  phosphorylation of p27/p21: R-HSA-187520
 Association of Cks1 with SCF(Skp2) complex: R-HSA-187545
@@ -265,6 +272,7 @@ Phosphorylation of Cyclin E:CDK2 complexes by WEE1: R-HSA-69195
 MYC:MAX binds the CDC25A gene: R-HSA-8932400
 Dephosphorylation of Cyclin E:Cdk2 complexes by Cdc25A: R-HSA-69199
 CAK-mediated phosphorylation of Cyclin E:Cdk2: R-HSA-188350
+AKT phosphorylates p21Cip1 and p27Kip1: R-HSA-198613
 Association of Rb with Cyclin E:Cdk2 complexes: R-HSA-188386
 Phosphorylation of proteins involved in G1/S transition by active Cyclin E:Cdk2 complexes: R-HSA-69200
 Cyclin E:CDK2-mediated phosphorylation of RB1: R-HSA-188390
@@ -296,9 +304,9 @@ TK1 gene expression is stimulated by E2F1: R-HSA-8962039
 TYMS gene expression: R-HSA-8962050
 Activation of the pre-replicative complex: R-HSA-68962
 Mcm10 associates with the pre-replicative complex, stabilizing Mcm2-7: R-HSA-68919
-Cdt1 is displaced from the pre-replicative complex.: R-HSA-68940
-CDT1 binds geminin: R-HSA-69299
+Cdt1 is displaced from the pre-replicative complex: R-HSA-68940
 CDK and DDK associate with the Mcm10:pre-replicative complex: R-HSA-68918
+CDT1 binds geminin: R-HSA-69299
 Mcm2-7 is phosphorylated by DDK: R-HSA-68954
 Cdc45 associates with the pre-replicative complex at the origin: R-HSA-68917
 DNA Replication Factor A (RPA) associates with the pre-replicative complex at the origin: R-HSA-68916
@@ -691,6 +699,7 @@ Formation of meiotic single-stranded DNA invasion complex: R-HSA-912503
 Formation of meiotic heteroduplex: R-HSA-912458
 Formation of meiotic holliday junction: R-HSA-912496
 Resolution of meiotic holliday junction: R-HSA-912429
+FIGNL1 binds DMC1, RAD51: R-HSA-9853878
 Meiotic synapsis: R-HSA-1221632
 Formation of axial/lateral elements of Synaptonemal Complex: R-HSA-912389
 Telomeres cluster at the nuclear membrane: R-HSA-912408
@@ -918,9 +927,9 @@ Activated ERKs phosphorylate ERF: R-HSA-3209160
 Phosphorylated ERF translocates to the cytosol: R-HSA-3209159
 E2F1, E2F2, or E2F3 and SP1 bind p14ARF promoter: R-HSA-3209096
 E2F1/E2F2/E2F3 and SP1 stimulate transcription of p14ARF mRNA: R-HSA-3209109
-miR-24 binds p16INK4A and p14ARF mRNAs: R-HSA-3209151
-Translation of p14ARF mRNA is inhibited by miR-24: R-HSA-3209111
 Translation of p16INK4A mRNA is inhibited by miR-24: R-HSA-3209114
+Translation of p14ARF mRNA is inhibited by miR-24: R-HSA-3209111
+miR-24 binds p16INK4A and p14ARF mRNAs: R-HSA-3209151
 p14ARF translocates to the nucleus: R-HSA-9645672
 p14ARF forms a ternary complex with MDM2 and TP53: R-HSA-6804998
 p14ARF sequesters MDM2: R-HSA-6804996
@@ -1021,7 +1030,6 @@ HSP90:ATP:p23:FKBP52:SHR:SH translocates to the nucleus: R-HSA-5618080
 ATP hydrolysis by HSP90: R-HSA-5618093
 Response of EIF2AK1 (HRI) to heme deficiency: R-HSA-9648895
 Ferriheme dissociates from p-T-EIF2AK1:2xferriheme dimer: R-HSA-9648880
-Expression of ASNS (Asparagine Synthetase): R-HSA-1791118
 p-T-EIF2AK1:ferriheme dimer autophosphorylates: R-HSA-9648883
 p-T,T486,T488-EIF2AK1 phosphorylates EIF2S1 (eIF2-alpha): R-HSA-9648888
 Translation of ATF4 : R-HSA-381128
@@ -1030,7 +1038,9 @@ Translation of PPP1R15A: R-HSA-9650710
 Translation of ATF5: R-HSA-9653745
 ATF4 binds the DDIT3 promoter: R-HSA-9655086
 Transcription of DDIT3 (CHOP, GADD153) in response to heme deficiency: R-HSA-9655071
+ATF4 and CEBPB,CEBPG bind the ASNS gene: R-HSA-9635915
 ATF4 and a CEBP protein bind the ATF5 promoter: R-HSA-9653742
+Expression of ASNS (Asparagine Synthetase): R-HSA-1791118
 Transcription of ATF5: R-HSA-9653724
 ATF4, CEBPB, and ATF3 bind the CHAC1 promoter: R-HSA-9653893
 Expression of CHAC1: R-HSA-9653894
@@ -1038,11 +1048,11 @@ ATF4 and a CEBP protein bind the TRIB3 promoter: R-HSA-9635927
 Expression of TRIB3 in response to stress: R-HSA-9635912
 ATF4 binds the PPP1R15A (GADD34) promoter: R-HSA-9654752
 Transcription of PPP1R15A: R-HSA-9654774
-ATF4 and CEBPB,CEBPG bind the ASNS gene: R-HSA-9635915
 Expression of GRB10: R-HSA-9654792
 Heme signaling: R-HSA-9707616
-H2O2 oxidises ferrohemoglobin to MetHb: R-HSA-9707504
+HMOX1 gene produces HMOX1 dimer: R-HSA-9707645
 FeHM dissociates from MetHb: R-HSA-9707516
+BACH1 binds MAFK: R-HSA-9707690
 FeHM oxidises LDL,HDL: R-HSA-9707586
 Hemes bind LY96: R-HSA-9707594
 Hemes:LY96 activates TLR4: R-HSA-9707659
@@ -1051,12 +1061,11 @@ SLC46A1 transports hemes from extracellular region to cytosol: R-HSA-917870
 PGRMC2 binds Hemes: R-HSA-9707683
 PGRMC2:Hemes translocate to the nucleus: R-HSA-9707606
 PGRMC2:Hemes dissociates: R-HSA-9707856
-BACH1 binds MAFK: R-HSA-9707690
-HMOX1 gene produces HMOX1 dimer: R-HSA-9707645
+H2O2 oxidises ferrohemoglobin to MetHb: R-HSA-9707504
 Hemes bind to BACH1:MAFK: R-HSA-9707523
 XPO1 (CRM1) binds to BACH1:Hemes: R-HSA-9708430
 XPO1:BACH1:Hemes are transported out of the nucleus: R-HSA-9708423
-NR1D1 (REV-ERBA) binds heme, the ARNTL gene, and recruits corepressors.: R-HSA-1368069
+NR1D1 (REV-ERBA) binds heme, the ARNTL gene, and recruits corepressors: R-HSA-1368069
 NR1D1 (REV-ERBA) binds heme, the CLOCK gene, and recruits corepressors: R-HSA-5663271
 NR1D1 (REV-ERBA) binds heme, the NPAS2 gene, and recruits corepressors: R-HSA-5663245
 NR1D1 (REV-ERBA) binds heme, the NR1D1 gene, and recruits corepressors: R-HSA-5663265
@@ -1255,12 +1264,12 @@ Superoxide and nitric oxide react to form peroxynitrite in mitochondria: R-HSA-3
 Cellular response to starvation: R-HSA-9711097
 Response of EIF2AK4 (GCN2) to amino acid deficiency: R-HSA-9633012
 EIF2AK4 (GCN2) binds tRNA: R-HSA-9633005
-Expression of ATF3: R-HSA-1791173
 EIF2AK4 (GCN2) dimer autophosphorylates: R-HSA-9633742
 p-T899-EIF2AK4 (GCN2) phosphorylates EIF2AS1: R-HSA-9633008
 ATF4 and phospho-ATF2 bind the DDIT3 promoter: R-HSA-9635804
 Transcription of DDIT3 (CHOP, GADD153) in response to amino acid deficiency: R-HSA-9644926
 ATF4 binds the ATF3 gene: R-HSA-9635892
+Expression of ATF3: R-HSA-1791173
 ATF4 binds the CEBPB gene: R-HSA-9635936
 Expression of CEBPB in response to stress: R-HSA-9635918
 IMPACT binds GCN1: R-HSA-9634669
@@ -1286,8 +1295,8 @@ MBTPS2 (S2P) cleaves ATF6 (ATF6-alpha): R-HSA-420818
 ATF6 (ATF6-alpha) translocates from the cytosol to the nucleus: R-HSA-381026
 ATF6 (ATF6-alpha) activates chaperone genes: R-HSA-381183
 Expression of BIP (78 kDa Glucose-regulated protein, GRP78, HSPA5): R-HSA-1791150
-Expression of Calreticulin: R-HSA-1791082
 Expression of DDIT3 (CHOP, GADD153) in response to unfolded protein: R-HSA-1791107
+Expression of Calreticulin: R-HSA-1791082
 Expression of HSP90B1 (Endoplasmin): R-HSA-1791163
 Expression of XBP1(S): R-HSA-1791121
 IRE1alpha activates chaperones: R-HSA-381070
@@ -1389,6 +1398,83 @@ OMA1 cleaves DELE1: R-HSA-9840408
 DELE1(143-515) is released into the cytosol: R-HSA-9840401
 DELE1(143-515) binds EIF2AK1 (HRI): R-HSA-9840429
 DELE1(143-515):EIF2AK1 enhances phosphorylation of EIF2S1 (EIF2alpha): R-HSA-9840415
+Mitochondrial unfolded protein response (UPRmt): R-HSA-9841251
+Reactive oxygen species oxidize DNAJA1: R-HSA-9857090
+Oxidized DNAJA1 binds HSPA1A,B (HSP70) displacing HSF1: R-HSA-9857076
+HSF1 is activated by phosphorylation, translocation to the nucleus, and trimerization: R-HSA-9857091
+ATF5 translocates from the cytosol to the mitochondrial matrix: R-HSA-9841248
+ATF5 translocates from the cytosol to the nucleoplasm: R-HSA-9841247
+ATF5 and HSF1 trimer bind the HSPA9 gene: R-HSA-9857083
+ATF5 and HSF1 trimer activate expression of HSPA9 (mtHSP70): R-HSA-9856627
+ATF5 and HSF1 trimer bind the bidirectional promoter of the HSPD1 gene and HSPE1 gene: R-HSA-9857071
+ATF5 and HSF1 trimer activate expression of HSPD1: R-HSA-9856666
+ATF5 and HSF1 trimer activate expression of HSPE1: R-HSA-9857082
+ATF5 activates expression of LONP1: R-HSA-9856668
+ATF5 activates expression of DEFA5: R-HSA-9856669
+Phosphorylation of AKT1 on serine-473 in response to reactive oxygen species: R-HSA-9841244
+p-S473-AKT1 phosphorylates ESR1 on serine-167: R-HSA-9841265
+p-S167-ESR1 translocates from the cytosol to the nucleus: R-HSA-9841817
+p-S167-ESR1 activates expression of HTRA2 (OMI): R-HSA-9856620
+p-S167-ESR1 activates expression of NRF1: R-HSA-9856845
+SIRT3 deacetylates Ac-K272,K290-FOXO3: R-HSA-9841847
+FOXO3 translocates from the mitochondrial matrix to the nucleus: R-HSA-9841812
+FOXO3 activates expression of SOD2: R-HSA-9856665
+FOXO3 activates expression of CAT: R-HSA-9856663
+Cellular responses to mechanical stimuli: R-HSA-9855142
+Response of endothelial cells to shear stress: R-HSA-9860931
+High laminar flow shear stress activates signaling by PIEZO1 and PECAM1:CDH5:KDR in endothelial cells: R-HSA-9856530
+PIEZO1 trimer passively transports cations across the plasma membrane according to their electrochemical gradients: R-HSA-9855089
+Calcium binds calmodulin: R-HSA-74448
+TRPV4 tetramer binds CALM1:Ca2+ (calmodulin:Ca2+): R-HSA-9865670
+TRPV4 tetramer:CALM1:Ca2+ transports calcium ions (Ca2+) from the extracellular region to the cytosol: R-HSA-9858800
+Ca2+ activates Calpain2 (m-Calpain): R-HSA-9861511
+Calpain2 (m-Calpain) cleaves TLN1 (Talin-1): R-HSA-9855106
+Calpain2 (m-Calpain, CAPN2:CAPNS:Ca2+) cleaves VCL (Vinculin): R-HSA-9861485
+MMP14 translocates from the Golgi membrane to the plasma membrane: R-HSA-9858803
+Pannexin-1 (PANX1) channel transports ATP from the cytosol to the extracellular region: R-HSA-9855161
+P2RY2 binds ATP: R-HSA-9860787
+Phosphorylation of PDPK1 on serine-241: R-HSA-9860796
+PDPK1 (PDK1) phosphorylates PKN2 on threonine-816: R-HSA-9860785
+Phosphorylation of KDR (VEGFR2) and FLT4 (VEGFR3) and PECAM1 in PECAM1:CDH5:KDR:FLT4:CTNNB1: R-HSA-9860500
+PI3K binds p-Y801,Y1054,Y1175-KDR in p-Y713-PECAM1:CDH5:p-Y801,Y1054,Y1175-KDR:p-Y1063,Y1230-FLT4:CTNNB1: R-HSA-9860477
+Phosphorylation of PI3K in p-Y713-PECAM1:CDH5:PIK3CA,B,D:PIK3R2:p-Y801,Y1054,Y1175-KDR:p-Y1063,Y1230-FLT4:CTNNB1: R-HSA-9860571
+Phospho-PI3K in p-Y713-PECAM1:CDH5:PIK3CA,B,D:p-Y464-PIK3R2:p-Y801,Y1054,Y1175-KDR:p-Y1063,Y1230-FLT4:CTNNB1 phosphorylates phosphoinositol-4,5-bisphosphate to yield phosphoinositol-3,4,5-trisphosphate: R-HSA-9860816
+AKT1 binds phosphoinositol-3,4,5-trisphosphate (PIP3): R-HSA-9860833
+mTORC2 phosphorylates AKT1 on serine-473: R-HSA-9860800
+p-T816-PKN2 phosphorylates AKT1 on serine-308: R-HSA-9860759
+Phospho-AKT1 phosphorylates NOS3 (eNOS) on serine-1177: R-HSA-9860792
+p-T816-PKN2 phosphorylates NOS3 (eNOS) on serine-1179: R-HSA-9860808
+Secretion of ADM (Adrenomedullin): R-HSA-9861331
+ADM (Adrenomedullin) binds CALCRL:RAMP2: R-HSA-9861332
+ADM:CALCRL:RAMP2 binds G(s):GDP:Gbeta:Ggamma heterotrimer: R-HSA-9861300
+ADM:CALCRL:RAMP2:G-alpha(s):GDP:G-beta:G-gamma exchanges GDP for GTP: R-HSA-9861324
+ADM:CALCRL:RAMP2:G-alpha(s):GTP:G-beta:G-gamma dissociates: R-HSA-9861293
+G alpha (s) activates adenylate cyclase: R-HSA-163617
+Activated Adenylate cyclase catalyses cAMP synthesis: R-HSA-164377
+cAMP binds PKA tetramer: R-HSA-8951727
+cAMP induces dissociation of inactive PKA tetramers: R-HSA-111925
+PKA phosphorylates NOS3 (eNOS) on serine-633: R-HSA-9861318
+Turbulent (oscillatory, disturbed) flow shear stress activates signaling by PIEZO1 and integrins in endothelial cells: R-HSA-9860927
+PTPN1 (PTP1B) dephosphorylates tyrosine-24 of ANXA2 (Annexin-2): R-HSA-9865167
+p-S26-ANXA2 binds integrin alpha5:beta1 at the plasma membrane: R-HSA-9865215
+p-S26-ANXA2:integrin alpha5:integrin beta1 (p-S26-ANXA2:ITGA5:ITGB1) binds fibronectin (FN1) matrix: R-HSA-9865228
+p-S715-PDE4D5 binds p-S26-ANXA2:integrin alpha5:integrin beta1:fibronectin (p-S26-ANXA2:ITGA5:ITGB1:fibronectin): R-HSA-9865182
+PPP2R2A binds p-S715-PDE4D5 in p-S26-ANXA2:p-S715-PDE4D5:ITGA5:ITGB1:fibronectin: R-HSA-9865501
+PPP2CA and PPP2R1A,B bind PPP2R2A in p-S26-ANXA2:p-S715-PDE4D5:ITGA5:ITGB1:fibronectin: R-HSA-9865520
+PP2A dephosphorylates serine-715 of PDE4D5 in p-S715-PDE4D5:integrin alpha5:integrin beta1:fibronectin: R-HSA-9865238
+PDE4D5 in p-S26-ANXA2:PP2A:PDE4D5:ITGA5:ITGB1:fibronectin hydrolyzes cAMP to yield AMP: R-HSA-9865748
+PP2A dephosphorylates serine-127 of YAP1: R-HSA-9865226
+Phosphorylation of ABL1 on tyrosine-393 in response to oscillatory shear stress: R-HSA-9865184
+p-Y393-ABL1 phosphorylates tyrosine-407 of YAP1: R-HSA-9865196
+p-Y407-YAP1 translocates from the cytosol to the nucleoplasm: R-HSA-9865176
+Phosphorylation of PTK2 (FAK) on tyrosine-397 in response to turbulent blood flow: R-HSA-9861484
+p-Y397-PTK2 (FAK) phosphorylates CHUK (IKKA): R-HSA-9861469
+PTK2 (FAK) and Gq/11 enhance the degradation of NFKBIA (IkBalpha), phosphorylation of RELA (p65) on serine-536, and translocation of p-S536-RELA:NFKB1 (p65:p50) to the nucleus: R-HSA-9861486
+Phosphorylation of IKBKE on serine-172 in response to low shear stress: R-HSA-9865492
+Phosphorylation of STAT1 on tyrosine-701 is enhanced by p-S172-IKBKE: R-HSA-9865511
+p-Y701-STAT1 dimerizes: R-HSA-8985943
+p-Y701-STAT1 dimer translocates from the cytosol to the nucleus: R-HSA-8985983
+p-Y701-STAT1 binds the NLRP3 gene: R-HSA-9865524
 Chromatin organization: R-HSA-4839726
 Chromatin modifying enzymes: R-HSA-3247509
 HATs acetylate histones: R-HSA-3214847
@@ -1808,6 +1894,9 @@ MUS81:EME1,EME2 cleaves D-loop: R-HSA-5686440
 Resolution of D-loops cleaved by MUS81:EME1 or MUS81:EME2: R-HSA-5686469
 Ligation of DNA and formation of Holliday structures following repair synthesis: R-HSA-5693539
 SPIDR binds BLM:TOP3A:RMI1:RMI2: R-HSA-5686398
+FIRRM binds FIGNL1: R-HSA-9853368
+FIGNL1 binds RAD51: R-HSA-9853389
+FIGNL1 binds SPIDR: R-HSA-9853376
 BLM mediates dissolution of double Holliday junction: R-HSA-5686410
 SLX1A:SLX4 binds MUS81:EME1,(MUS81:EME2): R-HSA-5686475
 Cleavage of Holliday junctions by GEN1 or SLX1A:SLX4:MUS81:EME1,(MUS81:EME2): R-HSA-5693584
@@ -2807,35 +2896,54 @@ Keratinocyte of spinosum layer differentiates into keratinocyte of granulosum la
 Keratinocyte of granulosum layer differentiates into corneocyte of corneum layer in interfollicular epidermis: R-HSA-9727355
 MITF-M-regulated melanocyte development: R-HSA-9730414
 Transcriptional and post-translational regulation of MITF-M expression and activity: R-HSA-9856649
+FOXD3 gene expression: R-HSA-9732107
 FOXD3 binds PAX3: R-HSA-9732097
 SOX10 and PAX3 bind the MITF promoter: R-HSA-9730407
 p-S133-CREB1 binds MITF promoter: R-HSA-9824653
-SOX2 binds the MITF gene: R-HSA-9732125
+SOX2 binds the MITF promoter: R-HSA-9732125
 AXL3 binds MITF promoter: R-HSA-9858238
-POU3F2 binds the MITF gene: R-HSA-9858286
-LEF1, CTNNB1 and MITF-M bind the MITF gene: R-HSA-9824598
+POU3F2 binds the MITF promoter: R-HSA-9858286
+LEF1, CTNNB1 and MITF-M bind the MITF promoter: R-HSA-9824598
 MITF gene expression: R-HSA-9730412
 MITF dimerizes: R-HSA-9857375
-MAPK1-dependent phosphorylation of MITF-M: R-HSA-9824977
+MAPK1 phosphorylates SOX10: R-HSA-9824582
 GSK3B phosphorylates p-S73 MITF-M at residue S69: R-HSA-9824999
+MAPK1-dependent phosphorylation of MITF-M: R-HSA-9824977
 XPO1 binds p-S69,73 MITF-M: R-HSA-9824979
 XPO1-dependent export of p-S69,S73 MITF-M: R-HSA-9824986
 RPS6KA1-dependent phosphorylation of MITF-M: R-HSA-9824994
 GSK3B phosphorylates p-S409 MITF-M at S397, S401 and S405: R-HSA-9824995
+SNAI2 gene expression: R-HSA-9825406
+AKT3 phosphorylates TBX3: R-HSA-9825704
+p-S742 TBX3 binds CDH1 promoter: R-HSA-9825794
+SNAI2 binds CDH1 gene promoter: R-HSA-9768533
+SNAI2 and TBX3 repress CDH1 gene expression during melanocyte development: R-HSA-9825774
+p-S742 TBX3 binds ID1 promoter: R-HSA-9825776
+TBX3-dependent ID1 gene expression: R-HSA-9825780
 MAPK-dependent phosphorylation of KARS: R-HSA-9825759
+p-S207 KARS1 dimer translocates to the nucleus: R-HSA-9825783
 CREBBP acetylates HINT1 dimer: R-HSA-9825747
+SIRT1 deacetylates HINT1 dimer: R-HSA-9825772
+p-S207 KARS1 dimer synthesizes A(5')p4(5')A: R-HSA-9825790
 HINT1 binds MITF-M: R-HSA-9825751
+p-S207 KARS1 dimer binds MITF-M:HINT1 dimer: R-HSA-9825782
+p-S207 KARS displaces HINT1: R-HSA-9825788
 MITF-M-dependent gene expression: R-HSA-9856651
 Regulation of MITF-M-dependent genes involved in pigmentation: R-HSA-9824585
-MITF-M and the BAF complex bind the TYR promoter: R-HSA-9824981
+USF1 is phosphorylated by p-MAPK14: R-HSA-9855910
+p-T153 USF1 dimer binds the TYR promoter: R-HSA-9855908
+MITF-M and the SWI/SNF complex bind the TYR promoter: R-HSA-9824981
+MITF-M dimer and TFAP2A bind intronic elements in the IRF4 gene: R-HSA-9907144
+MITF-M-dependent IRF4 gene expression: R-HSA-9907147
+IRF4 binds the TYR promoter: R-HSA-9907145
 MITF-M-dependent TYR gene expression: R-HSA-9824579
-MITF-M dimer, SOX10, pS133 CREB1 and CTNNB1:LEF1 bind the DCTgene: R-HSA-9825848
+MITF-M dimer, SOX10, pS133 CREB1 and CTNNB1:LEF1 bind the DCT promoter: R-HSA-9825848
 MITF-M-dependent DCT gene expression: R-HSA-9824586
-MITF-M dimer and the BAF complex bind the TYRP1 gene: R-HSA-9825847
+MITF-M dimer and the SWI/SNF complex bind the TYRP1 promoter: R-HSA-9825847
 MITF-M-dependent TYRP1 gene expression: R-HSA-9824593
-MITF-M dimer binds GPR143 gene: R-HSA-9856056
+MITF-M dimer binds GPR143 promoter: R-HSA-9856056
 MITF-M-dependent GPR143 expression: R-HSA-9856053
-MITF-M dimer binds the PMEL gene: R-HSA-9825842
+MITF-M dimer binds an intronic element in the PMEL gene: R-HSA-9825842
 MITF-M-dependent PMEL gene expression: R-HSA-9825846
 MITF-M dimer binds MLANA gene: R-HSA-9825844
 MITF-M-dependent MLANA gene expression: R-HSA-9825856
@@ -2844,12 +2952,13 @@ MITF-M-dependent RAB27A expression: R-HSA-9856460
 MITF-M dimer binds MYO5A gene: R-HSA-9856464
 MITF-M-dependent MYO5A expression: R-HSA-9856462
 p-AKT2 phosphorylates Myosin 5A: R-HSA-1449597
+MLPH/MYRIP bind GGC-RAB27A and MYO5A: R-HSA-9856465
 Regulation of MITF-M-dependent genes involved in cell cycle and proliferation: R-HSA-9825892
 MITF-M dimer binds the TBX2 gene: R-HSA-9825845
 MITF-M-dependent TBX2 gene expression: R-HSA-9825840
-MITF-M dimer binds the CDKN1A gene: R-HSA-9825835
+MITF-M dimer binds the CDKN1A promoter: R-HSA-9825835
 MITF-M-dependent CDKN1A expression: R-HSA-9825837
-MITF-M dimer binds the MET gene: R-HSA-9825836
+MITF-M dimer binds the MET promoter: R-HSA-9825836
 MITF-M-dependent MET gene expression: R-HSA-9824597
 MITF-M dimer binds the CDK2 gene: R-HSA-9858560
 MITF-M-dependent CDK2 expression: R-HSA-9858566
@@ -2857,6 +2966,7 @@ MITF-M dimer binds the CCNB1 gene: R-HSA-9858643
 MITF-M-dependent CCNB1 gene expression: R-HSA-9858641
 MITF-M dimer binds the CCND1 gene: R-HSA-9858650
 TCF/LEF:CTNNB1 binds the CCND1 gene: R-HSA-9858646
+HINT1, HDAC1, and SIN3A bind CTNNB1 at the CCND1 promoter: R-HSA-9858647
 MITF-M and CTNNB1-dependent CCND1 expression: R-HSA-9858645
 MITF-M dimer binds the CDKN2A gene: R-HSA-9858652
 MITF-M-dependent expression of CDKN2A gene product 16INK4A : R-HSA-9858651
@@ -3013,7 +3123,7 @@ Non-covalent tyrosine kinase inhibitors bind and inactivate sensitive ligand-res
 Covalent tyrosine kinase inhibitors bind and inactivate EGFR kinase domain mutant dimers resistant to non-covalent tyrosine kinase inhibitors: R-HSA-1220611
 Signaling by EGFRvIII in Cancer: R-HSA-5637812
 Constitutive Signaling by EGFRvIII: R-HSA-5637810
-EGFRvIII mutant binds chaperone proteins HSP90 and CDC37.: R-HSA-1247999
+EGFRvIII mutant binds chaperone proteins HSP90 and CDC37: R-HSA-1247999
 EGFRvIII cancer variant does not bind EGF ligand: R-HSA-5638137
 Ligand-independent dimerization of EGFRvIII mutant: R-HSA-1248002
 Trans-autophosphorylation of EGFRvIII mutant dimers: R-HSA-1248655
@@ -3060,7 +3170,7 @@ p-BCR-pFGFR1 binds GRB2:GAB2: R-HSA-1839095
 p-BCR-p-FGFR1 phosphorylates GAB2: R-HSA-1839110
 BCR-FGFR1:GRB2:p-GAB2 binds PIK3R1: R-HSA-1839114
 BCR-FGFR1 fusion:GRB2:p-GAB2:PIK3R1 binds PIK3CA : R-HSA-1839102
-BCR-FGFR1-associated PI3K phosphorylates PIP2 to PIP3.: R-HSA-1839107
+BCR-FGFR1-associated PI3K phosphorylates PIP2 to PIP3: R-HSA-1839107
 Phosphorylation of STAT5 by cytosolic FGFR1 fusions: R-HSA-1839112
 FGFR1OP-FGFR1 phosphorylates STAT1 and STAT3: R-HSA-1888198
 Signaling by plasma membrane FGFR1 fusions: R-HSA-8853336
@@ -3827,8 +3937,6 @@ Defective ABCB6 causes MCOPCB7: R-HSA-5683371
 Defective ABCB6 does not transport porphyrin from cytosol into mitochondria matrix: R-HSA-5683355
 Defective ABCB11 causes PFIC2 and BRIC2: R-HSA-5678520
 Defective ABCB11 does not transport bile salts from cytosol to extracellular region: R-HSA-5678517
-Defective ABCD4 causes MAHCJ: R-HSA-5683329
-Defective ABCD4:LMBRD1 does not transport Cbl from lysosomal lumen to cytosol: R-HSA-5683325
 Defective ABCC9 causes CMD10, ATFB12 and Cantu syndrome: R-HSA-5678420
 Defective ABCC9 (in KCNJ11:ABCC9) does not transport K+ from extracellular region to cytosol: R-HSA-5678418
 Defective ABCA1 causes TGD: R-HSA-5682113
@@ -3843,9 +3951,11 @@ Defective ABCC6 causes PXE: R-HSA-5690338
 Defective ABCC6 does not transport organic anion from cytosol to extracellular region: R-HSA-5690340
 Defective ABCC8 can cause hypo- and hyper-glycemias: R-HSA-5683177
 Defective ABCC8 does not form functional KATP channels, causing hyperinsulinemic hypoglycemia: R-HSA-5683113
-Activating ABCC8 mutants cause hyperglycemia in permanent neonatal diabetes mellitus (PNDM) and transient neonatal DM (TNDM).: R-HSA-5683209
+Activating ABCC8 mutants cause hyperglycemia in permanent neonatal diabetes mellitus (PNDM) and transient neonatal DM (TNDM): R-HSA-5683209
 Defective ABCD1 causes ALD: R-HSA-5684045
 Defective ABCD1 does not transfer LCFAs from cytosol to peroxisomal matrix: R-HSA-5684043
+Defective ABCD4 causes MAHCJ: R-HSA-5683329
+Defective ABCD4:LMBRD1 does not transport Cbl from lysosomal lumen to cytosol: R-HSA-5683325
 Defective ABCG5 causes sitosterolemia: R-HSA-5679096
 Defective ABCG5 (in ABCG5:ABCG8) does not transport sterols from cytosol to extracellular region: R-HSA-5679145
 Defective ABCG8 causes GBD4 and sitosterolemia: R-HSA-5679090
@@ -3853,8 +3963,6 @@ Defective ABCG8 (in ABCG5:ABCG8) does not transport sterols from cytosol to extr
 SLC transporter disorders: R-HSA-5619102
 Defective AVP does not bind AVPR1A,B and causes neurohypophyseal diabetes insipidus (NDI): R-HSA-5619099
 Defective AVP mutants do not bind AVPR1A,B: R-HSA-5621425
-Defective SLC26A2 causes chondrodysplasias: R-HSA-3560792
-Defective SLC26A2 does not cotransport extracellular SO4(2-), H+ to cytosol: R-HSA-3560789
 Defective AVP does not bind AVPR2 and causes neurohypophyseal diabetes insipidus (NDI): R-HSA-9036092
 Defective AVP mutants do not bind AVPR2: R-HSA-9035517
 Defective CP causes aceruloplasminemia (ACERULOP): R-HSA-5619060
@@ -3897,6 +4005,8 @@ Defective SLC24A4 causes hypomineralized amelogenesis imperfecta (AI): R-HSA-561
 Defective SLC24A4 does not exchange extracellular 4Na+ for cytosolic Ca2+, K+: R-HSA-5626270
 Defective SLC24A5 causes oculocutaneous albinism 6 (OCA6): R-HSA-5619036
 Defective SLC24A5 does not exchange cytosolic 4Na+ for Golgi luminal Ca2+, K+: R-HSA-5626356
+Defective SLC26A2 causes chondrodysplasias: R-HSA-3560792
+Defective SLC26A2 does not cotransport extracellular SO4(2-), H+ to cytosol: R-HSA-3560789
 Defective SLC26A3 causes congenital secretory chloride diarrhea 1 (DIAR1): R-HSA-5619085
 SLC26A3 does not exchange Cl- for HCO3-: R-HSA-5627737
 Defective SLC26A4 causes Pendred syndrome (PDS): R-HSA-5619046
@@ -4331,6 +4441,30 @@ Diseases of mitochondrial beta oxidation: R-HSA-9759774
 Diseases of propionyl-CoA catabolism: R-HSA-9759785
 Defective MUT causes MMAM: R-HSA-3359478
 Defective MUT does not isomerise L-MM-CoA to SUCC-CoA: R-HSA-3322971
+Diseases of branched-chain amino acid catabolism: R-HSA-9865118
+Maple Syrup Urine Disease: R-HSA-9865114
+Loss-of-function mutations in BCKDHA or BCKDHB cause MSUD: R-HSA-9865125
+BCKDHA or BCKDHB loss-of-function mutants don't synthesize BCAA-CoA: R-HSA-9865121
+Loss-of-function mutations in DBT cause MSUD2: R-HSA-9865113
+DBT loss-of-function mutants don't synthesize BCAA-CoA: R-HSA-9865115
+Loss-of-function mutations in DLD cause MSUD3/DLDD: R-HSA-9907570
+Loss-of-function DLD mutants don't dehydrogenate dihydrolipoyl DBT: R-HSA-9907572
+H139Hfs13* PPM1K causes a mild variant of  MSUD: R-HSA-9912529
+H139Hfs13* PPM1K does not dephosphorylate BCKDH: R-HSA-9912527
+Branched-chain ketoacid dehydrogenase kinase deficiency: R-HSA-9912481
+BCKDK loss-of-function mutations do not phosphorylate BCKDH: R-HSA-9912480
+Isovaleric acidemia: R-HSA-9914355
+IVD mutants don't synthesize beta-methylcrotonyl-CoA: R-HSA-9914837
+3-Methylcrotonyl-CoA carboxylase deficiency: R-HSA-9909438
+MCCC mutants don't synthesize beta-methylglutaconyl-CoA: R-HSA-9909466
+3-methylglutaconic aciduria: R-HSA-9914274
+AUH mutants don't synthesize 3-hydroxy-methylglutaryl-CoA: R-HSA-9914271
+Beta-ketothiolase deficiency: R-HSA-9915355
+ACAT1 mutants don't synthesize propionyl-CoA or acetyl-CoA: R-HSA-9915356
+Mitochondrial short-chain enoyl-CoA hydratase deficiency 1: R-HSA-9916720
+ECHS1 mutants don't synthesize beta-hydroxyisobutyryl-CoA: R-HSA-9916717
+3-hydroxyisobutyryl-CoA hydrolase deficiency: R-HSA-9916722
+HIBCH mutants don't synthesize beta-hydroxyisobutyrate: R-HSA-9916727
 Infectious disease: R-HSA-5663205
 Bacterial Infection Pathways: R-HSA-9824439
 Uptake and actions of bacterial toxins: R-HSA-5339562
@@ -4431,27 +4565,27 @@ EPS15 and HGS bind CBL-monoubiquitinated MET engaged with Listeria InlB: R-HSA-8
 Infection with Mycobacterium tuberculosis: R-HSA-9635486
 Modulation by Mtb of host immune system: R-HSA-9637628
 PstS1 binds MRC1: R-HSA-9637605
-esxA translocates from Mtb cytosol to the host's ER: R-HSA-9637651
-esxA binds TLR2: R-HSA-9637638
+EsxA translocates from Mtb cytosol to the host's ER: R-HSA-9637651
+EsxA binds TLR2: R-HSA-9637638
 Rv2779c binds TLR2: R-HSA-9637641
+EsxA binds B2M: R-HSA-9637635
 PtpA binds Ubiquitin: R-HSA-9636461
-esxA binds B2M: R-HSA-9637635
 Response of Mtb to phagocytosis: R-HSA-9637690
 Inhibition of membrane repair: R-HSA-9635644
-esxG binds esxH: R-HSA-9697057
-esxG:esxH translocates from MTb cytosol to host phagosomal lumen: R-HSA-9635666
-esxG:esxH binds HGS: R-HSA-9635667
+EsxG binds esxH: R-HSA-9697057
+EsxG:EsxH translocates from MTb cytosol to host phagosomal lumen: R-HSA-9635666
+EsxG:EsxH binds HGS: R-HSA-9635667
 Suppression of phagosomal maturation: R-HSA-9637687
 Prevention of phagosomal-lysosomal fusion: R-HSA-9636383
-lprG binds to LAM,LM: R-HSA-9697064
-Rv1410c transports lprG:LM,LAM from cytosol to the cell wall: R-HSA-9697077
-lprG dissociates from LAM,LM: R-HSA-9697070
+LprG binds to LAM,LM: R-HSA-9697064
+Rv1410c transports LprG:LM,LAM from cytosol to the cell wall: R-HSA-9697077
+LprG dissociates from LAM,LM: R-HSA-9697070
 LAM translocates from the cell wall to the plasma membrane: R-HSA-9636404
 PtpA:Ub dephosphorylates p-Y133-VPS33B: R-HSA-9636439
-lpdC binds to CORO1A: R-HSA-9636396
+LpdC binds to CORO1A: R-HSA-9636396
 SecA2 transports SapM from cytoplasm to cytosol: R-HSA-9636375
 SapM dephosphorylates PI3P: R-HSA-9636457
-ndkA dephosphorylates RAB5A:GTP,RAB7A:GTP: R-HSA-9636684
+NdkA dephosphorylates RAB5A:GTP,RAB7A:GTP: R-HSA-9636684
 Inhibition of nitric oxide production: R-HSA-9636249
 PPE2 binds KPNA1:KPNB1: R-HSA-9636251
 PPE2:KPNA1:KPNB1 translocates to the nucleus: R-HSA-9636247
@@ -4461,8 +4595,8 @@ NOS2 gene produces NOS2 protein: R-HSA-9636261
 Blockage of phagosome acidification: R-HSA-9636467
 PtpA binds ATP6V1H: R-HSA-9636397
 Manipulation of host energy metabolism: R-HSA-9636667
-esxA binds ENO1: R-HSA-9636669
-esxA binds PGK1: R-HSA-9636658
+EsxA binds ENO1: R-HSA-9636669
+EsxA binds PGK1: R-HSA-9636658
 Suppression of apoptosis: R-HSA-9635465
 PtpA dephosphorylates GSK3A: R-HSA-9635461
 Rv3364c binds cathepsin G: R-HSA-9635424
@@ -4497,7 +4631,7 @@ AhpC reduces peroxidated lipids: R-HSA-1222526
 Cell redox homeostasis: R-HSA-1222541
 AhpD reactivates AhpC: R-HSA-1222655
 DlaT reactivates AhpD: R-HSA-1222690
-lpdC dimer reactivates dlaT: R-HSA-1222412
+LpdC dimer reactivates DlaT: R-HSA-1222412
 TrxA reactivates AhpC: R-HSA-1222417
 TrxB reactivates TrxA: R-HSA-1222485
 TrxA/B1 reactivates Tpx: R-HSA-1222644
@@ -4519,7 +4653,7 @@ CpnT hydrolyses NAD+: R-HSA-9637699
 Antimicrobial action and antimicrobial resistance in Mtb: R-HSA-9639775
 RNAP transcribes Mtb RNA polyanion: R-HSA-9697085
 Rifampicin binds Mtb RNAP: R-HSA-9697086
-Defective rpoB in Mtb RNAP transcribes RNA polyanion: R-HSA-9697084
+Defective RpoB in Mtb RNAP transcribes RNA polyanion: R-HSA-9697084
 Viral Infection Pathways: R-HSA-9824446
 HIV Infection: R-HSA-162906
 HIV Life Cycle: R-HSA-162587
@@ -5401,10 +5535,7 @@ Release of PLCG from FCGR3A: R-HSA-9664271
 PLC-gamma1 hydrolyses PIP2: R-HSA-202407
 IP3 binds to the IP3 receptor, opening the endoplasmic reticulum Ca2+ channel: R-HSA-169680
 IP3R:I(1,4,5)P3 tetramer transports Ca2+ from ER lumen to cytosol: R-HSA-169683
-Calcium binds calmodulin: R-HSA-74448
 Adenylate cyclase produces cAMP: R-HSA-111930
-cAMP binds PKA tetramer: R-HSA-8951727
-cAMP induces dissociation of inactive PKA tetramers: R-HSA-111925
 PKA catalytic subunit translocates to the nucleus: R-HSA-111924
 PKA phosphorylates CREB1: R-HSA-111919
 CREB1 binds IL-10 promoter: R-HSA-9664332
@@ -5414,7 +5545,6 @@ ADORA2B binds Ade-Rib: R-HSA-9660829
 ADORA2B:Ade-Rib binds heterometric G-protein Gs: R-HSA-9660828
 ADORA2B (in Ade-Rib:ADORA2B:Heterotrimeric G-protein Gs) exchanges GDP for GTP on Gs: R-HSA-9660824
 ADORA2B:Ade-Rib:GsGTP dissociates: R-HSA-9660819
-G alpha (s) activates adenylate cyclase: R-HSA-163617
 Adenylate cyclase converts ATP to 3',5'-cyclic AMP (cAMP) and pyrophosphate: R-HSA-392129
 CREB binds IL6 promoter: R-HSA-9662708
 IL6 gene produces IL6 protein: R-HSA-9662710
@@ -5425,10 +5555,8 @@ LTC4 binds CyslTR1,2: R-HSA-9664306
 Diseases of Immune System: R-HSA-5260271
 Diseases associated with the TLR signaling cascade: R-HSA-5602358
 IRAK4 deficiency (TLR2/4): R-HSA-5603041
-Defective IRAK4 does not bind MyD88 within the TLR2/4 complex: R-HSA-5602672
-Defective IRAK4 variants do not bind MyD88:MAL:BTK:activated TLR2/4: R-HSA-5602353
+Defective IRAK4 does not bind MyD88:MAL:BTK:activated TLR2/4: R-HSA-5602353
 IRAK4 deficiency (TLR5): R-HSA-5603037
-Defective IRAK4 does not form a complex with MyD88 within the TLR5 complex: R-HSA-5602472
 IRAK4 deficiency blocks formation of the MyD88-IRAK4 Myddosome in the TLR5 pathway: R-HSA-5602603
 MyD88 deficiency (TLR2/4): R-HSA-5602498
 Defective MyD88 does not bind MAL(TIRAP):TLR2/4: R-HSA-5602606
@@ -5455,16 +5583,21 @@ G or G analog binds C-ter TLR7 GoF variant : R-HSA-9824849
 Diseases of the neuronal system: R-HSA-9675143
 Diseases associated with visual transduction: R-HSA-2474795
 Retinoid cycle disease events: R-HSA-2453864
+Defective visual phototransduction due to STRA6 loss of function: R-HSA-9918449
 Defective STRA6 does not transport atROL: R-HSA-2453818
+Defective visual phototransduction due to LRAT loss of function: R-HSA-9918442
 Defective LRAT does not esterify RBP1:atROL and FACYLs to atREs: R-HSA-2466710
+Defective visual phototransduction due to ABCA4 loss of function: R-HSA-9918454
 Defective ABCA4 does not transport NRPE from disc membranes: R-HSA-2466802
-Defective OPN1SW causes tritanopia: R-HSA-2466834
-Defective OPN1MW causes DCB and BCM: R-HSA-2466706
-Defective OPN1MW causes COD5: R-HSA-2471641
-Defective OPN1LW causes BCM: R-HSA-2466822
-Defective OPN1LW causes CBP: R-HSA-2471660
-Defective RDH12 does not reduce atRAL to atROL and causes LCA13: R-HSA-2466861
-Defective RDH12 does not reduce atRAL to atROL: R-HSA-2471670
+Defective visual phototransduction due to OPN1SW loss of function: R-HSA-9918443
+Defective OPN1SW does not bind 11cRAL: R-HSA-2466834
+Defective visual phototransduction due to OPN1MW loss of function: R-HSA-9918436
+Defective OPN1MW does not bind 11cRAL: R-HSA-2466706
+Defective visual phototransduction due to OPN1LW loss of function: R-HSA-9918450
+Defective OPN1LW does not bind 11cRAL: R-HSA-2466822
+Defective visual phototransduction due to RDH12 loss of function: R-HSA-9918440
+Defective RDH12 does not reduce atRAL to atROL: R-HSA-2466861
+Defective visual phototransduction due to RDH5 loss of function: R-HSA-9918438
 Defective RDH5 does not oxidise 11cROL to 11cRAL and causes RPA: R-HSA-2466832
 Biosynthesis of A2E, implicated in retinal degradation: R-HSA-2466712
 atRAL can spontaneously react with PE to form NRPE: R-HSA-2466846
@@ -5683,7 +5816,7 @@ Procollagen lysyl hydroxylases convert collagen lysines to 5-hydroxylysines: R-H
 Lysyl hydroxylated collagen propeptides dissociate from Lysyl hydroxylases: R-HSA-8948232
 COLGALT1,COLGALT2 bind Lysyl hydroxylated collagen propeptides: R-HSA-8948228
 PLOD3 binds Lysyl hydroxylated collagen propeptides: R-HSA-8948219
-Galactosylation of collagen propeptide hydroxylysines by procollagen galactosyltransferases 1, 2.: R-HSA-1981120
+Galactosylation of collagen propeptide hydroxylysines by procollagen galactosyltransferases 1, 2: R-HSA-1981120
 Galactosylation of collagen propeptide hydroxylysines by PLOD3: R-HSA-1981128
 COLGALT1,COLGALT2:Galactosyl-hydroxylysyl collagen propeptides dissociates: R-HSA-8948231
 PLOD3:Fe2+ dimer:Galactosyl-hydroxylysyl collagen propeptides dissociates: R-HSA-8948222
@@ -5749,7 +5882,7 @@ Collagen type IV sulfilimine cross-linking by peroxidasin: R-HSA-2559639
 Formation of collagen fibres: R-HSA-2213201
 Collagen XI cross-links with collagen II: R-HSA-2299620
 Collagen IX is cross-linked to the surface of collagen type II fibrils: R-HSA-2213210
-Type XII and XIV collagens associate with type I and type II fibrils.: R-HSA-2213205
+Type XII and XIV collagens associate with type I and type II fibrils: R-HSA-2213205
 Type X collagen associates with collagen type II fibrils: R-HSA-2213208
 Hemidesmosome formation: R-HSA-2213192
 Release of endostatin-like peptides: R-HSA-2213200
@@ -5934,7 +6067,7 @@ HSPG2 (perlecan) degradation by MMP14, MMP15: R-HSA-2534240
 HSPG2 (perlecan) is cleaved by BMP1, TLL1, TLL2, Cathepsin L1: R-HSA-3814820
 DCN (decorin) degradation by MMP2, MMP3, MMP7: R-HSA-2534248
 DCN (decorin) degradation by MMP14: R-HSA-3828025
-E-cadherin degradation by MMP3, MMP7 and plasmin.: R-HSA-1454843
+E-cadherin degradation by MMP3, MMP7 and plasmin: R-HSA-1454843
 E-cadherin degradation by MMP9, KLK7: R-HSA-3827958
 E-cadherin degradation by ADAM10, ADAM15: R-HSA-4224014
 E-cadherin degradation by PS1:NCSTN (Gamma-secretase): R-HSA-2534206
@@ -7124,7 +7257,7 @@ B-WICH recruits histone acetyltransferases: R-HSA-5250930
 B-WICH:histone acetyltransferase acetylates histone H3 at lysine-9: R-HSA-5250938
 ERCC6 (CSB) and EHMT2 (G9a) positively regulate rRNA expression: R-HSA-427389
 Recruitment of ERCC6 (CSB), EHMT2 (G9a), and NuRD to the promoter of rRNA gene: R-HSA-427404
-TTF1:rRNA promoter:ERCC6:EHMT2 complex dimethylates histone H3 at lysine-9.: R-HSA-427336
+TTF1:rRNA promoter:ERCC6:EHMT2 complex dimethylates histone H3 at lysine-9: R-HSA-427336
 CBX3 (HP1gamma) binds histone H3 dimethylated at lysine-9: R-HSA-427383
 Negative epigenetic regulation of rRNA expression: R-HSA-5250941
 SIRT1 negatively regulates rRNA expression: R-HSA-427359
@@ -7148,9 +7281,13 @@ DNMT3B:DNMT3L methylates cytosine in DNA: R-HSA-5334097
 UHRF1 binds chromatin with hemimethylated cytosine: R-HSA-5334099
 UHRF1:Chromatin binds DNMT1: R-HSA-5334160
 DNMT1 methylates cytosine in hemimethylated DNA: R-HSA-5334151
+Epigenetic regulation by WDR5-containing histone modifying complexes: R-HSA-9917777
 Formation of WDR5-containing histone-modifying complexes: R-HSA-9772755
 Formation of the RBBP5:ASH2L heterodimer: R-HSA-9675215
+PAXIP1 binds PAGR1: R-HSA-9821395
 Formation of the WRAD complex: R-HSA-9675214
+PAXIP1:PAGR1 complex, NCOA6 and KDM6A bind MLL3 complex: R-HSA-9821412
+PAXIP1:PAGR1 complex, NCOA6 and KDM6A bind MLL4 complex: R-HSA-9821410
 TASP1 cleaves KMT2A: R-HSA-9818574
 Cleaved KMT2A dimers translocate to the nucleus: R-HSA-9818576
 Formation of the MLL1 complex: R-HSA-9675026
@@ -7170,15 +7307,74 @@ AKAP8L binds MLL1 complex: R-HSA-9821368
 MEN1 binds MLL2 complex: R-HSA-9818682
 PSIP1 binds MEN1 associated with MLL2 complex: R-HSA-9821902
 AKAP8L binds MLL2 complex: R-HSA-9821366
-PAXIP1 binds PAGR1: R-HSA-9821395
-PAXIP1:PAGR1 complex, NCOA6 and KDM6A bind MLL3 complex: R-HSA-9821412
-PAXIP1:PAGR1 complex, NCOA6 and KDM6A bind MLL4 complex: R-HSA-9821410
 CXXC1 and WDR82 bind SET1A complex: R-HSA-9821475
 HCFC1 binds SET1A complex: R-HSA-9821486
 BOD1L1 binds SET1A complex: R-HSA-9821931
 CXXC1 and WDR82 bind SET1B complex: R-HSA-9821476
 BOD1 binds SET1B complex: R-HSA-9821941
 Formation of the NSL complex: R-HSA-9828175
+Epigenetic regulation of gene expression by MLL3 and MLL4 complexes: R-HSA-9818564
+Epigenetic regulation of adipogenesis genes by MLL3 and MLL4 complexes: R-HSA-9851695
+MLL4 and MLL3 complexes regulate expression of PPARG target genes in adipogenesis and hepatic steatosis: R-HSA-9841922
+ABL1 binds PPARG2: R-HSA-9842028
+ABL1 phosphorylates PPARG2: R-HSA-9841924
+PHLDA1 binds PPARG: R-HSA-9843219
+PPARG binds RXRA: R-HSA-9843112
+PPARG:RXRA heterodimer binds target gene loci: R-HSA-9843122
+Unliganded PPARG:RXRA heterodimer recruits corepressors to target gene loci: R-HSA-9843115
+PPARG binds ligands: R-HSA-9842815
+RXRA binds ligands: R-HSA-9843118
+Corepressors are released from liganded PPARG:RXRA heterodimer: R-HSA-9843117
+Coactivators are recruited to liganded PPARG:RXRA heterodimer: R-HSA-9843120
+MLL4-ASCOM,(MLL3-ASCOM) complex is recruited to ligand- and coactivator-bound PPARG:RXRA heterodimer: R-HSA-9843119
+KMT2D,(KMT2C) complex monomethylates nucleosomes at PPARG:RXRA-bound enhancers: R-HSA-9843121
+ACSL1 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859188
+ACSS3 gene expression is stimulated by PPARG2:RXRA:MLL4(MLL3)-ASCOM complex: R-HSA-9854128
+AGPAT2 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859084
+ADIPOQ gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9856211
+ANGPTL4 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859121
+CD36 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9851530
+CEBPA gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9856486
+CIDEC gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9851534
+DGAT2 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859291
+ELOVL5 gene expression is stimulated by PPARG2:RXRA:MLL4(MLL3)-ASCOM complex: R-HSA-9854142
+FABP4 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9843900
+GPAM gene expression is stimulated by PPARG2:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9854141
+LIPE gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859223
+LPIN1 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859334
+LPL gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859182
+MGLL gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859273
+PDK4 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859119
+PEX11A gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859005
+PLIN1 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859007
+PLIN2 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859196
+PLIN4 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859206
+PNPLA2 gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9859082
+PPARG2 transcription is stimulated by PPARG2:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9843116
+SCD gene expression is stimulated by PPARG:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9851539
+SCD5 gene expression is stimulated by PPARG2:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9854146
+THRSP gene expression is stimulated by PPARG2:RXRA:MLL4,(MLL3)-ASCOM complex: R-HSA-9854130
+Regulation of endogenous retroelements: R-HSA-9842860
+Regulation of endogenous retroelements by Piwi-interacting RNAs (piRNAs): R-HSA-9845323
+PIWIL4:piRNA binds nascent LINE1 pre-RNA and recruits SPOCD1, C19ORF84, DNMT3A, DNMT3L, the NURD complex, and the BAF complex: R-HSA-9727450
+DNMT3A:DNMT3L in nascent RNA transcript:MeR-PIWIL4:2'-O-methyl-piRNA:SPOCD1:DNMT3A:DNMT3L methylates cytosine in DNA: R-HSA-9845308
+Regulation of endogenous retroelements by KRAB-ZFP proteins: R-HSA-9843940
+KRAB-ZFP binds retroelement DNA in chromatin: R-HSA-9842835
+TRIM28 (KAP1) binds KRAB-ZFP in KRAB-ZFP:retroelement chromatin: R-HSA-9842850
+TRIM28 in TRIM28:KRAB-ZFP:retroelement chromatin autoSUMOylates with SUMO2: R-HSA-9842868
+ATF7IP:SETDB1 binds SUMO2-6K-TRIM28:KRAB-ZFP:retroelement chromatin: R-HSA-9842839
+SETDB1 in ATF7IP:SETDB1:SUMO2-6K-TRIM28:KRAB-ZFP:retroelement trimethylates lysine-9 of histone H3 in nucleosomes: R-HSA-9842833
+NuRD complex binds SUMO2-6K-TRIM28:KRAB-ZNF:retroelement: R-HSA-9842876
+CBX5 (HP-1alpha) binds TRIM28 (KAP1) in SUMO2-6K-TRIM28:KRAB-ZFP:retroelement chromatin: R-HSA-9843978
+Regulation of endogenous retroelements by the Human Silencing Hub (HUSH) complex: R-HSA-9843970
+HUSH complex binds LINE1 (L1) RNA: R-HSA-9843990
+EHMT1,EHMT2 trimethylates lysine-16 of ATF7IP: R-HSA-9844111
+me3-K16-ATF7IP:SETDB1 and MORC2 bind MPHOSPH8 (MPP8) in HUSH complex:L1 RNA: R-HSA-9843993
+SETDB1 in me3-K16-ATF7IP:SETDB1:MORC2:HUSH complex:L1 RNA trimethylates lysine-9 of histone H3 (H3K9me3): R-HSA-9844006
+MPHOSPH8 (MPP8) in HUSH complex binds histone H3 trimethyl-lysine 9 (H3K9me3) in L1HS,L1PA2,3 heterochromatin: R-HSA-9844015
+me3-K16-ATF7IP:SETDB1 and MORC2 bind MPHOSPH8 (MPP8) in HUSH complex:L1HS,L1PA2,3 heterochromatin: R-HSA-9843927
+SETDB1 in me3-K16-ATF7IP:SETDB1:MORC2:HUSH complex:L1HS,L1PA2,3 heterochromatin trimethylates lysine-9 of histone H3 in adjacent nucleosome: R-HSA-9844057
+MPHOSPH8 of the HUSH complex bound to retroelement chromatin binds ZCCHC8 of the NEXT complex: R-HSA-9844716
 Hemostasis: R-HSA-109582
 Platelet homeostasis: R-HSA-418346
 Prostacyclin signalling through prostacyclin receptor: R-HSA-392851
@@ -7213,16 +7409,16 @@ LDL binds to LRP8: R-HSA-432121
 FGR binds LDL:LRP8: R-HSA-8948034
 FGR binds and phosphorylates LRP8: R-HSA-432129
 Fgr may phosphorylate p38 MAPK: R-HSA-432148
-PECAM1 is phosphorylated: R-HSA-435244
-PECAM-1 binds PP2A: R-HSA-432143
-Phosphorylation of cPLA2 by MAPK p38 alpha: R-HSA-428961
-Interaction of PECAM-1 and SHP-1: R-HSA-210277
 Interaction of PECAM-1 and SHP-2: R-HSA-210294
+Phosphorylation of cPLA2 by MAPK p38 alpha: R-HSA-428961
+PECAM1 is phosphorylated: R-HSA-435244
+Interaction of PECAM-1 and SHP-1: R-HSA-210277
+PECAM-1 binds PP2A: R-HSA-432143
 PAFAH2 hydrolyses PAF to lyso-PAF and acetate: R-HSA-8869206
 Platelet Adhesion to exposed collagen: R-HSA-75892
+Binding of GPVI:Fc Epsilon R1 gamma receptor complex with collagen: R-HSA-114577
 Interaction of GPVI and FceRI gamma: R-HSA-210282
 GPVI binds Fyn and Lyn: R-HSA-432295
-Binding of GPVI:Fc Epsilon R1 gamma receptor complex with collagen: R-HSA-114577
 VWF multimer binds to collagen type I: R-HSA-9822539
 GPIb:IX:V binds to VWF multimer:collagen: R-HSA-9823065
 ADAMTS13 cleaves VWF multimer: R-HSA-9822532
@@ -7414,14 +7610,14 @@ thrombin:antithrombin III:heparin -> thrombin:cleaved antithrombin III:heparin: 
 thrombin:cleaved SERPINC1:SERPINC1 activators -> thrombin:cleaved SERPINC1 + SERPINC1 activators: R-HSA-140872
 activated thrombin (factor IIa) + thrombomodulin -> activated thrombin:thrombomodulin: R-HSA-141046
 PROCR binds Protein C: R-HSA-5591052
+Activated thrombin:thrombomodulin cleaves PROCR:Protein C to PROCR:Activated protein C: R-HSA-141040
 Activated protein C is released from PROCR: R-HSA-5603467
 Activated protein C binds Protein S: R-HSA-5604929
 Activated protein C cleaves factor Va to factor Vi intermediate form: R-HSA-141026
-Activated thrombin:thrombomodulin cleaves PROCR:Protein C to PROCR:Activated protein C: R-HSA-141040
 Activated protein C cleaves Factor Va intermediate form for Factor Va: R-HSA-5591040
 Activated protein C cleaves factor VIIIa: R-HSA-5607002
 Heparin cofactor 2 (SERPIND1) binds activated thrombin (factor IIa): R-HSA-5578883
-Protease nexin-1 (PN1) is a specific and extremely efficient inhibitor of thrombin.: R-HSA-5602080
+Protease nexin-1 (PN1) is a specific and extremely efficient inhibitor of thrombin: R-HSA-5602080
 SERPINA5 binds activated protein C: R-HSA-5591086
 Activated protein C:PROCR binds F2R: R-HSA-5607058
 Soluble PROCR binds activated protein C: R-HSA-5606996
@@ -7585,11 +7781,11 @@ NCK recruits WASP: R-HSA-430180
 Downstream TCR signaling: R-HSA-202424
 Recruitment of PI3K to plasma membrane: R-HSA-202203
 PI3K bound to TRAT1 phosphorylates PIP2 to PIP3: R-HSA-202365
+Translocation of PKC theta to plasma membrane: R-HSA-202328
 Hydrolysis of PIP3 to PI(3,4)P2: R-HSA-202237
 PTEN dephosphorylates PIP3: R-HSA-199456
-Translocation of PDK1 to Plasma membrane: R-HSA-202164
-Translocation of PKC theta to plasma membrane: R-HSA-202328
 Change of PKC theta conformation: R-HSA-202307
+Translocation of PDK1 to Plasma membrane: R-HSA-202164
 Phosphorylation of PKC theta: R-HSA-202222
 Translocation of CARMA1 to Plasma membrane: R-HSA-202394
 Phosphorylation of CARMA1: R-HSA-202437
@@ -7598,14 +7794,14 @@ Interaction of Bcl10 to CARMA1: R-HSA-202466
 Phosphorylation of Bcl10: R-HSA-202459
 Oligomerization of Bcl10: R-HSA-202489
 Interaction and oligomerization of MALT1 to Bcl10: R-HSA-202478
-Translocation of TRAF6 to CBM complex: R-HSA-202472
-Auto-ubiquitination of TRAF6: R-HSA-2730904
-Activation of TAK1-TAB2 complex: R-HSA-202510
-Activation of IKK complex: R-HSA-202500
 Ubiquitination of NEMO by TRAF6: R-HSA-202534
+Translocation of TRAF6 to CBM complex: R-HSA-202472
 p-S177,S181-IKKB:IKKA:pUb-NEMO phosphorylates IkB-alpha:NF-kB: R-HSA-202541
+Auto-ubiquitination of TRAF6: R-HSA-2730904
 beta-TRCP ubiquitinates IkB-alpha in p-S32,33-IkB-alpha:NF-kB complex: R-HSA-5607728
 26S proteasome processes K48PolyUb-K21,22-p-S32,36-IkBA:NF-kB complex to form NF-kB complex: R-HSA-5607724
+Activation of TAK1-TAB2 complex: R-HSA-202510
+Activation of IKK complex: R-HSA-202500
 NFKB1:RELA translocates from the cytosol to the nucleus: R-HSA-2730894
 Costimulation by the CD28 family: R-HSA-388841
 CD28 co-stimulation: R-HSA-389356
@@ -7698,7 +7894,7 @@ Interaction of E3 with substrate and E2-Ub complex: R-HSA-983157
 Transfer of Ub from E2 to substrate and release of E2: R-HSA-983140
 Polyubiquitination of substrate: R-HSA-983156
 Release of E3 from polyubiquitinated substrate: R-HSA-983147
-Proteasomal cleavage of substrate: R-HSA-1236935
+Proteasomal cleavage of substrate: R-HSA-983150
 Trimming of N-ter extended precursor fragments by cytosolic aminopeptidases: R-HSA-983162
 THOP1 cleaves oligopeptide fragment (8-16aa): R-HSA-8940641
 Antigen Presentation: Folding, assembly and peptide loading of class I MHC: R-HSA-983170
@@ -7727,6 +7923,7 @@ Partial proteolysis of antigen in phagolysosomes: R-HSA-1236938
 Escape of antigens from phagosome to cytosol: R-HSA-1236972
 ER-Phagosome pathway: R-HSA-1236974
 Egress of internalized antigen to the cytosol via sec61: R-HSA-1236947
+Proteasomal cleavage of substrate (26S proteasome catalyst): R-HSA-1236935
 Transport of SEC22B, TAP and PLC from ER to ERGIC: R-HSA-8863914
 SEC22B, CALR, STX4, TAP and TAPBP bind: R-HSA-8863858
 CALR, TAP, TAPBP dissociate from SEC22B:STX4: R-HSA-8951595
@@ -7746,7 +7943,7 @@ Internalization of receptor bound antigen into clathrin coted vesicles: R-HSA-12
 Movement of clathrin coated vesicles into early endosome: R-HSA-1236955
 Exogenous soluble antigen targeted to more stable early endosome: R-HSA-1236940
 Egress of internalized antigen into cytosol from early endosome: R-HSA-1236968
-Proteasomal clevage of exogenous antigen: R-HSA-1236970
+Proteasomal clevage of exogenous antigen (26S proteasome catalyst): R-HSA-1236970
 MHC class II antigen presentation: R-HSA-2132295
 Formation of MHC II alpha beta heterodimer: R-HSA-2213239
 Interaction of invariant chain trimer and MHC II alpha beta dimer: R-HSA-2130478
@@ -7777,7 +7974,6 @@ Transport of antigen loaded MHC II molecules to surface: R-HSA-2213248
 LAG3 (CD233) binds MHC II: R-HSA-8856157
 Immunoregulatory interactions between a Lymphoid and a non-Lymphoid cell: R-HSA-198933
 TCR complex interacts with peptide antigen-presenting MHC Class I: R-HSA-198955
-CD40L binds CD40: R-HSA-199404
 KIR2DL2/3 interacting with HLA-C group 1 (Cw4): R-HSA-198958
 NKG2D homodimer interacting with ligands: R-HSA-198983
 CD96 binds PVR: R-HSA-199014
@@ -7791,6 +7987,7 @@ Nectin 2 binds CD226: R-HSA-199144
 CD200 binds to CD200R: R-HSA-199154
 MHC Class I interacts with CD160: R-HSA-199169
 Fc gamma receptors interact with antigen-bound IgG: R-HSA-199161
+CD40L binds CD40: R-HSA-199404
 C3d-complexed antigen binds to complement receptor: R-HSA-199518
 KIR2DL1 interacting with HLA-C group 2 (Cw3): R-HSA-199558
 KIR3DL1 interacting with HLA Bw4: R-HSA-199566
@@ -7847,12 +8044,58 @@ MyD88 forms a complex with the activated TLR receptor: R-HSA-975866
 MyD88 oligomerization within the complex of activated TLR:MyD88: R-HSA-975880
 IRAK4 binds to MyD88 bound to the activated TLR5 or 10 receptor: R-HSA-975873
 IRAK4 autophosphorylation within the complex activated TLR:MyD88: R-HSA-975865
+IRAK1/or IRAK2 binds to the activated IRAK4 :oligo MyD88:activated TLR5 or 10 complex: R-HSA-975852
+Phosphorylation of IRAK2 bound to the activated IRAK4:MyD88 oligomerl:activated TLR5 or 10 complex: R-HSA-975861
+First phosphorylation of IRAK1 by IRAK4 bound to MyD88:activated TLR: R-HSA-975878
+Second phosphorylation of IRAK1 by IRAK4 bound to MyD88:activated TLR complex: R-HSA-975874
+Multiple IRAK1 autophosphorylation within the complex p-IRAK4:oligo MyD88:activated TLR: R-HSA-975853
+TRAF6 binds to hp- IRAK1 or p-IRAK2: R-HSA-975857
+Dissociation of hp-IRAK1:TRAF6 or IRAK2:TRAF6-oligomer from the activated TLR5 or 10:oligo-Myd88:p-IRAK4 complex: R-HSA-975879
+IRAK2 mediated activation of TAK1 complex: R-HSA-937042
+IRAK2 induces TRAF6 oligomerization: R-HSA-936963
+Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2: R-HSA-936942
+Activated TRAF6 synthesizes unanchored polyubiquitin chains: R-HSA-936986
+Activated TRAF6:p-IRAK2 interacts with TAK1 complex: R-HSA-936960
+Auto phosphorylation of TAK1 bound to p-IRAK2:pUb oligo-TRAF6: free K63 pUb:TAB1:TAB2/TAB3 : R-HSA-936991
+IRAK1 recruits IKK complex: R-HSA-937039
+Pellino binds hp-IRAK1:TRAF6: R-HSA-937044
+IRAK1 phosphorylates Pellino: R-HSA-937034
+Pellino ubiquitinates hp-IRAK1: R-HSA-937050
+NEMO subunit of IKK complex binds to activated IRAK1: R-HSA-937032
+TRAF6 binds MEKK1: R-HSA-166869
+TAK1-dependent IKK and NF-kappa-B activation  : R-HSA-445989
+CHUK, IKBKB and IKBKG form IKK complex: R-HSA-5609665
+Ubiquitination of IKBKG by TRAF6: R-HSA-9758604
+NF-kappa-B complex is transported from cytosol to nucleus: R-HSA-168166
+NF-kappa-B inhibitor binds NF-kappa-B complex: R-HSA-9630923
+Active IKBKB phosphorylates NF-kappa-B inhibitor : R-HSA-9773803
+Regulation of NF-kappa B signaling: R-HSA-9758274
+TP53 binds the IKBIP gene promoter: R-HSA-9749464
+TP53 stimulates IKBIP gene expression: R-HSA-9749487
+IKBIP binds IKBKB and CHUK: R-HSA-9749494
+LRRC14 binds IKBKB and CHUK: R-HSA-9749505
+NLRX1 binds CHUK:IKBKB:IKBKG: R-HSA-9749471
+NLRC5 binds IKBKB and CHUK: R-HSA-9750226
+TRAF2,6 ubiquitinates NLRC5: R-HSA-9750946
+USP14 deubiquitinates NLRC5: R-HSA-9750942
+USP18 binds IKBKG within IKK complex: R-HSA-9761344
+N4BP1 binds IKBKG: R-HSA-9757954
+CASP8 cleaves N4BP1 at D424, D490: R-HSA-9757951
 MAP kinase activation: R-HSA-450294
 JNK (c-Jun kinases) phosphorylation and  activation mediated by activated human TAK1: R-HSA-450321
 Activated TAK1 phosphorylates MKK4/MKK7: R-HSA-450337
 activated TAK1 mediates p38 MAPK activation: R-HSA-450302
 activated human TAK1 phosphorylates MKK3/MKK6: R-HSA-450346
 Nuclear export of human p38 MAPK mediated by its substrate MAPKAPK2 or 3: R-HSA-450257
+MAP3K8 (TPL2)-dependent MAPK1/3 activation: R-HSA-5684264
+NFKB p105, TPL2 (COT) and ABIN2 form a stable complex: R-HSA-451634
+IKBKB phosphorylates TPL2 (MAP3K8) at Ser400: R-HSA-5684275
+MAP3K8 is phosphorylated: R-HSA-5684261
+IKBKB phosphorylates NFkB p105 within the NFkB p105:TPL2:ABIN2 complex: R-HSA-5684267
+SCF betaTrCP1,2 binds p-NFkB p105:TPL2:ABIN2: R-HSA-5684248
+SCF betaTrCP ubiquitinates NFKB p105 within p-S927, S932-NFkB p105:TPL2:ABIN2 : R-HSA-5684250
+3xUb,p-S-NFkB p105:TPL2:ABIN2 dissociates due to degradation of p105: R-HSA-5684273
+TPL2 phosphorylates MEK1, SEK1: R-HSA-451649
 MAPK targets/ Nuclear events mediated by MAP kinases: R-HSA-450282
 ERK/MAPK targets: R-HSA-198753
 ERK1/2 activates ELK1: R-HSA-198731
@@ -7868,52 +8111,6 @@ MAPKAPK2 phosphorylates CREB at Serine 133: R-HSA-199917
 Activation of the AP-1 family of transcription factors: R-HSA-450341
 Phosphorylated MAPKs phosphorylate ATF-2: R-HSA-168053
 Formation of Activated Protein 1 (AP-1) complex. ATF2/c-JUN heterodimer. : R-HSA-168440
-MAP3K8 (TPL2)-dependent MAPK1/3 activation: R-HSA-5684264
-NFKB p105, TPL2 (COT) and ABIN2 form a stable complex: R-HSA-451634
-IKBKB phosphorylates TPL2 (MAP3K8) at Ser400: R-HSA-5684275
-MAP3K8 is phosphorylated: R-HSA-5684261
-IKBKB phosphorylates NFkB p105 within the NFkB p105:TPL2:ABIN2 complex: R-HSA-5684267
-SCF betaTrCP1,2 binds p-NFkB p105:TPL2:ABIN2: R-HSA-5684248
-SCF betaTrCP ubiquitinates NFKB p105 within p-S927, S932-NFkB p105:TPL2:ABIN2 : R-HSA-5684250
-3xUb,p-S-NFkB p105:TPL2:ABIN2 dissociates due to degradation of p105: R-HSA-5684273
-TPL2 phosphorylates MEK1, SEK1: R-HSA-451649
-IRAK1/or IRAK2 binds to the activated IRAK4 :oligo MyD88:activated TLR5 or 10 complex: R-HSA-975852
-Phosphorylation of IRAK2 bound to the activated IRAK4:MyD88 oligomerl:activated TLR5 or 10 complex: R-HSA-975861
-First phosphorylation of IRAK1 by IRAK4 bound to MyD88:activated TLR: R-HSA-975878
-Second phosphorylation of IRAK1 by IRAK4 bound to MyD88:activated TLR complex: R-HSA-975874
-Multiple IRAK1 autophosphorylation within the complex p-IRAK4:oligo MyD88:activated TLR: R-HSA-975853
-TRAF6 binds to hp- IRAK1 or p-IRAK2: R-HSA-975857
-Dissociation of hp-IRAK1:TRAF6 or IRAK2:TRAF6-oligomer from the activated TLR5 or 10:oligo-Myd88:p-IRAK4 complex: R-HSA-975879
-IRAK1 recruits IKK complex: R-HSA-937039
-Pellino binds hp-IRAK1:TRAF6: R-HSA-937044
-IRAK1 phosphorylates Pellino: R-HSA-937034
-Pellino ubiquitinates hp-IRAK1: R-HSA-937050
-NEMO subunit of IKK complex binds to activated IRAK1: R-HSA-937032
-IRAK2 mediated activation of TAK1 complex: R-HSA-937042
-IRAK2 induces TRAF6 oligomerization: R-HSA-936963
-Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2: R-HSA-936942
-Activated TRAF6 synthesizes unanchored polyubiquitin chains: R-HSA-936986
-Activated TRAF6:p-IRAK2 interacts with TAK1 complex: R-HSA-936960
-Auto phosphorylation of TAK1 bound to p-IRAK2:pUb oligo-TRAF6: free K63 pUb:TAB1:TAB2/TAB3 : R-HSA-936991
-TRAF6 binds MEKK1: R-HSA-166869
-TAK1-dependent IKK and NF-kappa-B activation  : R-HSA-445989
-CHUK, IKBKB and IKBKG form IKK complex: R-HSA-5609665
-Ubiquitination of IKBKG by TRAF6: R-HSA-9758604
-NF-kappa-B inhibitor binds NF-kappa-B complex: R-HSA-9630923
-Active IKBKB phosphorylates NF-kappa-B inhibitor : R-HSA-9773803
-NF-kappa-B complex is transported from cytosol to nucleus: R-HSA-168166
-Regulation of NF-kappa B signaling: R-HSA-9758274
-TP53 binds the IKBIP gene promoter: R-HSA-9749464
-TP53 stimulates IKBIP gene expression: R-HSA-9749487
-IKBIP binds IKBKB and CHUK: R-HSA-9749494
-LRRC14 binds IKBKB and CHUK: R-HSA-9749505
-NLRX1 binds CHUK:IKBKB:IKBKG: R-HSA-9749471
-NLRC5 binds IKBKB and CHUK: R-HSA-9750226
-TRAF2,6 ubiquitinates NLRC5: R-HSA-9750946
-USP14 deubiquitinates NLRC5: R-HSA-9750942
-USP18 binds IKBKG within IKK complex: R-HSA-9761344
-N4BP1 binds IKBKG: R-HSA-9757954
-CASP8 cleaves N4BP1 at D424, D490: R-HSA-9757951
 Toll Like Receptor 3 (TLR3) Cascade: R-HSA-168164
 Viral dsRNA binds the Toll-Like Receptor 3 (TLR3): R-HSA-168092
 Viral dsRNA:TLR3 recruits TRIF (TICAM1): R-HSA-168929
@@ -7960,7 +8157,7 @@ MyD88 interacts with the activated TLR receptor 7, 8 or 9 : R-HSA-975175
 MyD88 oligomerization within the complex of activated TLR 7/8 or 9 : MyD88: R-HSA-975098
 IRAK4 binds to the activated TLR7/8 or 9 receptor:MyD88 complex : R-HSA-975156
 IRAK4 autophosphorylation in the complex with MyD88:activated TLR 7/8 or 9: R-HSA-975170
-IRAK1/or IRAK2 binds to the activated IRAK4 :MyD88:activated TLR 7/8 or 9.: R-HSA-975115
+IRAK1/or IRAK2 binds to the activated IRAK4 :MyD88:activated TLR 7/8 or 9: R-HSA-975115
 Phosphorylation of IRAK2 bound to the activated IRAK4:MyD88 oligomer:activated TLR 7/8 or 9: R-HSA-975160
 First phosphorylation of IRAK1 by IRAK4 bound to MyD88:activated TLR 7/8 or 9: R-HSA-975180
 Second phosphorylation of IRAK1 by IRAK4 bound to MyD88: activated TLR 7/8 or 9: R-HSA-975134
@@ -7972,7 +8169,7 @@ IRAK1 recruits IKK complex upon TLR7/8 or 9 stimulation: R-HSA-975144
 Pellino binds hp-IRAK1:TRAF6 upon TLR7/8 or 9 activation: R-HSA-975142
 IRAK1 phosphorylates Pellino upon TLR7/8 or 9 activation : R-HSA-975139
 Pellino ubiquitinates hp-IRAK1 upon TLR7/8 or 9 activation<br>: R-HSA-975122
-NEMO subunit of IKK complex binds to activated IRAK1 upon stimulation of TLR7/8 or 9.: R-HSA-975119
+NEMO subunit of IKK complex binds to activated IRAK1 upon stimulation of TLR7/8 or 9: R-HSA-975119
 IRAK2 mediated activation of TAK1 complex upon TLR7/8 or 9 stimulation: R-HSA-975163
 IRAK2 induces TRAF6 oligomerization initiated from endosomal compartments: R-HSA-975185
 Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2 at endosome membrane: R-HSA-975147
@@ -7985,6 +8182,13 @@ TRAF6 ubiquitinqtes IRF7 within the activated TLR7/8 or 9 complex: R-HSA-975118
 Phosphorylation and release of IRF7 upon TLR7/8 or 9 activation: R-HSA-975106
 Dimerization of p-IRF7: R-HSA-933533
 Translocation of p-IRF7:p-IRF7 to nucleus: R-HSA-933531
+SLC15A4:TASL-dependent IRF5 activation: R-HSA-9860276
+SLC15A4 binds TASL: R-HSA-9860295
+TASL is phosphorylated: R-HSA-9860264
+TASL recruits IRF5: R-HSA-9860290
+Activated IKBKB phosphorylates IRF5: R-HSA-9860292
+Dimerization of p-S446-IRF5: R-HSA-9860273
+p-S446-IRF5 dimer translocates to the nucleus: R-HSA-9860278
 Toll Like Receptor 9 (TLR9) Cascade: R-HSA-168138
 Engulfed CpG DNA binds to endosomal full-length TLR9: R-HSA-1679589
 Engulfed CpG DNA binds to endosomal N-ter TLR9 dimer: R-HSA-1679098
@@ -7995,11 +8199,6 @@ Association of LBP with LPS: R-HSA-166015
 Transfer of LPS from LBP carrier to CD14: R-HSA-166020
 GPI-bound CD14 binds LPS: R-HSA-166038
 Secreted CD14 binds LPS: R-HSA-169719
-Transfer of LPS onto TLR4: R-HSA-166041
-CD14:LPS binds CR3: R-HSA-2559439
-Endocytosis of TLR4:LY96:LPS:CD14: R-HSA-2201293
-Endocytosis of TRAM (TICAM2): R-HSA-2201341
-TLR4:LY96:LPS:CD14 recruits TRAM (TICAM2): R-HSA-166168
 MyD88:MAL(TIRAP) cascade initiated on plasma membrane: R-HSA-166058
 TIRAP binds PIP2-rich regions in the plasma membrane: R-HSA-2559456
 Activated TLR2/4 interacts with MAL (TIRAP): R-HSA-2201316
@@ -8018,6 +8217,11 @@ TRAF6 binds to hp- IRAK1: R-HSA-166363
 TRAF6 binds to p-IRAK2  : R-HSA-2262777
 Dissociation of hp-IRAK1:TRAF6 from the activated TLR:oligo-Myd88:TIRAP:p-IRAK4 complex: R-HSA-166362
 Dissociation of p-IRAK2:TRAF6 from the activated TLR:oligo-Myd88:TIRAP:p-IRAK4 complex: R-HSA-2262775
+Transfer of LPS onto TLR4: R-HSA-166041
+CD14:LPS binds CR3: R-HSA-2559439
+Endocytosis of TLR4:LY96:LPS:CD14: R-HSA-2201293
+Endocytosis of TRAM (TICAM2): R-HSA-2201341
+TLR4:LY96:LPS:CD14 recruits TRAM (TICAM2): R-HSA-166168
 MyD88-independent TLR4 cascade : R-HSA-166166
 TRAM:TLR4:LY96:LPS:CD14 recruits TRIF (TICAM1): R-HSA-166175
 SARM binds TICAM1:TRAM:TLR4:LY96:LPS:CD14: R-HSA-2559568
@@ -8166,11 +8370,11 @@ RIP2 is K63 polyubiquitinated: R-HSA-688137
 TNFAIP3 (A20) deubiquitinates RIP2: R-HSA-688136
 K63 polyubiquitinated RIP2 associates with the TAK1 complex: R-HSA-688985
 TAK1 is activated: R-HSA-706479
+TAK1 phosphorylates MKK6: R-HSA-727819
 NOD1 induced apoptosis is mediated by RIP2 and CARD8: R-HSA-622420
 CARD9 binds RIP2 (and NOD2): R-HSA-741395
 Activation of p38 MAPK: R-HSA-1247960
 AAMP binds NOD2: R-HSA-9676160
-TAK1 phosphorylates MKK6: R-HSA-727819
 Inflammasomes: R-HSA-622312
 The NLRP3 inflammasome: R-HSA-844456
 ATP binds to P2X7: R-HSA-877178
@@ -8188,10 +8392,10 @@ The IPAF inflammasome: R-HSA-844623
 IPAF is activated: R-HSA-874084
 IPAF binds procaspase-1: R-HSA-844617
 The AIM2 inflammasome: R-HSA-844615
-AIM2 binds dsDNA: R-HSA-844619
 AIM2 oligomerizes: R-HSA-874079
 dsDNA:AIM2 clusters bind ASC: R-HSA-844620
 dsDNA:AIM2:ASC cluster binds procaspase-1: R-HSA-844618
+AIM2 binds dsDNA: R-HSA-844619
 Advanced glycosylation endproduct receptor signaling: R-HSA-879415
 The TRTK-12 fragment of F-actin capping protein alpha binds the AGER ligand S100B: R-HSA-879377
 Advanced glycosylation end product-specific receptor (AGER/RAGE) is a multiligand receptor: R-HSA-879411
@@ -8235,16 +8439,16 @@ Active IKK Complex phosphorylates NF-kappa-B inhibitor : R-HSA-168140
 Negative regulators of DDX58/IFIH1 signaling: R-HSA-936440
 RNF125 mediated ubiquitination of DDX58, IFIH1 and MAVS: R-HSA-936412
 Interaction of PIN1 with p-IRF3: R-HSA-936380
+PIN1 mediated IRF3 degradation: R-HSA-936462
 Inhibition of DDX58/IFIH1 signaling by ATG5:ATG12:MAVS: R-HSA-936378
 CYLD mediated deubiquitination of DDX58 (RIG-I): R-HSA-936390
 OTUD5 deubiquitinates TRAF3: R-HSA-936381
 Negative regulation of DDX58/IFIH1 signaling by RNF216: R-HSA-936475
-NLRX1 inhibits MAVS-DDX58 interaction.: R-HSA-936564
+NLRX1 inhibits MAVS-DDX58 interaction: R-HSA-936564
 ISGylation of DDX58: R-HSA-936563
 TAX1BP1:A20 inhibit TBK1/IKKi K63-polyubiquitination: R-HSA-937337
 NLRC5 interacts with DDX58/IFIH1: R-HSA-937343
 Interaction of PCBP2 with MAVS: R-HSA-990528
-PIN1 mediated IRF3 degradation: R-HSA-936462
 Recruitment of ITCH and K48 ubiquitination of MAVS: R-HSA-990526
 HSP90 binds TBK1 and IRF3: R-HSA-9709831
 MAVS binds TOMM70: R-HSA-9709842
@@ -8355,12 +8559,12 @@ DAP12 signaling: R-HSA-2424491
 Phosphorylation of DAP12: R-HSA-2395439
 Recruitment of SYK to p-DAP12: R-HSA-210289
 Phosphorylation of SYK: R-HSA-2454239
-p85 regulatory unit of PI3K binds p-6Y-SYK: R-HSA-2424482
-Phosphorylation of LAT by p-SYK: R-HSA-2730843
 Recruitment of GRB2:SOS to p-5Y-LAT: R-HSA-2396599
-Recruitment of GADS:SLP-76 to p-5Y-LAT: R-HSA-2396561
-Recruitment of PLC-gamma to SLP-76 and p-5Y-LAT: R-HSA-2396606
 SOS mediated nucleotide exchange of RAS (SHC): R-HSA-2424477
+p85 regulatory unit of PI3K binds p-6Y-SYK: R-HSA-2424482
+Recruitment of GADS:SLP-76 to p-5Y-LAT: R-HSA-2396561
+Phosphorylation of LAT by p-SYK: R-HSA-2730843
+Recruitment of PLC-gamma to SLP-76 and p-5Y-LAT: R-HSA-2396606
 Phosphorylation of SLP-76 by p-SYK: R-HSA-2730851
 Recruitment of VAV and BTK to p-SLP-76: R-HSA-2424481
 Phosphorylation of BTK by p-SYK: R-HSA-2424484
@@ -8388,10 +8592,10 @@ FCERI mediated Ca+2 mobilization: R-HSA-2871809
 Recruitment of TEC kinases to p-SLP-76: R-HSA-2730885
 Phosphorylation of TEC kinases by p-SYK: R-HSA-2730833
 Autophosphorylation of BTK/ITK: R-HSA-2730858
-Activation of Calcineurin: R-HSA-2730872
 Phosphorylation of PLC-gamma: R-HSA-2730888
-Calcineurin binds and dephosphorylates NFAT: R-HSA-2730849
 Hydrolysis of PIP2 by PLCG: R-HSA-2730847
+Activation of Calcineurin: R-HSA-2730872
+Calcineurin binds and dephosphorylates NFAT: R-HSA-2730849
 Translocation of CaN:CaM:NFAT to nucleus: R-HSA-2730867
 FCERI mediated NF-kB activation: R-HSA-2871837
 RasGRP interacts with DAG and Ca2+: R-HSA-2730871
@@ -8445,8 +8649,8 @@ Active NIK:p-S176,180-IKKA dimer phosphorylates p100:RELB: R-HSA-5607726
 SCF-beta-TRCP binds p-7S-p100 in active NIK:p-S176,180-IKKA dimer:p-7S-p100:RELB: R-HSA-5607723
 SCF-beta-TRCP ubiquitinates p-7S-p100:RELB in active NIK:p-176,S180-IKKA dimer:p-7S-p100:SCF-beta-TRCP: R-HSA-5607725
 26S proteasome processes p-7S-p100:RELB to form p52:RELB: R-HSA-5607731
-CCL17 and CCL22 genes are transcribed: R-HSA-5660965
 p52:RELB translocates from cytosol to nucleus: R-HSA-5607741
+CCL17 and CCL22 genes are transcribed: R-HSA-5660965
 CLEC7A/inflammasome pathway: R-HSA-5660668
 IL1B gene is transcribed: R-HSA-5660622
 Caspase-8 binds MALT: R-HSA-5660665
@@ -8538,8 +8742,8 @@ S100A8:S100A9 binds Zn2+: R-HSA-6798474
 Lactoferrin scavenges iron ions: R-HSA-1222491
 LCN2:2,5DHBA binds Fe3+: R-HSA-5229273
 Ion influx/efflux at host-pathogen interface: R-HSA-6803544
-ATP7A transports cytosolic Cu2+ to phagosomal lumen: R-HSA-6803545
 NRAMP1 transports divalent metal ions across phagosomal membranes of macrophages: R-HSA-435171
+ATP7A transports cytosolic Cu2+ to phagosomal lumen: R-HSA-6803545
 Neutrophil degranulation: R-HSA-6798695
 Exocytosis of azurophil granule lumen proteins: R-HSA-6798751
 Exocytosis of azurophil granule membrane proteins: R-HSA-6798739
@@ -8751,7 +8955,7 @@ UBE2N:UBE2V1 dissociates from hp-IRAK1:3xK63-polyUb-TRAF6:3xUBE2N:UBE2V1: R-HSA-
 Polyubiquitinated TRAF6 binds the TAK1 complex: R-HSA-446870
 TAK1 is activated within the TAK1 complex: R-HSA-450187
 hp-IRAK1,hp-IRAK4 bind Pellino1,2,3: R-HSA-450690
-hp-IRAK1, hp-IRAK4 4 phosphorylate Pellino-1 and 2.: R-HSA-450827
+hp-IRAK1, hp-IRAK4 4 phosphorylate Pellino-1 and 2: R-HSA-450827
 hp-IRAK1:p-Pellino, IRAK4:p-Pellino bind UBE2N:UBE2V1: R-HSA-8948063
 Pellino ubiquitinates IRAK1: R-HSA-451418
 K63polyUb-IRAK1 dissociates: R-HSA-8948066
@@ -8761,10 +8965,10 @@ SCF Beta-TrCP complex binds to NFKB p50:p65: phospho IKBA complex: R-HSA-209125
 Beta-TrCP ubiquitinates NFKB p50:p65:phospho IKBA complex: R-HSA-209063
 Ubiquitinated and phosphorylated IKBA binds to and is degraded by the proteasome complex: R-HSA-209061
 Interleukin-18 signaling: R-HSA-9012546
+Expression of IL18, ALOX5: R-HSA-6797293
 IL18BP binds IL18: R-HSA-8848392
 IL18 binds IL18R1: R-HSA-8848370
 IL18:IL18R1 binds IL18RAP: R-HSA-8848395
-Expression of IL18, ALOX5: R-HSA-6797293
 Interleukin-33 signaling: R-HSA-9014843
 IL33 binds IL1RL1: R-HSA-448629
 IL33:IL1RL1 binds IL1RAP-1: R-HSA-448603
@@ -8796,9 +9000,9 @@ MAPK8 phosphorylation: R-HSA-9008043
 Interleukin-2 family signaling: R-HSA-451927
 HAVCR2 binds LGALS9: R-HSA-5340385
 Interleukin-2 signaling: R-HSA-9020558
-IL2RG binds JAK3: R-HSA-451895
 Interleukin-2 receptor alpha binds interleukin-2: R-HSA-450054
 IL2RB binds JAK1: R-HSA-451900
+IL2RG binds JAK3: R-HSA-451895
 Interleukin-2 receptor alpha:IL2 binds Interleukin-2 receptor beta: R-HSA-450027
 Interleukin-2: IL2 receptor alpha:beta binds IL2 receptor gamma subunit: R-HSA-450063
 Within the IL-2R complex JAK3 phosphorylates JAK1: R-HSA-451942
@@ -8807,8 +9011,8 @@ Phosphorylation of IL2RB Y338 enables SHC recruitment: R-HSA-452091
 Phosphorylation of IL2RB Y338, Y392 or Y510 enables STAT recruitment: R-HSA-452108
 SHC1 bound to IL2 receptor is phosphorylated: R-HSA-452100
 Recruited STAT5 is phosphorylated: R-HSA-452097
-p-STAT5 dimerizes: R-HSA-452102
 Phosphorylated STAT5 is released: R-HSA-919404
+p-STAT5 dimerizes: R-HSA-452102
 STAT5 dimers translocate to the nucleus: R-HSA-507937
 SYK binds IL2RB: R-HSA-508292
 SYK is a substrate for JAK1: R-HSA-508282
@@ -8822,7 +9026,6 @@ IL9R is phosphorylated by IL9:IL9R:JAK1:IL2RG:p-Y904,939-JAK3: R-HSA-8985973
 IL9:p-Y407-IL9R:JAK1:IL2RG:p-904,939-JAK3 binds STAT1, STAT3, STAT5A or STAT5B: R-HSA-8985929
 IL9:p-Y116-IL9R:JAK1:IL2RG:p-904,939-JAK3:STAT3 phosphorylates STAT1, STAT3 or STAT5: R-HSA-8985988
 p-Y701-STAT1, p-Y705-STAT3, p-Y649-STAT5 dissociates from IL9:p-Y407-IL9R:JAK1:IL2RG:p-904,939-JAK3:p-Y705-STAT3: R-HSA-8985900
-p-Y701-STAT1 dimerizes: R-HSA-8985943
 p-Y694-STAT5A, p-STAT5B dimerizes: R-HSA-8985950
 p-Y701-STAT1 binds p-Y705-STAT3: R-HSA-8985966
 p-Y701-STAT1:p-Y705-STAT3 translocates from the cytosol to the nucleus: R-HSA-8985981
@@ -8900,7 +9103,6 @@ IL4R, IL2RG, JAK1 in IL4-bound IL4R1:JAK1 are phosphorylated: R-HSA-6786096
 STAT3,STAT6 bind p-Y-IL4R: R-HSA-6786124
 JAK1 phosphorylates STAT3,STAT6: R-HSA-6786095
 p-Y705-STAT3,p-Y641-STAT6 dissociate: R-HSA-6786072
-Expression of PTGS2: R-HSA-6790029
 p-Y705-STAT3, p-Y641-STAT6 dimerise: R-HSA-6786097
 p-Y705-STAT3 dimer, p-Y641-STAT6 dimer translocate to nucleus: R-HSA-6786293
 Expression of SOCS1: R-HSA-6785860
@@ -8913,6 +9115,7 @@ Expression of STAT3-upregulated cytosolic proteins: R-HSA-6790041
 Expression of STAT3-upregulated nuclear proteins: R-HSA-6790036
 Expression of BCL2, BCL2L1: R-HSA-6790025
 Expression of HSP90B1: R-HSA-6790038
+Expression of PTGS2: R-HSA-6790029
 Expression of NDN,TP53: R-HSA-6789960
 Expression of FASLG: R-HSA-6797245
 SOCS5,(SOCS1) bind IL4RA: R-HSA-6785821
@@ -8936,13 +9139,13 @@ Expression of IL13-upregulated plasma membrane proteins: R-HSA-6788346
 Expression of IL13-downregulated extracellular proteins: R-HSA-6789325
 Interleukin-6 family signaling: R-HSA-6783589
 Interleukin-6 signaling: R-HSA-1059683
-JAK1,JAK2,(TYK2) bind IL6ST: R-HSA-1067646
 IL6 binds IL6R-2: R-HSA-1067640
 IL6:IL6R-2 binds IL6ST-2: R-HSA-1067676
 IL6 binds IL6R: R-HSA-1067667
 IL6:IL6R-2 binds IL6ST:JAK1, JAK2, (TYK2): R-HSA-1067651
 IL6:IL6R binds IL6ST:JAK1,JAK2,(TYK2): R-HSA-1067688
 Assembly of hexameric IL-6 receptor: R-HSA-1067659
+JAK1,JAK2,(TYK2) bind IL6ST: R-HSA-1067646
 JAK activation: R-HSA-1112514
 IL6ST is tyrosine phosphorylated: R-HSA-1112510
 Tyrosine phosphorylated IL6ST binds STAT1,STAT3: R-HSA-1112565
@@ -8999,8 +9202,8 @@ JAK1,TYK2 phosphorylate JAK1,TYK2: R-HSA-6784319
 p-Y-JAK1,p-Y-TYK2 phosphorylate IL10RA: R-HSA-6784324
 IL10 dimer:2xp-Y-IL10RA:p-Y-JAK1:2xIL10RB:p-Y-TYK2 binds STAT3: R-HSA-6784323
 STAT3 is phosphorylated by p-Y-JAK1,P-Y-TYK2: R-HSA-6784006
-p-Y705-STAT3 dissociates from IL10 dimer:2xp-Y-IL10RA:p-Y-JAK1:2xIL10RB:p-Y-TYK2:p-Y705-STAT3: R-HSA-6784791
 p-Y705-STAT3 dimerizes: R-HSA-6784765
+p-Y705-STAT3 dissociates from IL10 dimer:2xp-Y-IL10RA:p-Y-JAK1:2xIL10RB:p-Y-TYK2:p-Y705-STAT3: R-HSA-6784791
 p-Y705-STAT3 dimer translocates from cytosol to nucleoplasm: R-HSA-6784763
 IL10 negatively regulates extracellular inflammatory mediators: R-HSA-6784160
 IL10 negatively regulates plasma membrane-associated inflammatory mediators: R-HSA-8937656
@@ -9132,6 +9335,7 @@ Interleukin-20 family signaling: R-HSA-8854691
 JAK1 binds IL20RA: R-HSA-8987039
 IL20RA binds IL20RB: R-HSA-448744
 IL19 binds IL20RA:JAK1:IL20RB: R-HSA-448728
+IFNL1 binds IL10RB:TYK2 and IFNLR1:JAK1: R-HSA-448661
 IL19:IL20RA:JAK1:IL20RB phosphorylates JAK1: R-HSA-8987084
 IL19:IL20RA:p‑JAK1:IL20RB binds STAT3: R-HSA-8982165
 IL19:IL20RA:p-JAK1:IL20RB:STAT3 phosphorylates STAT3: R-HSA-8982163
@@ -9177,7 +9381,6 @@ IL22:p-Y251,p-Y301-IL22RA1:p-JAK1:IL10RB:p-TYK2:STAT3 phosphorylates STAT3: R-HS
 p-Y705-STAT3 dissociates from  IL22:p-Y251,p-Y301-IL22RA1:p-JAK1:IL10RB:p-TYK2:p-Y705-STAT3: R-HSA-8987236
 JAK1 binds IFNLR1: R-HSA-8987120
 IFNL2,IFNL3 bind IL10RB:TYK2 and IFNLR1:JAK1: R-HSA-8987105
-IFNL1 binds IL10RB:TYK2 and IFNLR1:JAK1: R-HSA-448661
 IFNL1:IFNLR1:JAK1:IL10RB:TYK2 phosphorylates JAK1,TYK2: R-HSA-8987202
 IFNL1:IFNLR1:p-JAK1:IL10RB:p-TYK2 phosphorylates IFNLR1: R-HSA-8987040
 IFNL1:p-Y434,Y517-IFNLR1:p-JAK1:IL10RB:p-TYK2 binds STAT1, STAT2, STAT3, STAT4, STAT5: R-HSA-8987266
@@ -9394,6 +9597,7 @@ NHLRC1 mediated ubiquitination of EPM2A (laforin) and PPP1RC3 (PTG) associated w
 Glycogen breakdown (glycogenolysis): R-HSA-70221
 glycogen phosphorylase (PYGB) dimer b + 2 ATP => glycogen phosphorylase (PYGB) dimer a + 2 ADP: R-HSA-453337
 glycogen phosphorylase (PYGM) dimer b + 2 ATP => glycogen phosphorylase (PYGM) dimer a + 2 ADP: R-HSA-71541
+PGM1:Mg2+ isomerises G1P to G6P: R-HSA-9638125
 glycogen phosphorylase (PYGL) dimer b + 2 ATP => glycogen phosphorylase (PYGL) dimer a + 2 ADP: R-HSA-71588
 PYGB dimer, b form + 2 AMP <=> PYGB b dimer:AMP complex: R-HSA-453356
 PYGB b dimer:AMP complex <=> PGYB dimer, b form + 2 AMP: R-HSA-453346
@@ -9405,10 +9609,10 @@ limit dextrin-glycogenin => ((1,6)-alpha-glucosyl)poly((1,4)-alpha-glucosyl) gly
 ((1,6)-alpha-glucosyl)poly((1,4)-alpha-glucosyl)glycogenin => poly{(1,4)-alpha-glucosyl} glycogenin + alpha-D-glucose: R-HSA-71593
 poly((1,4)-alpha-glycosyl) glycogenin-1 + n orthophosphate => glycogenin-1 + n D-glucose 1-phosphate [PYGM,PYGB]: R-HSA-453358
 poly((1,4)-alpha-glucosyl) glycogenin-2 + n orthophosphate => glycogenin-2 + n D-glucose 1-phosphate [PYGL]: R-HSA-453339
-PGM1:Mg2+ isomerises G1P to G6P: R-HSA-9638125
 GAA hydrolyzes lysosomal glycogen: R-HSA-9036727
 Glucose metabolism: R-HSA-70326
 Gluconeogenesis: R-HSA-70263
+PC carboxylates PYR to OA: R-HSA-70501
 PCK1 phosphorylates OA to yield PEP: R-HSA-70241
 PCK2 phosphorylates OA to yield PEP: R-HSA-372819
 Enolase dimers (ENO1,2,3) convert PEP to 2PG: R-HSA-70494
@@ -9423,7 +9627,6 @@ SLC37A1, SLC37A2 exchange G6P for Pi across the ER membrane: R-HSA-3257122
 G6PC hydrolyzes G6P to Glc and Pi (liver): R-HSA-71825
 G6PC2 hydrolyzes G6P to form Glc and Pi (islet): R-HSA-3266566
 G6PC3 hydrolyzes G6P to form Glc and Pi (ubiquitous): R-HSA-3262512
-PC carboxylates PYR to OA: R-HSA-70501
 Efflux of Glc from the endoplasmic reticulum: R-HSA-198458
 Glycolysis: R-HSA-70171
 Regulation of Glucokinase by Glucokinase Regulatory Protein: R-HSA-170822
@@ -9433,15 +9636,14 @@ NPC transports GCK1:GKRP from cytosol to nucleoplasm: R-HSA-170796
 nucleoplasmic GCK1:GKRP complex => glucokinase (GCK1) + glucokinase regulatory protein (GKRP): R-HSA-170810
 glucokinase [nucleoplasm] => glucokinase [cytosol]: R-HSA-170825
 HK1,2,3,GCK,HKDC1 phosphorylate Glc to form G6P: R-HSA-70420
-PKM dephosphorylates PEP to PYR: R-HSA-71670
 ADPGK:Mg2+ phosphorylates Glc to G6P: R-HSA-5696021
 alpha-D-glucose 6-phosphate <=> D-fructose 6-phosphate: R-HSA-70471
 GNPDA1,2 hexamers deaminate GlcN6P to Fru(6)P: R-HSA-6799604
 Regulation of glycolysis by fructose 2,6-bisphosphate metabolism: R-HSA-9634600
-D-fructose 6-phosphate + ATP => D-fructose 2,6-bisphosphate + ADP: R-HSA-71802
 Dephosphorylation of phosphoPFKFB1 by PP2A complex: R-HSA-163750
-Fructose 2,6-bisphosphate is hydrolyzed to form fructose-6-phosphate and orthophosphate: R-HSA-70262
 Phosphorylation of PF2K-Pase by PKA catalytic subunit: R-HSA-163773
+D-fructose 6-phosphate + ATP => D-fructose 2,6-bisphosphate + ADP: R-HSA-71802
+Fructose 2,6-bisphosphate is hydrolyzed to form fructose-6-phosphate and orthophosphate: R-HSA-70262
 D-fructose 6-phosphate + ATP => D-fructose 1,6-bisphosphate + ADP: R-HSA-70467
 D-fructose 1,6-bisphosphate <=> dihydroxyacetone phosphate + D-glyceraldehyde 3-phosphate: R-HSA-71496
 dihydroxyacetone phosphate <=> D-glyceraldehyde 3-phosphate: R-HSA-70454
@@ -9452,6 +9654,7 @@ PGM2L1:Mg2+ phosphorylates G6P to G1,6BP: R-HSA-8955760
 PGP:Mg2+ dimer hydrolyses 3PG to glycerol: R-HSA-8955794
 3-Phospho-D-glycerate <=> 2-Phospho-D-glycerate: R-HSA-71654
 2-Phospho-D-glycerate <=> Phosphoenolpyruvate + H2O: R-HSA-71660
+PKM dephosphorylates PEP to PYR: R-HSA-71670
 Fructose metabolism: R-HSA-5652084
 Fructose biosynthesis: R-HSA-5652227
 AKR1B1 reduces Glc to D-sorbitol: R-HSA-5652172
@@ -9471,19 +9674,19 @@ GALK1 phosphorylates Gal to Gal1P: R-HSA-70355
 GALT transfers UMP from UDP-Glc to Gal1P to form UDP-Gal: R-HSA-70361
 GALE:NAD+ dimer reversibly epimerises UDP-Gal to UDP-Glc: R-HSA-70369
 Pentose phosphate pathway: R-HSA-71336
-D-fructose 6-phosphate + D-erythrose 4-phosphate  <=>  sedoheptulose 7-phosphate + D-glyceraldehyde 3-phosphate: R-HSA-163764
 D-glucono-1,5-lactone 6-phosphate + H2O => 6-phospho-D-gluconate: R-HSA-71296
-D-glyceraldehyde 3-phosphate + D-fructose 6-phosphate   <=> xylulose 5-phosphate + D-erythrose 4-phosphate: R-HSA-163751
 6-phospho-D-gluconate + NADP+ => D-ribulose 5-phosphate + CO2 + NADPH + H+: R-HSA-71299
-D-glyceraldehyde 3-phosphate + sedoheptulose 7-phosphate<=> xylulose 5-phosphate+ribose 5-phosphate : R-HSA-163741
 RBKS phosphorylates ribose to R5P: R-HSA-8955844
 ribose 5-phosphate <=> D-ribulose 5-phosphate: R-HSA-177784
 D-ribulose 5-phosphate <=> ribose 5-phosphate: R-HSA-71306
 RPE dimers isomerise RU5P to XY5P: R-HSA-71303
 xylulose 5-phosphate <=> D-ribulose 5-phosphate: R-HSA-199803
 ribose 5-phosphate + xylulose 5-phosphate <=> sedoheptulose 7-phosphate + D-glyceraldehyde 3-phosphate: R-HSA-71324
+D-glyceraldehyde 3-phosphate + sedoheptulose 7-phosphate<=> xylulose 5-phosphate+ribose 5-phosphate : R-HSA-163741
 sedoheptulose 7-phosphate + D-glyceraldehyde 3-phosphate <=> D-erythrose 4-phosphate + D-fructose 6-phosphate: R-HSA-71334
+D-fructose 6-phosphate + D-erythrose 4-phosphate  <=>  sedoheptulose 7-phosphate + D-glyceraldehyde 3-phosphate: R-HSA-163764
 xylulose 5-phosphate + D-erythrose 4-phosphate <=> D-glyceraldehyde 3-phosphate + D-fructose 6-phosphate: R-HSA-71335
+D-glyceraldehyde 3-phosphate + D-fructose 6-phosphate   <=> xylulose 5-phosphate + D-erythrose 4-phosphate: R-HSA-163751
 PGM2:Mg2+ isomerises R1P to R5P: R-HSA-6787329
 PGM2:Mg2+ isomerises  dR1P to dR5P: R-HSA-8982667
 DERA cleaves dR5P to GA3P and CH3CHO: R-HSA-6787321
@@ -9595,6 +9798,7 @@ HEXB cleaves the terminal GalNAc from DS: R-HSA-9638075
 IDUA) hydrolyses the unsulfated alpha-L-iduronosidic link in DS: R-HSA-1793186
 ARSB hydrolyses C4S/C6S chains: R-HSA-1793207
 HYAL1 hydrolyses Chondroitin chains: R-HSA-1793209
+UXS1 tetramer decarboxylates UDP-glucuronate to UDP-xylose: R-HSA-8863761
 Formation of xylulose-5-phosphate: R-HSA-5661270
 AKR1A1 reduces D-glucuronate to L-gulonate: R-HSA-5661256
 CRYL1 dimer dehydrogenates L-gulonate to 3-dehydro-L-gulonate: R-HSA-5661290
@@ -9708,6 +9912,7 @@ I(1,4,5)P3 is dephosphorylated to I(1,4)P2 by INPP5(4) in the cytosol: R-HSA-185
 I(1,4,5)P3 is dephosphorylated to I(1,4)P2 by INPP5A/B at the plasma membrane: R-HSA-1855222
 I(1,4)P2 is dephosphorylated to I4P by INPP1 in the cytosol: R-HSA-1855208
 I4P is dephosphorylated to Ins by IMPA1/2 in the cytosol: R-HSA-1855211
+MTMR7 binds MTMR9: R-HSA-6809238
 I1P is dephosphorylated to Ins by IMPA1/2 in the cytosol: R-HSA-1855154
 I(1,3,4)P3 is dephosphorylated to I(1,3)P2 by INPP4A/B in the cytosol: R-HSA-1855180
 I(1,3,4)P3 is dephosphorylated to I(3,4)P2 by INPP1 in the cytosol: R-HSA-1855232
@@ -9716,7 +9921,6 @@ Glc6P is isomerised to I3P by ISYNA1 in the cytosol: R-HSA-1855178
 I3P is dephosphorylated to Ins by IMPA1/2 in the cytosol: R-HSA-1855210
 MIOX oxidises Ins to GlcA: R-HSA-5678327
 I(1,3)P2 is dephosphorylated into I1P by MTMR7: R-HSA-6809561
-MTMR7 binds MTMR9: R-HSA-6809238
 I(1,3)P2 is dephosphorylated into I1P by MTMR7:MTMR9: R-HSA-6809565
 Metabolism of lipids: R-HSA-556833
 Regulation of lipid metabolism by PPARalpha: R-HSA-400206
@@ -9724,6 +9928,7 @@ PPARA binds RXRA: R-HSA-400204
 PPARA:RXRA binds Corepressors of PPARA: R-HSA-400183
 PPARA binds fibrates: R-HSA-9734475
 PPARA activates gene expression: R-HSA-1989781
+Expression of 3-Hydroxy-3-methylglutaryl-coenzyme A Reductase (HMGCR): R-HSA-1655826
 Expression of ABCA1: R-HSA-1989765
 Expression of ABCB4: R-HSA-1989762
 Expression of ACADM: R-HSA-1989745
@@ -9741,18 +9946,17 @@ Expression of CYP4A11: R-HSA-1989755
 Expression of CYP7A1: R-HSA-1989746
 Expression of FABP1: R-HSA-1989751
 Expression of FADS1: R-HSA-1989757
-Expression of 3-Hydroxy-3-methylglutaryl-coenzyme A Reductase (HMGCR): R-HSA-1655826
 Expression of FATP1 (SLC27A1): R-HSA-1989750
 Expression of FHL2: R-HSA-1989747
+Expression of Farnesyldiphosphate Farnesyltransferase (FDFT1, Squalene Synthase): R-HSA-1655850
 Expression of G0S2: R-HSA-1989759
 Expression of GLIPR1: R-HSA-1989772
 Expression of GRHL1: R-HSA-1989748
+Expression of Hydroxymethylglutaryl coenzyme A synthase (HMGCS1): R-HSA-1655848
 Expression of HMGCS2: R-HSA-1989760
-Expression of Farnesyldiphosphate Farnesyltransferase (FDFT1, Squalene Synthase): R-HSA-1655850
 Expression of ME1: R-HSA-1989756
 Expression of PEX11A: R-HSA-1989753
 Expression of PLIN2: R-HSA-1989770
-Expression of Hydroxymethylglutaryl coenzyme A synthase (HMGCS1): R-HSA-1655848
 Expression of RGL1: R-HSA-1989777
 Expression of SULT2A1: R-HSA-1989775
 Expression of TIAM2: R-HSA-1989768
@@ -9769,9 +9973,10 @@ Fatty acid metabolism: R-HSA-8978868
 Fatty acyl-CoA biosynthesis: R-HSA-75105
 ACLY tetramer transforms CIT to Ac-CoA: R-HSA-75848
 SLC27A2 ligates CoA to bempedoic acid to form ETC-1002-CoA: R-HSA-9734535
-acetyl-CoA + bicarbonate + ATP => malonyl-CoA + H2O + ADP + orthophosphate: R-HSA-200555
+ACLY tetramer binds ETC-1002-CoA: R-HSA-9734540
+Formation of Malonyl-CoA from Acetyl-CoA (liver): R-HSA-200555
 Formation of fatty acid synthase (FAS) dimer: R-HSA-163756
-acetyl-CoA + 7 malonyl-CoA + 14 NADHP + 14 H+ => palmitate + 7 CO2 + 14 NADP+ + 8 CoASH + 6 H2O: R-HSA-75872
+Conversion of malonyl-CoA and acetyl-CoA to palmitate: R-HSA-75872
 OLAH hydrolyzes decanoyl-FASN dimer to DECA and FASN dimer: R-HSA-5655955
 Synthesis of very long-chain fatty acyl-CoAs: R-HSA-75876
 ACSBG1,2 ligates CoA-SH to VLCFA, forming VLCFA-CoA: R-HSA-5695957
@@ -9792,21 +9997,25 @@ PPT1 hydrolyses palmitoylated proteins: R-HSA-5690517
 PPT2 hydrolyses PALMCoA to PALM: R-HSA-5690046
 2xHSD17B8:2xCBR4 reduces 3OA-ACP to 3HA-ACP: R-HSA-8862152
 RPP14 (HTD2) dehydrates 3HA-CoA to t2E-CoA: R-HSA-8957389
-Arachidonic acid metabolism: R-HSA-2142753
-Hydrolysis of phosphatidylcholine: R-HSA-111883
-Arachidonate diffuses across the ER membrane: R-HSA-428990
+Arachidonate metabolism: R-HSA-2142753
+PLA2G4A (cPLA2) hydrolyzes phosphatidylcholine: R-HSA-111883
+SLC27A1 transports arachidonate across the ER membrane: R-HSA-428990
 AWAT1 transfers acyl group from acyl-CoA to ARACOH, forming wax esters: R-HSA-5696424
 FAAH hydrolyses AEA to AA and ETA: R-HSA-5693742
 FAAH2 hydrolyses AEA to AA and ETA: R-HSA-5693751
 Synthesis of Prostaglandins (PG) and Thromboxanes (TX): R-HSA-2162123
+Arachidonate is oxidised to PGG2 by PTGS1: R-HSA-140355
 PTGS2 dimer binds PTGS2 inhibitors: R-HSA-2309779
+PGG2 is reduced to PGH2 by PTGS1: R-HSA-140359
+PTGS2 dimer binds PTGS inhibitors: R-HSA-9716836
 ASA- acetylates PTGS1: R-HSA-2314678
 ASA- acetylates PTGS2: R-HSA-2314686
-Arachidonic acid is oxidised to PGG2 by PTGS1: R-HSA-140355
+TBXAS1 isomerises PGH2 to TXA2: R-HSA-76500
 PTGS1 dimer binds PTGS1 Inhibitors: R-HSA-9677320
-Arachidonic acid is oxidised to PGG2 by PTGS2: R-HSA-2309787
-PGG2 is reduced to PGH2 by PTGS1: R-HSA-140359
 PGG2 is reduced to PGH2 by PTGS2: R-HSA-2309773
+PTGS1,2 dimers bind PTGS Inhibitors: R-HSA-9716838
+Arachidonate is oxidised to PGG2 by PTGS2: R-HSA-2309787
+PTGIS, CYP8A1 isomerise PGH2 to PGI2: R-HSA-76496
 PGH2 diffuses from the endoplasmic reticulum lumen to the cytosol: R-HSA-2299725
 PGH2 is reduced to PGF2a by AKR1C3: R-HSA-2161549
 PGH2 is reduced to PGF2a by FAM213B: R-HSA-2161612
@@ -9826,20 +10035,18 @@ PGD2 is dehydrated to 15d-PGD2: R-HSA-2161673
 PGD2 is reduced to 11-epi-PGF2a by AKRIC3: R-HSA-2161614
 PGD2/E2/F2a is oxidised to 15k-PGD2/E2/F2a by HPGD: R-HSA-2161662
 15k-PGE2/F2a is reduced to dhk-PGE2/F2a by PTGR1: R-HSA-2161692
-PTGIS, CYP8A1 isomerise PGH2 to PGI2: R-HSA-76496
 PGI2 is hydrolysed to 6k-PGF1a: R-HSA-2161619
-TBXAS1 isomerises PGH2 to TXA2: R-HSA-76500
 TXA2 is hydrolysed to TXB2: R-HSA-443894
 TXB2 is converted to 11dh-TXB2 by TXDH: R-HSA-2161732
 PGH2 is degraded to 12S-HHT and MDA by TBXAS1: R-HSA-2161613
 Synthesis of Leukotrienes (LT) and Eoxins (EX): R-HSA-2142691
-ALOX5 is phosphorylated by MAPKAP2: R-HSA-429016
-Arachidonic acid is oxidised to 5S-HpETE by ALOX5: R-HSA-265296
-ALOX5 binds ALOX5 inhibitors: R-HSA-9707186
 5S-HpETE is dehydrated to LTA4 by ALOX5: R-HSA-266051
+ALOX5 is phosphorylated by MAPKAP2: R-HSA-429016
+CYP4F2, 4F3 20-hydroxylate LTB4: R-HSA-211873
+Arachidonate is oxidised to 5S-HpETE by ALOX5: R-HSA-265296
+ALOX5 binds ALOX5 inhibitors: R-HSA-9707186
 LTA4 is hydolysed to LTB4 by LTA4H: R-HSA-266072
 LTB4 is oxidised to 12-oxoLTB4 by PTGR1: R-HSA-2161567
-CYP4F2, 4F3 20-hydroxylate LTB4: R-HSA-211873
 20oh-LTB4 is oxidised to 20cho-LTB4 by CYP4F2/4F3: R-HSA-2161745
 20cho-LTB4 is oxidised to 20cooh-LTB4 by CYP4F2/4F3: R-HSA-2161792
 20cho-LTB4 is oxidised to 20cooh-LTB4 by ALDH: R-HSA-2161979
@@ -9856,28 +10063,35 @@ Synthesis of 5-eicosatetraenoic acids: R-HSA-2142688
 5S-HETE is oxidised to 5-oxoETE by 5-HEDH: R-HSA-2161776
 PON1,2,3:Ca2+ dimers hydrolyse 5-HETEL to 5-HETE: R-HSA-8932633
 Synthesis of 15-eicosatetraenoic acid derivatives: R-HSA-2142770
-Arachidonic acid is oxidised to 15S-HpETE by ALOX15/15B: R-HSA-2162002
+Arachidonate is oxidised to 15S-HpETE by ALOX15/15B: R-HSA-2162002
 15S-HpETE is reduced to 15S-HETE by GPX1/2/4: R-HSA-2161791
 15S-HETE is oxidised to 15-oxoETE by 15-HEDH: R-HSA-2161789
-Arachidonic acid is oxidised to 15R-HETE by Acetyl-PTGS2: R-HSA-2161951
+Arachidonate is oxidised to 15R-HETE by Acetyl-PTGS2: R-HSA-2161951
 Synthesis of 12-eicosatetraenoic acid derivatives: R-HSA-2142712
-Arachidonic acid is oxidised to 12R-HpETE by ALOX12B: R-HSA-2161950
+Arachidonate is oxidised to 12R-HpETE by ALOX12B: R-HSA-2161950
 12R-HpETE is reduced to 12R-HETE by GPX1/2/4: R-HSA-2161959
 ALOXE3 isomerises 12R-HpETE to HXA3: R-HSA-8942208
-Arachidonic acid is oxidised to 12S-HpETE by ALOX12/15: R-HSA-2161964
+Arachidonate is oxidised to 12S-HpETE by ALOX12/15: R-HSA-2161964
 12S-HpETE is reduced to 12S-HETE by GPX1/2/4: R-HSA-2161999
-Arachidonic acid  is converted to 12-oxoETE by ALOX12: R-HSA-2161948
+Arachidonate  is converted to 12-oxoETE by ALOX12: R-HSA-2161948
 Synthesis of Hepoxilins (HX) and Trioxilins (TrX): R-HSA-2142696
-Arachidonic acid is converted to HXA3/B3 by ALOX12: R-HSA-2161794
+Arachidonate is converted to HXA3/B3 by ALOX12: R-HSA-2161794
 HXA3/B3 is hydrolysed to TrXA3/B3 by HXEH: R-HSA-2161949
 Synthesis of (16-20)-hydroxyeicosatetraenoic acids (HETE): R-HSA-2142816
-Arachidonic acid is hydroxylated to 16/17/18-HETE by CYP(1): R-HSA-2161795
-Arachidonic acid is hydroxylated to 19-HETE by CYP(2): R-HSA-2161814
-Arachidonic acid is hydroxylated to 20-HETE by CYP(3): R-HSA-2161940
+Arachidonate is hydroxylated to 16-HETE by CYP(1): R-HSA-2161795
+Arachidonate is hydroxylated to 17-HETE by CYP(1): R-HSA-9915992
+Arachidonate is hydroxylated to 18-HETE by CYP(1): R-HSA-9915993
+Arachidonate is hydroxylated to 19-HETE by CYP(2): R-HSA-2161814
+Arachidonate is hydroxylated to 20-HETE by CYP(3): R-HSA-2161940
 Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET): R-HSA-2142670
-Arachidonic acid is epoxidated to 5,6-EET by CYP(4): R-HSA-2161890
-Arachidonic acid is epoxidated to 8,9/11,12/14,15-EET by CYP(5): R-HSA-2161899
-EET(1) is hydrolysed to DHET(1) by EPHX2: R-HSA-2161961
+Arachidonate is epoxidated to 5,6-EET by CYP(4): R-HSA-2161890
+Arachidonate is epoxidated to 8,9-EET by CYP(5): R-HSA-2161899
+Arachidonate is epoxidated to 11,12-EET by CYP(5): R-HSA-9915971
+Arachidonate is epoxidated to 14,15-EET by CYP(5): R-HSA-9915997
+5,6-EET is hydrolysed to 5,6-DHET by EPHX2: R-HSA-2161961
+8,9-EET is hydrolysed to 8.9-DHET by EPHX2: R-HSA-9915968
+11,12-EET is hydrolysed to 11,12-DHET by EPHX2: R-HSA-9915986
+14,15-EET is hydrolysed to 14,15-DHET by EPHX2: R-HSA-9915994
 alpha-linolenic (omega3) and linoleic (omega6) acid metabolism: R-HSA-2046104
 alpha-linolenic acid (ALA) metabolism: R-HSA-2046106
 Activation of alpha-linolenic acid to alpha-linolenoyl-CoA: R-HSA-2046085
@@ -9906,12 +10120,13 @@ Desaturation of tetracosatetraenoyl-CoA to tetracosapentaenoyl-CoA: R-HSA-204609
 Translocation of tetracosapentaenoyl-CoA to peroxisomes: R-HSA-2046093
 Peroxisomal beta-oxidation of tetracosapentaenoyl-CoA to Docosapentaenoyl-CoA: R-HSA-2046101
 Translocation of DPA to the ER: R-HSA-2066782
-Carnitine metabolism: R-HSA-200425
+Carnitine shuttle: R-HSA-200425
 OCTN2 / SLC22A5 transports CAR from extracellular space to cytosol: R-HSA-165026
 CAR translocates from the cytosol to the mitochondrial intermembrane space: R-HSA-8949399
-CPT1A,B transfers PALM to CAR: R-HSA-200406
+CPT1A transfers PALM to CAR: R-HSA-200406
+CPT1B transfers PALM to CAR: R-HSA-9911362
 Exchange of palmitoylcarnitine and carnitine across the inner mitochondrial membrane: R-HSA-200424
-palmitoylcarnitine + CoASH => palmitoyl-CoA + carnitine: R-HSA-200410
+CPT2 converts palmitoyl carnitine to palmitoyl-CoA: R-HSA-200410
 MID1IP1 binds THRSP: R-HSA-8866941
 Btn-ACACA:2Mn2+ polymer carboxylates Ac-CoA to form Mal-CoA: R-HSA-75851
 Btn-ACACB:2Mn2+ polymer carboxylates Ac-CoA to form Mal-CoA: R-HSA-8876889
@@ -9992,23 +10207,24 @@ ACOX2:FAD, ACOXL:FAD oxidise (2S)-pristanoyl-CoA to trans-2,3-dehydropristanoyl-
 trans-2,3-dehydropristanoyl-CoA + H2O => 3-hydroxypristanoyl-CoA: R-HSA-389986
 3-hydroxypristanoyl-CoA + NAD+ => 3-ketoxypristanoyl-CoA + NADH + H+: R-HSA-389995
 3-ketopristanoyl-CoA + CoASH => 4,8,12-trimethyltridecanoyl-CoA + propionyl-CoA: R-HSA-390224
-4,8,12-trimethyltridecanoyl-CoA + 2 O2 + 2 H2O + 2 NAD+ + 2 CoASH => 4,8-dimethylnonanoyl-CoA + 2 H2O2 + 2 NADH + 2 H+ + acetyl-CoA + propionyl-CoA: R-HSA-390276
+Conversion of 4,8,12-trimethyltridecanoyl-CoA to 4,8-dimethylnonanoyl-CoA: R-HSA-390276
 4,8-dimethylnonanoyl-CoA + carnitine => 4,8-dimethylnonanoylcarnitine + CoASH: R-HSA-390281
 acetyl-CoA + carnitine => acetylcarnitine + CoASH: R-HSA-390291
-acetyl-CoA + H2O => acetate + CoASH: R-HSA-390304
+acetyl-CoA + H2O => acetate + CoASH + H+: R-HSA-390304
 propionyl-CoA + carnitine => propionylcarnitine + CoASH: R-HSA-390284
 Beta-oxidation of very long chain fatty acids: R-HSA-390247
 Peroxisomal uptake of very long-chain fatty acyl CoA: R-HSA-390393
+SLC27A2-mediated ligation of peroxisomal fatty acid and CoASH: R-HSA-9914143
 ECI2 isomerizes 3Z-enoyl-CoA to 2E-enoyl-CoA: R-HSA-6809808
-hexacosanoyl-CoA + O2 => trans-2,3-dehydrohexacosanoyl-CoA + H2O2: R-HSA-390256
+ACOX1 oxidizes C26:0 CoA: R-HSA-390256
 HSD17B4 hydrates trans-2,3-dehydrohexacosanoyl-CoA: R-HSA-390252
 EHHADH hydrates trans-2,3-dehydrohexacosanoyl-CoA: R-HSA-6809263
 HSD17B4 dehydrogenates 3-hydroxyhexacosanoyl-CoA: R-HSA-390251
 EHHADH dehydrogenates 3-hydroxyhexacosanoyl-CoA: R-HSA-6809264
 3-ketohexacosanoyl-CoA + CoASH => tetracosanoyl-CoA + acetyl-CoA: R-HSA-390250
-tetracosenoyl-CoA + 8 O2 + 8 H2O + 8 NAD+ + 8 CoASH => octanoyl-CoA + 8 H2O2 + 8 NADH + 8 H+ + 8 acetyl-CoA: R-HSA-390302
+Beta-oxidation of tetradecenoyl-CoA to octanoyl-CoA: R-HSA-390302
 malonyl-CoA is decarboxylated to acetyl-CoA in peroxisome: R-HSA-977317
-DECR2 reduces LCtE-CoA to t3enoyl-CoA: R-HSA-6786720
+DECR2 reduces a (2E,4E)-dienoyl-CoA to a 4,5-saturated-(3E)-enoyl-CoA : R-HSA-6786720
 Peroxisomal ACOT4,6,8 hydrolyse MCFA-CoA, LCFA-CoA: R-HSA-5690042
 ACBD4,5 bind MCFA-CoA and LCFA-CoA: R-HSA-8848247
 NUDT7 hydrolyses CoA-SH to 3',5'-ADP and PPANT: R-HSA-6809354
@@ -10023,6 +10239,7 @@ MOGAT1,2,3 transfer acyl group from acyl-CoA to 2-acylglycerol to form DAG: R-HS
 1,2-diacyl-glycerol + acyl-CoA => triacylglycerol + CoASH [DGAT1]: R-HSA-75900
 1,2-diacyl-glycerol + acyl-CoA => triacylglycerol + CoASH [DGAT2]: R-HSA-549192
 Triglyceride catabolism: R-HSA-163560
+Gly-3-P+FAD->DHAP+FADH2 (catalyzed by mitochondrial Gly-Phos dehydrogenase): R-HSA-188467
 hormone-sensitive lipase (HSL) + 2 ATP -> phosphorylated HSL + 2 ADP: R-HSA-163416
 2 phosphorylated HSL monomers -> phosphorylated HSL dimer: R-HSA-163602
 perilipin:CGI-58 complex -> perilipin + CGI-58: R-HSA-163539
@@ -10039,7 +10256,6 @@ phosphorylated perilipin + H2O -> perilipin + orthophosphate: R-HSA-163568
 PNPLA4 hydrolyzes TAG: R-HSA-8848338
 PNPLA4 hydrolyzes retinyl palmitate: R-HSA-8848355
 PNPLA5 hydrolyzes TAG: R-HSA-8848339
-Gly-3-P+FAD->DHAP+FADH2 (catalyzed by mitochondrial Gly-Phos dehydrogenase): R-HSA-188467
 Phospholipid metabolism: R-HSA-1483257
 Glycerophospholipid biosynthesis: R-HSA-1483206
 Synthesis of PA: R-HSA-1483166
@@ -10072,11 +10288,11 @@ ETA is phosphorylated to PETA by CHK/ETNK: R-HSA-1483222
 PETA is dephosphorylated to ETA by PHOSPHO1: R-HSA-1483096
 PXLP-K278-ETNPPL tetramer hydrolyses PETA: R-HSA-5696415
 PETA and CTP are condensed to CDP-ETA by PCY2: R-HSA-1483190
+PA is dephosphorylated to DAG by LPIN: R-HSA-1483203
 CDP-ETA and DAG are converted to PE by CEPT1/EPT1: R-HSA-1482962
 PS transports from the ER membrane to the IM membrane: R-HSA-1483170
 PS is decarboxylated to PE by PISD: R-HSA-1483212
 PE transports from the mitochondrial membrane to the ER: R-HSA-1483077
-PA is dephosphorylated to DAG by LPIN: R-HSA-1483203
 Acyl chain remodelling of PE: R-HSA-1482839
 PE is hydrolyzed to 1-acyl LPE by PLA2[2]: R-HSA-1482884
 PE is hydrolyzed to 1-acyl LPE by PLA2[3]: R-HSA-1482887
@@ -10377,7 +10593,7 @@ HMGCS1 condenses Ac-CoA and ACA-CoA to form bHMG-CoA: R-HSA-191323
 HMGCR dimer reduces bHMG-CoA to MVA: R-HSA-191352
 HMGCR dimer binds statins: R-HSA-9705584
 Mevalonate is phosphorylated to mevalonate-5-phosphate: R-HSA-191380
-Mevalonate-5-phosphate is further phosphorylated.: R-HSA-191422
+Mevalonate-5-phosphate is further phosphorylated: R-HSA-191422
 MVD decarboxylates MVA5PP to IPPP: R-HSA-191414
 Isopentenyl pyrophosphate rearranges to dimethylallyl pyrophosphate: R-HSA-191382
 FDPS dimer transfers IPPP to DMAPP: R-HSA-191322
@@ -10386,12 +10602,12 @@ FDPS dimer transfers IPPP to GPP: R-HSA-191303
 GGPS1 hexamer transfers IPPP to GPP: R-HSA-9717830
 holo-FDPS dimer binds NBPs: R-HSA-9717841
 Two FPP molecules dimerize to form presqualene diphosphate: R-HSA-191405
+CYP51A1 demethylates LNSOL: R-HSA-194678
 Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate: R-HSA-8952137
 Reduction of presqualene diphosphate to form squalene: R-HSA-191402
 Squalene is oxidized to its epoxide: R-HSA-191299
 Squalene 2,3-epoxide cyclizes, forming lanosterol: R-HSA-191366
 DHCR24 reduces LAN to 24,25-dhLAN: R-HSA-9755937
-CYP51A1 demethylates LNSOL: R-HSA-194678
 4,4-dimethylcholesta-8(9),14,24-trien-3beta-ol is reduced to 4,4-dimethylcholesta-8(9),24-dien-3beta-ol [LBR]: R-HSA-194674
 4,4-dimethylcholesta-8(9),14,24-trien-3beta-ol is reduced to 4,4-dimethylcholesta-8(9),24-dien-3beta-ol [TM7SF2]: R-HSA-194698
 4,4-dimethylcholesta-8(9),24-dien-3beta-ol is oxidized to 4-methyl,4-carboxycholesta-8(9),24-dien-3beta-ol: R-HSA-194641
@@ -10465,8 +10681,8 @@ Expression of TM7SF2: R-HSA-1655833
 Bile acid and bile salt metabolism: R-HSA-194068
 Synthesis of bile acids and bile salts: R-HSA-192105
 Synthesis of bile acids and bile salts via 7alpha-hydroxycholesterol: R-HSA-193368
-CYP7A1 7-hydroxylates CHOL: R-HSA-192051
 7alpha-hydroxycholesterol is oxidized and isomerized to 4-cholesten-7alpha-ol-3-one: R-HSA-192097
+CYP7A1 7-hydroxylates CHOL: R-HSA-192051
 CYP8B1 12-hydroxylates 4CHOL7aOLONE: R-HSA-192157
 4-cholesten-7alpha, 12alpha-diol-3-one is reduced to 5beta-cholesten-7alpha, 12alpha-diol-3-one: R-HSA-192067
 4-cholesten-7alpha-ol-3-one is reduced to 5beta-cholestan-7alpha-ol-3-one: R-HSA-192033
@@ -10505,12 +10721,10 @@ Choloyl CoA reacts with glycine or taurine to form glycocholate or taurocholate:
 Chenodeoxycholoyl CoA reacts with glycine or taurine to form glycochenodeoxycholate or taurochenodeoxycholate: R-HSA-193491
 Bile salts are translocated from the peroxisomal matrix to the cytosol: R-HSA-192315
 Synthesis of bile acids and bile salts via 24-hydroxycholesterol: R-HSA-193775
-CYP46A1 24-hydroxylates CHOL: R-HSA-192061
+CYP8B1 12-hydroxylates 4CHOL7a,24(S)DIOL: R-HSA-193709
 Efflux of 24-hydroxycholesterol: R-HSA-193776
 Influx of 24-hydroxycholesterol: R-HSA-193767
-CYP39A1 7-hydroxylates 24OH-CHOL: R-HSA-192178
 Cholest-5-ene-3beta,7alpha,24(S)-triol is oxidized and isomerized to 4-cholesten-7alpha,24(S)-diol-3-one: R-HSA-193789
-CYP8B1 12-hydroxylates 4CHOL7a,24(S)DIOL: R-HSA-193709
 4-cholesten-7alpha,12alpha,24(S)-triol-3-one is reduced to 5beta-cholestan-7alpha,12alpha,24(S)-triol-3-one: R-HSA-193755
 4-cholesten-7alpha,24(S)-diol-3-one is reduced to 5beta-cholestan-7alpha,24(S)-diol-3-one: R-HSA-193746
 5Beta-cholestan-7alpha,12alpha,24(S)-triol-3-one is reduced to 5beta-cholestan-3alpha,7alpha,12alpha,24(S)-tetrol: R-HSA-193781
@@ -10518,7 +10732,9 @@ CYP8B1 12-hydroxylates 4CHOL7a,24(S)DIOL: R-HSA-193709
 5beta-cholestan-3alpha,7alpha,12alpha,24(S)-tetrol is translocated from the cytosol to the mitochondrial matrix: R-HSA-193774
 5beta-cholestan-3alpha,7alpha,24(S)-triol is translocated from the cytosol to the mitochondrial matrix: R-HSA-193715
 5beta-cholestan-3alpha,7alpha,12alpha,24(S)-tetrol is hydroxylated to 5beta-cholestan-3alpha,7alpha,12alpha,24(S), 27-pentol: R-HSA-193787
+CYP39A1 7-hydroxylates 24OH-CHOL: R-HSA-192178
 CYP27A1 27-hydroxylates 5β-CHOL3α,7α,24(s)-triol: R-HSA-193792
+CYP46A1 24-hydroxylates CHOL: R-HSA-192061
 5beta-cholestan-3alpha,7alpha,12alpha,24(S),27-pentol is oxidized to 3alpha,7alpha,12alpha,24(S)-tetrahydroxy-5beta-cholestan-27-al: R-HSA-193780
 5beta-cholestan-3alpha,7alpha,24(S),27-tetrol is oxidized to 3alpha,7alpha,24(S)-trihydroxy-5beta-cholestan-27-al: R-HSA-193719
 3alpha,7alpha,12alpha,24(S)-tetrahydroxy-5beta-cholestan-27-al is oxidized to 3alpha,7alpha,12alpha,24(S)-tetrahydroxy-5beta-cholestanoate (TetraHCA): R-HSA-193713
@@ -10533,21 +10749,21 @@ TetraHCA is conjugated with Coenzyme A (SLC27A2 VLCS): R-HSA-193727
 3,7,24THCA-CoA is translocated from the cytosol to the peroxisome: R-HSA-193753
 Isomerization of 25(R) TetraHCA-CoA to (24R, 25R) 3alpha,7alpha,12alpha,24-tetrahydroxy-5beta-cholestanoyl-CoA: R-HSA-193763
 Isomerization of 3,7,24THCA-CoA to (24R, 25R) 3alpha,7alpha,24-trihydroxy-5beta-cholestanoyl-CoA: R-HSA-193736
+CYP7B1 7-hydroxylates 25OH-CHOL: R-HSA-192065
 Synthesis of bile acids and bile salts via 27-hydroxycholesterol: R-HSA-193807
-CYP27A1 27-hydroxylates CHOL: R-HSA-192123
+CYP8B1 12-hydroxylates 4CHOL7a,27DONE: R-HSA-193845
 Efflux of 27-hydroxycholesterol: R-HSA-193812
 Influx of 27-hydroxycholesterol: R-HSA-193801
 27-hydroxycholesterol is 7alpha-hydroxylated: R-HSA-191972
 Cholest-5-ene-3beta,7alpha,27-triol is oxidized and isomerized to 4-cholesten-7alpha,27-diol-3-one: R-HSA-193816
-CYP8B1 12-hydroxylates 4CHOL7a,27DONE: R-HSA-193845
 4-cholesten-7alpha,12alpha,27-triol-3-one is reduced to 5beta-cholestan-7alpha,12alpha,27-triol-3-one: R-HSA-193821
 4-cholesten-7alpha,27-diol-3-one is reduced to 5beta-cholestan-7alpha,27-diol-3-one: R-HSA-193824
 5Beta-cholestan-7alpha,12alpha,27-triol-3-one is reduced to 5beta-cholestan-3alpha,7alpha,12alpha,27-tetrol: R-HSA-193800
 5beta-cholestan-7alpha,27-diol-3-one is reduced to 5beta-cholestan-3alpha,7alpha,27-triol: R-HSA-193841
 5beta-cholestan-3alpha,7alpha,12alpha,27-tetrol is translocated from the cytosol to the mitochondrial matrix: R-HSA-193832
 5beta-cholestan-3alpha,7alpha,27-triol is translocated from the cytosol to the mitochondrial matrix: R-HSA-193808
+CYP27A1 27-hydroxylates CHOL: R-HSA-192123
 Cholesterol is hydroxylated to 25-hydroxycholesterol: R-HSA-191983
-CYP7B1 7-hydroxylates 25OH-CHOL: R-HSA-192065
 OSBPs transport 25OH-CHOL from ER membrane to plasma membrane: R-HSA-8867667
 OSBP exchanges 25OH-CHOL with PI4P from ER membrane to Golgi membrane: R-HSA-8868402
 Recycling of bile acids and salts: R-HSA-159418
@@ -10573,8 +10789,8 @@ CHOL translocates from cytosol to mitochondrial intermembrane space: R-HSA-19612
 Cholesterol translocates from mitochondrial intermembrane space to inner mitochondrial membrane: R-HSA-196086
 TSPO:BZRAP1 transports CHOL from outer mitochondrial membrane to inner mitochondrial membrane: R-HSA-8951850
 Oxidation of cholesterol to 22beta-hydroxycholesterol: R-HSA-193054
-Oxidation of 22beta-hydroxycholesterol to 20alpha,22beta-hydroxycholesterol: R-HSA-193065
 CYP11A1 cleaves 20a,22b-DHCHOL: R-HSA-193101
+Oxidation of 22beta-hydroxycholesterol to 20alpha,22beta-hydroxycholesterol: R-HSA-193065
 Translocation of isocaproaldehyde from the mitochondrial matrix to the cytosol: R-HSA-196125
 Reduction of isocaproaldehyde to 4-methylpentan-1-ol: R-HSA-196060
 Pregnenolone translocates from the mitochondrial matrix to the cytosol: R-HSA-193097
@@ -10591,11 +10807,11 @@ Corticosteroids bind to CBG in blood: R-HSA-1449687
 Mineralocorticoid biosynthesis: R-HSA-193993
 Pregnenolone is dehydrogenated to form pregn-5-ene-3,20-dione: R-HSA-196350
 Pregn-5-ene-3,20-dione isomerizes to progesterone: R-HSA-193052
-CYP21A2 21-hydroxylates PROG: R-HSA-193964
 11DCORST translocates from cytosol to mitochondrial matrix: R-HSA-193996
 CYP11B2 oxidises 11DCORST to CORST: R-HSA-194017
 CYP11B2 18-hydroxylates CORST to 18HCORST: R-HSA-193995
 CYP11B2 oxidises 18HCORST to ALDO: R-HSA-193965
+CYP21A2 21-hydroxylates PROG: R-HSA-193964
 Androgen biosynthesis: R-HSA-193048
 CYP17A1 cleaves 17aHPREG to DHA: R-HSA-193070
 HSD2B1 dimer, HSD3B2 dimer isomerise DHA to ANDST: R-HSA-193073
@@ -10608,21 +10824,22 @@ SRD5A2 binds SRD5A2 inhibitors: R-HSA-9705794
 SRD5A3 dehydrogenates TEST to DHTEST: R-HSA-9705714
 Estrogen biosynthesis: R-HSA-193144
 CYP19A1 hydroxylates TEST to EST17b: R-HSA-193143
-CYP19A1 hydroxylates ANDST to E1: R-HSA-193060
 CYP19A1 binds Aromatase inhibitors: R-HSA-9707353
 HSD17B1 hydrogenates E1 to EST17b: R-HSA-804969
 HSD17B11 dehydrogenates EST17b to E1: R-HSA-5693390
 AKR1B15 reduces EST17b to E1: R-HSA-5696822
 HSD17B14 tetramer oxidises estradiol (E2) to estrone (E1): R-HSA-6810594
 HSD17B2 oxidises estradiol (E2) to estrone (E1): R-HSA-8862137
+CYP19A1 hydroxylates ANDST to E1: R-HSA-193060
 ARSC hydrolyzes steroid sulfates: R-HSA-1606839
 Vitamin D (calciferol) metabolism: R-HSA-196791
+CYP2R1 25-hydroxylates VD3 to 25(OH)D: R-HSA-209845
 Photolytic cleavage and thermal isomerization of 7-dehydroCHOL: R-HSA-209754
 VD3 translocates from ER membrane to extracellular region: R-HSA-8963872
 VD3 binds GC: R-HSA-209738
 VD3 dissociates from GC: R-HSA-8963851
+CYP27B1 hydroxylates 25(OH)D to 1,25(OH)2D: R-HSA-209868
 VD3 translocates from extracellular region to ER membrane: R-HSA-350147
-CYP2R1 25-hydroxylates VD3 to 25(OH)D: R-HSA-209845
 25(OH)D translocates from ER membrane to extracellular region: R-HSA-6807242
 25(OH)D binds GC: R-HSA-209944
 CUBN binds GC:25(OH)D: R-HSA-350186
@@ -10631,7 +10848,6 @@ Endocytic translocation of CUBN:GC:25(OH)D to lysosomal lumen: R-HSA-209760
 LGMN degrades GC: R-HSA-350158
 CUBN dissociates from 25(OH)D: R-HSA-8963864
 25(OH)D translocates from lysosomal lumen to cytosol: R-HSA-209766
-CYP27B1 hydroxylates 25(OH)D to 1,25(OH)2D: R-HSA-209868
 CYP24A1 hydroxylates 1,25(OH)2D, inactivating it: R-HSA-209765
 1,25(OH)2D translocates from cytosol to nucleoplasm: R-HSA-8963913
 1,25(OH)2D binds VDR: R-HSA-8963915
@@ -10664,9 +10880,10 @@ D-beta hydroxybutyrate+NAD+ <=> acetoacetate+NADH+H+: R-HSA-73920
 OXCT dimers transfer CoA from SUCC-CoA to ACA, forming ACA-CoA: R-HSA-74177
 acetoacetyl-CoA + CoA <=> 2 acetyl-CoA: R-HSA-74181
 Biosynthesis of specialized proresolving mediators (SPMs): R-HSA-9018678
-Synthesis of Lipoxins (LX): R-HSA-2142700
+Biosynthesis of Lipoxins (LX): R-HSA-2142700
 LTA4 translocates from neutrophil cytosol to platelet cytosol: R-HSA-9032036
-ALOX12 oxidises LTA4 to LXA4/B4: R-HSA-2161775
+ALOX12 oxidises LTA4 to LXA4: R-HSA-2161775
+ALOX12 oxidises LTA4 to LXB4: R-HSA-9916401
 ALOX5 oxidises 15S-HpETE to LXA4/B4: R-HSA-2161917
 LXA4/B4 translocate from cytosol to extracellular region: R-HSA-9032054
 ALOX5 oxidises 15R-HETE to 15epi-LXA4/B4: R-HSA-2161907
@@ -10688,7 +10905,7 @@ Biosynthesis of E-series 18(R)-resolvins: R-HSA-9023661
 GPX4-2 reduces 18(R)-HpEPE to 18(R)-HEPE: R-HSA-9018895
 ALOX15 oxidises 18(R)-HEPE to 18(R)-RvE3: R-HSA-9018907
 ALOX5 oxidises 18(R)-HEPE to 5(S)-Hp-18(R)-HEPE: R-HSA-9018863
-5-HEDH dehydrogenates 5(S)-Hp-18(R)-HpEPE to 18(R)-RvE2: R-HSA-9018901
+5-HEDH dehydrogenates 5(S)-Hp-18(R)-HEPE to 18(R)-RvE2: R-HSA-9018901
 ALOX5 oxidises 5(S)-Hp-18(R)-HEPE to 5S,6S-epoxy-18(R)-HEPE: R-HSA-9018894
 LTA4H:Zn2+ hydrolyses 5S,6S-epoxy-18(R)-HEPE to 18(R)-RvE1: R-HSA-9018877
 18(R)-RvE1, E2 and E3 translocate from cytosol to extracellular region: R-HSA-9023983
@@ -10703,7 +10920,7 @@ GPX4-2 reduces 17(S)-Hp-DHA to 17(S)-HDHA: R-HSA-9020273
 ALOX5 oxidises 17(S)-HDHA to 4(S)-Hp-17(S)-HDHA: R-HSA-9020264
 ALOX5 oxidises 17(S)-HDHA to 7(S)-Hp-17(S)-HDHA: R-HSA-9020282
 Hydroperoxy reductase reduces 4(S)-Hp-17(S)-HDHA to RvD6: R-HSA-9020249
-Hydroperoxy reducatse reduces 7(S)-Hp-17(S)-HDHA to RvD5: R-HSA-9020260
+Hydroperoxy reductase reduces 7(S)-Hp-17(S)-HDHA to RvD5: R-HSA-9020260
 ALOX5 dehydrogenates 7(S)-Hp-17(S)-HDHA to 7S(8)-epoxy-17S-HDHA: R-HSA-9020255
 ALOX5 dehydrogenates 4(S)-Hp-17(S)-HDHA to 4S(5)-epoxy-17(S)-HDHA: R-HSA-9020277
 LTA4H:Zn2+ hydrolyses 7S(8)-epoxy-17(S)-HDHA to RvD1 or RvD2: R-HSA-9020258
@@ -10835,9 +11052,9 @@ ACSL3,4 ligates coenzyme A (CoA-SH) to palmitate yielding palmitoyl-coenzyme A i
 Glucagon-like Peptide-1 (GLP1) regulates insulin secretion: R-HSA-381676
 GLP1R binds GLP1: R-HSA-381612
 GLP1R binds GLP1R agonists: R-HSA-9728664
+G(s):GTP activates Adenylyl cyclase: R-HSA-381704
 GLP1R:GLP1 activates G(s): R-HSA-381706
 Heterotrimeric G(s) complex dissociates: R-HSA-422320
-G(s):GTP activates Adenylyl cyclase: R-HSA-381704
 Activated Adenylyl cyclase synthesizes cyclic AMP: R-HSA-381607
 PKA:AKAP79:IQGAP1 complex dissociates to active PKA subunits in response to cAMP: R-HSA-381707
 Potassium voltage-gated channels close in reponse to PKA: R-HSA-381713
@@ -10855,7 +11072,6 @@ Glucagon signaling in metabolic regulation: R-HSA-163359
 Glucagon binds to Glucagon receptor: R-HSA-163625
 Glucagon:GCGR mediates GTP-GDP exchange: R-HSA-825631
 PKA activation in glucagon signalling: R-HSA-164378
-Activated Adenylate cyclase catalyses cAMP synthesis: R-HSA-164377
 PKA-mediated phosphorylation of key metabolic factors: R-HSA-163358
 Phosphorylation of ChREBP at Thr(653) by PKA: R-HSA-163672
 PhosphoChREBP (Thr 653) is exported to cytosol: R-HSA-164423
@@ -10889,7 +11105,7 @@ Transcriptional activation of AGPAT1 by ChREBP:MLX: R-HSA-163748
 Metabolism of nitric oxide: NOS3 activation and regulation: R-HSA-202131
 eNOS activation: R-HSA-203615
 N-myristoylation of eNOS: R-HSA-203611
-palmitoylation of eNOS: R-HSA-203567
+Palmitoylation of eNOS: R-HSA-203567
 eNOS translocation from Golgi to Caveolae: R-HSA-203700
 eNOS associates with Caveolin-1: R-HSA-203712
 eNOS:Caveolin-1 complex binds to CaM: R-HSA-202110
@@ -10897,16 +11113,15 @@ HSP90 binds eNOS:Caveolin-1:CaM complex: R-HSA-202129
 Caveolin-1 dissociates from eNOS:CaM:HSP90 complex: R-HSA-202144
 AKT1 binds eNOS complex via HSP90: R-HSA-202137
 AKT1 phosphorylates eNOS: R-HSA-202111
-The cofactor BH4 is required for electron transfer in the eNOS catalytic cycle: R-HSA-1497784
 eNOS synthesizes NO: R-HSA-202127
-Salvage - Sepiapterin is reduced to BH2: R-HSA-1497869
+The cofactor BH4 is required for electron transfer in the eNOS catalytic cycle: R-HSA-1497784
 BH2 binding can lead to eNOS uncoupling: R-HSA-1497796
-DDAH1,2 hydrolyses ADMA to DMA and L-Cit: R-HSA-5693373
+DDAH1 hydrolyses ADMA to DMA and L-Cit: R-HSA-5693373
+Salvage - Sepiapterin is reduced to q-BH2: R-HSA-1497869
 Uncoupled eNOS favours the formation of superoxide: R-HSA-1497810
 Superoxide reacts rapidly with NO to form peroxynitrite (ONOO-): R-HSA-1497878
-depalmitoylation of eNOS: R-HSA-203613
+Depalmitoylation of eNOS: R-HSA-203613
 depalmitoylated eNOS translocates from plasma membrane: R-HSA-202132
-CYGB binds O2: R-HSA-5340214
 CYGB dioxygenates NO: R-HSA-5340226
 NOSIP mediated eNOS trafficking: R-HSA-203754
 eNOS binds NOSIP: R-HSA-203553
@@ -10932,7 +11147,7 @@ ME3 tetramer decarboxylates MAL to PYR: R-HSA-9012349
 PDH complex synthesizes acetyl-CoA from PYR: R-HSA-9861559
 PDH E1 decarboxylates PYR, transferring acetyl to DLAT: R-HSA-9861734
 DLAT trimer transfers acetyl to CoA: R-HSA-9861667
-DLD dimer dehydrogenates dihydrolipoyl: R-HSA-9853499
+DLD dimer dehydrogenates dihydrolipoyl: R-HSA-9858589
 Regulation of pyruvate metabolism: R-HSA-9861718
 Regulation of pyruvate dehydrogenase (PDH) complex: R-HSA-204174
 GSTZ1 dimer dehalogenates DCA: R-HSA-9011595
@@ -10975,7 +11190,6 @@ SDHAF4 binds to FAD-SDHA: R-HSA-9854961
 Transfer of Fe-S clusters to SDHB: R-HSA-9854984
 SDHA binds to SDHB: R-HSA-9855212
 SDHA:SDHB binds to SDHC:SDHD: R-HSA-9855252
-Respiratory electron transport, ATP synthesis by chemiosmotic coupling, and heat production by uncoupling proteins.: R-HSA-163200
 Respiratory electron transport: R-HSA-611105
 Complex I biogenesis: R-HSA-6799198
 NUBPL binds 4Fe-4S: R-HSA-5690023
@@ -10987,27 +11201,52 @@ Intermediate 1 binds HP subcomplex to form Intermediate 2: R-HSA-6799178
 Intermediate 2 binds MT-ND1:NDUFAF5:NDUFAF6 to form a 315kDa subcomplex: R-HSA-6799191
 COA1:MT-ND2, TMEM186:MT-ND3, MT-ND6, NDUFB6 bind the MCIA complex to form a 370kDa subcomplex: R-HSA-6799199
 The 315kDa subcomplex binds the 370kDa subcomplex to form the 550kDa complex: R-HSA-6799202
+MT-ND4 is translated: R-HSA-9906955
 ND4, ND5 bind the 550kDa complex to form the 815kDa complex: R-HSA-6799197
 NDUF subunits bind to form the FP subcomplex: R-HSA-6800870
 Peripheral arm subunits bind the 815kDa complex to form a 980kDa complex: R-HSA-6799179
 The MCIA complex, NDUFAF2-7 all dissociate from the 980kDa complex, resulting in Complex I: R-HSA-6799196
-Complex I oxidises NADH to NAD+, reduces CoQ to QH2: R-HSA-163217
+Complex I oxidises NADH to NAD+, reduces CoQ to CoQH2: R-HSA-163217
 Transfer of electrons through the succinate dehydrogenase complex: R-HSA-163213
 Reducing equivalents from beta-oxidation of fatty acids transfer to ETF: R-HSA-169260
-ETFDH oxidises ETF (reduced) to ETF, reduces CoQ to QH2: R-HSA-169270
+HCCS inserts heme into cytochrome c: R-HSA-9866217
+ETFDH oxidises ETF (reduced) to ETF, reduces CoQ to CoQH2: R-HSA-169270
+Complex III assembly: R-HSA-9865881
+MT-CYB is translated: R-HSA-9865893
+Intermediate 0 binds heme and UQCC3: R-HSA-9866061
+Intermediate I binds second heme, UQCRB, UQCRQ: R-HSA-9866104
+Intermediate II binds CYC1, UQCRC1, UQCRC2, UQCRH: R-HSA-9866132
+Late core complex dimerizes: R-HSA-9866162
+apo-UQCRFS1 binds LYRM7: R-HSA-9866253
+2Fe-2S is inserted in UQCRFS1: R-HSA-9866272
+Late core complex dimer binds UQCR10. UQCR11, UQCRFS1: R-HSA-9866164
+Unknown peptidase cleaves UQCRFS1 subunit: R-HSA-9906017
+TTC19 clears UQCRFS1 fragments from Complex III: R-HSA-9906042
 Electron transfer from ubiquinol to cytochrome c of complex III: R-HSA-164651
+Complex IV assembly: R-HSA-9864848
+MT-CO1 mRNA is translated: R-HSA-9865309
+Nascent MT-CO1 binds to MITRAC, Mg2+, PE, CL: R-HSA-9865350
+MT-CO2 mRNA is translated: R-HSA-9865569
+COX18 inserts nascent MT-CO2 in COX20:TMEM77: R-HSA-9902096
+TIMM21 carries COX4, COX5A, COX6C to MT-CO1:MITRAC: R-HSA-9865412
+Metallochaperone inserts Cu2+ into MT-CO1: R-HSA-9865449
+Metallochaperone inserts 2Cu2+ into MT-CO2: R-HSA-9865630
+MT-CO1 and MT-CO2 complexes associate, installing heme moieties: R-HSA-9865579
+MT-CO3, COX6A,B,7A and NDUFA4 bind to holo-MT-CO1,2 complex: R-HSA-9865663
 Malate-aspartate shuttle: R-HSA-9856872
 SLC25A12,13 exchange L-Glu and L-Asp: R-HSA-372448
 PXLP-K259-GOT1 transaminates 2-OG and L-Asp: R-HSA-70592
 MDH1 reduces OA: R-HSA-9856871
 SLC25A18,22 import L-Glu, H+: R-HSA-8875623
-GOT2 transaminates OA and L-Glu: R-HSA-70613
 SLC25A11 exchanges 2-OG and MAL: R-HSA-376851
+GOT2 transaminates OA and L-Glu: R-HSA-70613
 Formation of ATP by chemiosmotic coupling: R-HSA-163210
 ADP and Pi bind to ATPase: R-HSA-164840
 ATPase synthesizes ATP: R-HSA-164832
 Enzyme-bound ATP is released: R-HSA-164834
 Mitochondrial Uncoupling: R-HSA-166187
+UCP1 imports a proton: R-HSA-170026
+AAC1 imports a proton: R-HSA-9864415
 The fatty acid cycling model: R-HSA-167826
 FA anion diffuses laterally to UCP: R-HSA-166220
 FA anion flip-flops to the opposite surface: R-HSA-166214
@@ -11015,8 +11254,6 @@ The FA anion diffuses away laterally from UCP: R-HSA-166387
 FA anion picks up a proton: R-HSA-166219
 FA spontaneously flip-flops back to the matrix side: R-HSA-166215
 The proton is delivered to the matrix side: R-HSA-166223
-The proton buffering model: R-HSA-167827
-Protons are translocated from the intermembrane space to the matrix: R-HSA-170026
 Oleoyl-phe metabolism: R-HSA-9673163
 PM20D1 hydrolyzes oleoyl-phe: R-HSA-9673054
 PM20D1 transforms oleoyl-phe from oleate and phe: R-HSA-9673053
@@ -11247,12 +11484,12 @@ Cobalamin (Cbl) metabolism: R-HSA-9759218
 MMACHC dealkylates RCbl: R-HSA-3095889
 Cob(I)alamin bound to MMACHC is oxidized to cob(II)alamin: R-HSA-9759549
 MMACHC decyanates CNCbl: R-HSA-3149519
+MTR transfers CH3 from MeCbl to HCYS: R-HSA-174374
 MMACHC:cob(II)alamin binds MMADHC: R-HSA-3149494
 cob(II)alamin is transferred from MMACHC:MMADHC:cob(II)alamin to MTRR:MTR: R-HSA-3204318
 MTRR reduces cob(II)alamin to meCbl: R-HSA-3149518
 MTR transfers CH3 group from 5-methyl-THF to cob(I)alamin: R-HSA-3149539
 MMADHC targets transport of cytosolic cob(II)alamin to mitochondria: R-HSA-3149563
-MTR transfers CH3 from MeCbl to HCYS: R-HSA-174374
 MMAB adenosylates cob(I)alamin: R-HSA-3159253
 MMAA:MUT binds AdoCbl: R-HSA-3159259
 Biotin transport and metabolism: R-HSA-196780
@@ -11376,14 +11613,19 @@ TTPA transports alpha-TOH from lysosomal membrane to plasma membrane: R-HSA-8874
 Metabolism of cofactors: R-HSA-8978934
 Ubiquinol biosynthesis: R-HSA-2142789
 PDSS1,2 ligates FPP to IPPP: R-HSA-2162253
+HPDL dioxygenates HPPA: R-HSA-9856718
+Unknown enzyme(s) process 4-HMA to 4-Hbz: R-HSA-9856737
+Unknown dehydrogenase oxidizes 4-HBz: R-HSA-9856794
 COQ2 ligates all-E-10PrP2 to PHB: R-HSA-2162192
 COQ6 hydroxylates DHB: R-HSA-2162187
 COQ3 methylates DHDB: R-HSA-2162193
-Unknown enzyme decarboxylates MHDB: R-HSA-2162195
+COQ4 decarboxylates MHDB: R-HSA-2162195
 Unknown enzyme hydroxylates DMPhOH: R-HSA-2162191
 COQ5 methylates MDMQ10H2: R-HSA-2162188
 COQ7:COQ9 octamer hydroxylates DMQ10H2: R-HSA-2162194
 COQ3 methylates DeMQ10H2: R-HSA-2162186
+mito-STARD7 transports Q10 to outer mitochondrial membrane: R-HSA-9856502
+STARD7 transports Q10 to plasma membrane: R-HSA-9856510
 NADPH regeneration: R-HSA-389542
 ACO1:4Fe-4S isomerises CIT to ISCIT: R-HSA-5690911
 isocitrate + NADP+ => 2-oxoglutarate + CO2 + NADPH + H+: R-HSA-389540
@@ -11436,12 +11678,14 @@ a-ketoisocaproate, a-keto-b-methylvalerate, or a-ketoisovalerate + glutamate <=>
 SLC25A44 transports Leu, Ile and Val from cytosol to mitochondrial matrix: R-HSA-9672770
 leu, ile, or val + alpha-ketoglutarate <=> a-ketoisocaproate, a-keto-b-methylvalerate, or a-ketoisovalerate + glutamate [BCAT2]: R-HSA-70724
 a-ketoisocaproate, a-keto-b-methylvalerate, or a-ketoisovalerate + glutamate <=> leu, ile, or val + alpha-ketoglutarate [BCAT2]: R-HSA-508179
-BCKDH synthesizes BCAA-CoA from KIC, KMVA, KIV: R-HSA-70713
+BCKDH synthesizes BCAA-CoA from KIC, KMVA, KIV: R-HSA-9859138
+BCKDHA:BCKDHB tetramer decarboxylates KIC, KMVA, KIV: R-HSA-9859148
+DBT transfers BCAA to CoA: R-HSA-9859163
 BCKDK phosphorylates BCKDH: R-HSA-5693148
 PPM1K dephosphorylates p-BCKDH: R-HSA-5693153
 isovaleryl-CoA + FAD => beta-methylcrotonyl-CoA + FADH2: R-HSA-70745
 beta-methylcrotonyl-CoA + ATP + CO2 <=> beta-methylglutaconyl-CoA + ADP + orthophosphate + H2O [MCCA]: R-HSA-70773
-beta-methylglutaconyl-CoA + ADP + orthophosphate + H2O <=> beta-methylcrotonyl-CoA + ATP + CO2 [MCCA]: R-HSA-508308
+beta-methylglutaconyl-CoA + ADP + orthophosphate <=> beta-methylcrotonyl-CoA + ATP + CO2 (MCCA): R-HSA-508308
 beta-methylglutaconyl-CoA + H2O <=> beta-hydroxy-beta-methylglutaryl-CoA: R-HSA-70785
 alpha-methylbutyryl-CoA + FAD => tiglyl-CoA + FADH2: R-HSA-70800
 tiglyl-CoA + H2O <=> alpha-methyl-beta-hydroxybutyryl-CoA: R-HSA-70830
@@ -11474,7 +11718,9 @@ alpha-aminoadipoate semialdehyde + NAD+ => alpha-aminoadipate + NADH + H+: R-HSA
 alpha-aminoadipate + alpha-ketoglutarate <=> alpha-ketoadipate + glutamate: R-HSA-70952
 alpha-ketoadipate + glutamate <=> alpha-aminoadipate + alpha-ketoglutarate: R-HSA-508561
 2-oxoglutarate [mitochondrial matrix] + 2-oxoadipate [cytosol] <=> 2-oxoglutarate [cytosol] + 2-oxoadipate [mitochondrial matrix]: R-HSA-372480
-alpha-ketoadipate + CoASH + NAD+ => glutaryl-CoA + CO2 + NADH + H+: R-HSA-71037
+OADH complex synthesizes glutaryl-CoA from 2-OA: R-HSA-9858328
+DHTKD1 dimer decarboxylates 2-OA: R-HSA-9858321
+DLST transfers glutaryl to CoA: R-HSA-9858590
 glutaryl-CoA + FAD => crotonyl-CoA + FADH2 + CO2: R-HSA-71046
 Phenylalanine and tyrosine metabolism: R-HSA-8963691
 Phenylalanine metabolism: R-HSA-8964208
@@ -11527,7 +11773,6 @@ kynurenine + O2 + NADPH + H+ => 3-hydroxykynurenine + NADP+ + H2O: R-HSA-71200
 kynurenine + 2-oxoglutarate => 4-(2-aminophenyl)-2,4-dioxobutanoic acid + glutamate: R-HSA-893583
 4-(2-aminophenyl)-2,4-dioxobutanoate => kynurenic acid + H2O [mitochondrial]: R-HSA-893597
 Sulfur amino acid metabolism: R-HSA-1614635
-MAT1A multimers transfer Ado from ATP to L-Met: R-HSA-174391
 Methionine salvage pathway: R-HSA-1237112
 MTA is cleaved and phosphorylated: R-HSA-1237160
 Methylthio-ribose-P = Methylthio-ribulose-P: R-HSA-1237096
@@ -11536,12 +11781,13 @@ Dehydration of methylthio-ribulose-P: R-HSA-1237140
 Acireductone is created: R-HSA-1237129
 Acireductone is oxidized to MOB: R-HSA-1237119
 Transamination of MOB to methionine: R-HSA-1237102
+MAT1A multimers transfer Ado from ATP to L-Met: R-HSA-174391
+AHCY:NAD+ tetramer hydrolyses AdoHcy: R-HSA-174401
 BHMT tetramer transfers CH3 group from BET to HCYS to form DMGLY: R-HSA-1614654
 BHMT2 tetramer transfers CH3 group from SMM to LHCYS: R-HSA-5696838
 Cysteine formation from homocysteine: R-HSA-1614603
 PXLP-CBS tetramers condenses HCYS and L-Ser to form L-Cystathionine: R-HSA-1614524
 PXLP-K212-CTH cleaves L-Cystathionine: R-HSA-1614583
-AHCY:NAD+ tetramer hydrolyses AdoHcy: R-HSA-174401
 Degradation of cysteine and homocysteine: R-HSA-1614558
 Homocysteine is degraded to oxobutanoate and H2S: R-HSA-1614631
 Cysteine is degraded to serine and H2S: R-HSA-1614614
@@ -11669,13 +11915,13 @@ S-Adenosyl methionine <=> Decarboxylated-Adenosyl methionine + CO2: R-HSA-351222
 Putrescine + dc-Adenosyl methionine  => Spermidine + 5'-methylthioadenosine: R-HSA-351215
 dc-Adenosyl methionine + Spermidine => Spermine + 5'-methylthioadenosine: R-HSA-351210
 Interconversion of polyamines: R-HSA-351200
-SMOX-3 oxidises SPN to SPM: R-HSA-141341
 Spermidine  => N-acetylated spermidine: R-HSA-351208
 N-acetylated spermidine (cytosol)=>N-acetylated spermidine (peroxisomal): R-HSA-351201
 PAO:FAD oxidises NASPM to PTCN: R-HSA-141348
-PAOX:FAD oxidises NASPN to SPM: R-HSA-141351
 Spermine  => N-acetylated spermine: R-HSA-351207
 N-acetylated spermine (cytosol)=>N-acetylated spermine (peroxisomal): R-HSA-351229
+PAOX:FAD oxidises NASPN to SPM: R-HSA-141351
+SMOX-3 oxidises SPN to SPM: R-HSA-141341
 Regulation of ornithine decarboxylase (ODC): R-HSA-350562
 Antizyme OAZ binds to Ornithine decarboxylase: R-HSA-350567
 26S proteosome degrades ODC holoenzyme complex: R-HSA-353125
@@ -11742,17 +11988,17 @@ ALB binds extracellular heme: R-HSA-9661419
 COX10 transforms heme to heme O: R-HSA-2995330
 COX15 transforms heme O to heme A: R-HSA-2995334
 Heme degradation: R-HSA-189483
+UGT1A1 transfers GlcA from UDP-GlcA to BIL to form BMG: R-HSA-9632039
+UGT1A4 transfers GlcA from UDP-GlcA to BIL to form BMG: R-HSA-159194
 BIL:ALB dissociates: R-HSA-9661425
+UGT1A1 tetramer transfers GlcA from UDP-GlcA to BMG to form BDG: R-HSA-9632038
 SLCO1B1 transports BIL from extracellular region (blood) to cytosol (hepatocyte): R-HSA-9661397
+UGT1A4 transfers GlcA from UDP-GlcA to BMG to form BDG: R-HSA-159179
 SLCO2B1-3 transports BIL  from extracellular region (blood) to cytosol (hepatocyte): R-HSA-9661723
 SLCO1B3 transports BIL from extracellular region (blood) to cytosol (hepatocyte): R-HSA-9661799
 BIL binds GSTA1, FABP1: R-HSA-9663511
 BIL dissociates from GSTA1, FABP1: R-HSA-9663492
 BIL translocates from the cytosol to the ER lumen: R-HSA-189381
-UGT1A1 transfers GlcA from UDP-GlcA to BIL to form BMG: R-HSA-9632039
-UGT1A4 transfers GlcA from UDP-GlcA to BIL to form BMG: R-HSA-159194
-UGT1A1 tetramer transfers GlcA from UDP-GlcA to BMG to form BDG: R-HSA-9632038
-UGT1A4 transfers GlcA from UDP-GlcA to BMG to form BDG: R-HSA-159179
 BMG, BDG translocates from ER lumen to cytosol: R-HSA-9661446
 ABCC2 transports BMG,BDG from cytosol to extracellular region: R-HSA-5679041
 ABCG2 tetramer transports BMG,BDG from cytosol to extracellular region: R-HSA-9661417
@@ -11859,6 +12105,7 @@ Phase II - Conjugation of compounds: R-HSA-156580
 Glucuronidation: R-HSA-156588
 Formation of the active cofactor, UDP-glucuronate: R-HSA-173599
 UDP-glucose is oxidised to UDP-glucuronate: R-HSA-173597
+SLC35D2 exchanges UDP-GlcA for UMP: R-HSA-9912889
 SLC35D1 hexamer transports UDP-GlcA, UDP-GlcNAc from cytosol to endoplasmic reticulum lumen: R-HSA-174368
 UGT1A10 transfers GlcA from UDP-GlcA to GCTN: R-HSA-8941701
 Formation of N-glucuronides: R-HSA-174916
@@ -12281,7 +12528,7 @@ Signal-containing nascent peptide translocates to endoplasmic reticulum: R-HSA-1
 Signal peptidase hydrolyzes signal peptide from ribosome-associated nascent protein: R-HSA-1799329
 Eukaryotic Translation Elongation: R-HSA-156842
 eEF1A complexes with GTP: R-HSA-156909
-eEF1A:GTP:aminoacyl tRNA ternary complex formation.: R-HSA-156908
+eEF1A:GTP:aminoacyl tRNA ternary complex formation: R-HSA-156908
 Peptide chain elongation: R-HSA-156902
 Aminoacyl-tRNA  binds to the ribosome at the A-site: R-HSA-156907
 Hydrolysis of eEF1A:GTP: R-HSA-156923
@@ -12413,9 +12660,6 @@ RIOX1:Fe2+ hydroxylates a histidine residue of RPL8: R-HSA-9630993
 RIOX2Fe2+ hydroxylates a histidine residue of RPL27A: R-HSA-9630967
 ASPH:Fe2+ hydroxylates an aspartate residue of F9: R-HSA-9631355
 Post-translational modification: synthesis of GPI-anchored proteins: R-HSA-163125
-Synthesis of dolichyl-phosphate mannose: R-HSA-162699
-dolichyl phosphate + GDP-alpha-D-mannose -> dolichyl phosphate D-mannose: R-HSA-162721
-Reorientation of dolichyl phosphate D-mannose in the endoplasmic reticulum membrane: R-HSA-162715
 Synthesis of glycosylphosphatidylinositol (GPI): R-HSA-162710
 phosphatidylinositol + UDP-N-acetyl-D-glucosamine -> N-acetylglucosaminyl-PI + UDP: R-HSA-162730
 N-acetylglucosaminyl-PI + H2O -> glucosaminyl-PI + acetate: R-HSA-162857
@@ -12432,6 +12676,9 @@ Attachment of GPI anchor to uPAR: R-HSA-162791
 uPAR precursor + acyl-GPI -> uPAR-acyl-GPI + uPAR propeptide: R-HSA-162836
 uPAR-acyl-GPI + H2O -> uPAR + long-chain fatty acid: R-HSA-162729
 GPLD1 hydrolyses GPI-anchors from proteins: R-HSA-8940388
+Synthesis of dolichyl-phosphate mannose: R-HSA-162699
+dolichyl phosphate + GDP-alpha-D-mannose -> dolichyl phosphate D-mannose: R-HSA-162721
+Reorientation of dolichyl phosphate D-mannose in the endoplasmic reticulum membrane: R-HSA-162715
 Asparagine N-linked glycosylation: R-HSA-446203
 Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein: R-HSA-446193
 Synthesis of substrates in N-glycan biosythesis: R-HSA-446219
@@ -12451,8 +12698,9 @@ Isomerization of GlcNAc6P to GlcNAc1P: R-HSA-446185
 GlcNAc1P is dephosphorylated to UDP-N-acetyl-glucosamine: R-HSA-446204
 Synthesis of GDP-mannose: R-HSA-446205
 MPI isomerises Fru6P to Man6P: R-HSA-532549
+HK1 phosphorylates Mannose to Man6P: R-HSA-9909159
 PMM1,2 isomerise Man6P to Man1P: R-HSA-446201
-Mannose-1-phosphate converted to GDP-Mannose: R-HSA-446221
+GMPPB converts Mannose-1-phosphate to GDP-Mannose: R-HSA-446221
 Synthesis of dolichyl-phosphate-glucose: R-HSA-446214
 NUDT14 hydrolyses UDP-Glc to G1P and UMP: R-HSA-6810464
 Flipping of dolichyl-phosphate-glucose into the ER lumen: R-HSA-446211
@@ -12756,7 +13004,7 @@ PIAS2,3,4 SUMOylate RORA with SUMO2: R-HSA-4719413
 SUMOylation of RXRA with SUMO1: R-HSA-4341048
 PIAS2-2 SUMOylates THRA with SUMO1: R-HSA-4719447
 PIAS2-2 SUMOylates THRA with SUMO3: R-HSA-4719423
-PIAS1 SUMOylates THRB with SUMO1.: R-HSA-4719424
+PIAS1 SUMOylates THRB with SUMO1: R-HSA-4719424
 PIAS1 SUMOylates THRB with SUMO3: R-HSA-4719448
 SUMOylation of ubiquitinylation proteins: R-HSA-3232142
 PML, TRIM27, PIAS1,2-1 SUMOylate MDM2 with SUMO1: R-HSA-3000434
@@ -12782,7 +13030,6 @@ SUMOylation of nuclear envelope proteins: R-HSA-9793242
 Deubiquitination: R-HSA-5688426
 UCH proteinases: R-HSA-5689603
 ADRM1 binds 26S proteasome: R-HSA-5665871
-UCHL3, SENP8 cleave NEDD8: R-HSA-5690808
 ADRM1:26S proteaseome binds UCHL5: R-HSA-5665854
 UCHL5 binds INO80 complex: R-HSA-5689544
 BAP1 binds BAP1-interacting complex: R-HSA-5689630
@@ -12791,6 +13038,7 @@ BAP1 binds Ub-HCFC1: R-HSA-5690785
 BAP1:Ub-HCFC1 deubiquitinates BAP1:Ub-HCFC1: R-HSA-5690759
 Histone H2A is dubiquitinated by the PR-DUB complex: R-HSA-5690790
 UCHL1, UCHL3 cleave ubiquitin adducts: R-HSA-5690319
+UCHL3, SENP8 cleave NEDD8: R-HSA-5690808
 UCHL5, USP15 deubiquitinate TGFBR1: R-HSA-2179291
 Ub-specific processing proteases: R-HSA-5689880
 USP7 deubiquitinates TP53,MDM2,MDM4,FOXO4, PTEN: R-HSA-5689950
@@ -12891,6 +13139,47 @@ US11:HLA binds DERL1:TMEM129:Ub:UBE2J2,UBE2K:VIMP:VCP: R-HSA-8943083
 TMEM129 polyubiquitinates HLA (MHC class I heavy chain) bound to cytomegalovirus US11: R-HSA-8943080
 PEX2:PEX10:PEX12 binds PEX5S,L (in PEX5S:PEX13:PEX14) and Ub:UBE2D1,2,3: R-HSA-8953917
 PEX2:PEX10:PEX12 monoubiquitinates PEX5S,L at cysteine-11: R-HSA-8953946
+Proteasome assembly: R-HSA-9907900
+PSMG3 binds PSMG4: R-HSA-9908041
+PSMG3:PSMG4 dimer binds PSMA5: R-HSA-9908034
+Formation of the outer ring of the 20S core particle: R-HSA-9907912
+PSMG1 binds PSMG2: R-HSA-9908051
+PSMG1:PSMG2 dimer binds the 20S core particle outer ring: R-HSA-9908052
+POMP binds the 20S core particle outer ring: R-HSA-9908069
+Formation of the inner ring of the 20S core particle of the 26S proteasome: R-HSA-9907898
+Formation of the preholoproteasome: R-HSA-9907919
+Maturation of the canonical 20S core particle: R-HSA-9908101
+PSMC4 binds PSMC5: R-HSA-9907951
+PSMD10 and PAAF1 bind PSMC4:PSMC5: R-HSA-9907979
+PSMC3 binds PSMC6: R-HSA-9907948
+PSMD9 binds PSMC3:PSMC6: R-HSA-9907965
+PSMC2 binds PSMC1: R-HSA-9907954
+PSMD5 and PSMD2 bind PSMC2:PSMC1: R-HSA-9907976
+Formation of the 19S regulatory particle base precursor: R-HSA-9907980
+Formation of the complex of PSMD7, PSMD12, PSMD13, and PSMD14: R-HSA-9907998
+PSMD11 binds PSMD7:PSMD12:PSMD13:PSMD14: R-HSA-9907992
+Formation of the complex of PSMD3, PSMD6, and SEM1: R-HSA-9908007
+Formation of the lid particle 2 (LP2): R-HSA-9908014
+Formation of the 19S regulatory particle lid: R-HSA-9908019
+Formation of the 19S regulatory particle precursor: R-HSA-9908026
+Formation of the 26S proteasome: R-HSA-9908178
+Formation of the PA28-alpha-beta regulatory particle: R-HSA-9908686
+Formation of the PA28-alpha-beta-20S proteasome: R-HSA-9908709
+Formation of the PA28gamma homoheptamer: R-HSA-9908723
+Formation of the PA28gamma-20S proteasome: R-HSA-9908721
+Formation of the inner ring of the 20S immunoproteasome core particle: R-HSA-9907925
+Fromation of the preholoimmunoproteasome: R-HSA-9907941
+Maturation of the 20S immunoproteasome core particle: R-HSA-9908105
+Formation of the immunoproteasome: R-HSA-9908186
+Formation of the inner ring of the 20S thymoproteasome core particle: R-HSA-9907928
+Formation of the preholothymoproteasome: R-HSA-9907940
+Maturation of the 20S thymoproteasome core particle: R-HSA-9908108
+Formation of the outer ring of the 20S core particle of the spermatoproteasome: R-HSA-9908764
+Formation of the inner ring of the 20S spermatoproteasome core particle: R-HSA-9908775
+Formation of the preholospermatoproteasome: R-HSA-9908777
+Maturation of the preholospermatoproteasome: R-HSA-9908780
+Formation of the spermatoproteasome: R-HSA-9908800
+PSMF1 binds the 20S core particle: R-HSA-9908844
 RAB geranylgeranylation: R-HSA-8873719
 FarC-PTP4A2 binds RABGGTB: R-HSA-8870457
 RABGGTA and RABGGTB bind: R-HSA-8870461
@@ -13001,7 +13290,7 @@ ENPEP:Zn2+ hydrolyzes Angiotensin-(1-8) to Angiotensin-(2-8): R-HSA-2022399
 ANPEP:Zn2+ hydrolyzes Angiotensin-(2-8) to Angiotensin-(3-8): R-HSA-2022393
 ACE2(18-805):Zn2+ hydrolyzes Angiotensin-(1-8) to Angiotensin-(1-7): R-HSA-2022379
 Mast Cell Carboxypeptidase hydrolyzes Angiotensin-(1-10) to Yield Angiotensin-(1-9): R-HSA-2028294
-CES1trimer hydrolyses ACEI pro-drugs to ACEIs: R-HSA-9619024
+CES1 trimer hydrolyses ACEI pro-drugs to ACEIs: R-HSA-9619024
 ACEIs translocate from ER lumen to extracellular region: R-HSA-9619034
 ACEIs bind ACE: R-HSA-9614933
 Incretin synthesis, secretion, and inactivation: R-HSA-400508
@@ -13073,7 +13362,7 @@ SFTPB dimer,C translocate from multivesicle body to lamellar body: R-HSA-5684865
 ABCA3 transports PC, PG from ER membrane to lamellar body: R-HSA-5683714
 CECRI deaminates Ade-Rib to Ino: R-HSA-5693346
 ADORA2A,B bind Ade-Rib: R-HSA-418925
-SFTPB,C, PC, PG translocate from lamellar body to extracellular region.: R-HSA-5684862
+SFTPB,C, PC, PG translocate from lamellar body to extracellular region: R-HSA-5684862
 ZDHHC2 transfers PALM from PALM-CoA to CKAP4: R-HSA-5686304
 PALM-C100-CKAP4 binds SFTPAs: R-HSA-5686301
 PALM-C100-CKAP4 transports SFTPAs from extracellular region to lamellar body: R-HSA-5686286
@@ -13499,7 +13788,7 @@ Expression of POLRMT: R-HSA-1592243
 Expression of SSBP1: R-HSA-1592241
 Expression of mTERF: R-HSA-1592251
 Expression of POLG2: R-HSA-1592235
-Expression of PEO1: R-HSA-1592239
+Expression of TWINKLE (TWNK, PEO1): R-HSA-1592239
 Expression of ESRRA (ERR1, ERRalpha): R-HSA-1605428
 Expression of SIRT3: R-HSA-1605535
 Expression of PERM1: R-HSA-8940309
@@ -13903,6 +14192,7 @@ ANO2 dimer binds Ca2+: R-HSA-9712195
 ANO2:Ca2+ translocates Cl- from the cytosol to the extracellular region: R-HSA-9712204
 Visual phototransduction: R-HSA-2187338
 The canonical retinoid cycle in rods (twilight vision): R-HSA-2453902
+Photons induce isomerization of 11c-retinyl to at-retinyl: R-HSA-74101
 TTR:RBP:atROL binds to STRA6 receptor: R-HSA-2453876
 STRA6 transports atROL from extracellular region to cytosol: R-HSA-2453863
 atROL binds RBP1 to form RBP1:atROL: R-HSA-74843
@@ -13913,7 +14203,6 @@ RDH5 oxidises 11cROL to 11cRAL: R-HSA-2454081
 RLBP1:11cRAL dissociates: R-HSA-8960973
 RBP3 transports 11cRAL to rod photoreceptor outer segment: R-HSA-2454113
 11cRAL binds to opsin to form 11c-retinyl:RHO: R-HSA-2454118
-Photons induce isomerization of 11c-retinyl to at-retinyl: R-HSA-74101
 ABCA4 mediates atRAL transport: R-HSA-1467466
 ABCA4 transports NRPE from photoreceptor outer segment membrane to cytosol: R-HSA-2466749
 NRPE dissociates to atRAL and PE: R-HSA-2466718
@@ -14023,9 +14312,9 @@ Phospholipase C-gamma1 binds to the activated EGF receptor: R-HSA-212706
 EGFR activates PLC-gamma1 by phosphorylation: R-HSA-212710
 Active PLC-gamma1 dissociates from EGFR: R-HSA-212713
 GRB2 events in EGFR signaling: R-HSA-179812
+GRB2-1 binds SOS1: R-HSA-109813
 GRB2:SOS1 complex binds to EGF:EGFR complex: R-HSA-177943
 SOS1-mediated nucleotide exchange of RAS (EGF:EGFR:GRB2:SOS1): R-HSA-177938
-GRB2-1 binds SOS1: R-HSA-109813
 SHC1 events in EGFR signaling: R-HSA-180336
 SHC1 binds to the phosphorylated EGF receptor:ligand complex: R-HSA-177925
 SHC1 phosphorylation by phosphorylated EGFR: R-HSA-177933
@@ -14113,7 +14402,7 @@ FGFR1- and PTPN11- associated PI3K phosphorylates PIP2 to PIP3: R-HSA-5654692
 Activated FGFR1 binds FLRT1,2,3: R-HSA-5656064
 Negative regulation of FGFR1 signaling: R-HSA-5654726
 KAL1 binds FGFR1c: R-HSA-5654514
-Activated ERK1/2 threonine-phosphorylates FGFR1-associated FRS2.: R-HSA-5654560
+Activated ERK1/2 threonine-phosphorylates FGFR1-associated FRS2: R-HSA-5654560
 p-CBL:GRB2 binds p-FRS2:activated FGFR1: R-HSA-5654673
 CBL ubiquitinates FRS2 and FGFR1: R-HSA-5654672
 Spry regulation of FGF signaling: R-HSA-1295596
@@ -14211,7 +14500,7 @@ Activated FGFR3:p-FRS2:p-PPTN11 binds GRB2:GAB1:PI3KR1: R-HSA-5654641
 Activated FGFR3:p-FRS2:p-PPTN11:GRB2:GAB1:PIK3R1 binds PIK3CA: R-HSA-5654643
 FGFR3- and PTPN11-associated PI3K phosphorylates PIP2 to PIP3: R-HSA-5654709
 Negative regulation of FGFR3 signaling: R-HSA-5654732
-Activated ERK1/2 threonine-phosphorylates FGFR3-associated FRS2.: R-HSA-5654565
+Activated ERK1/2 threonine-phosphorylates FGFR3-associated FRS2: R-HSA-5654565
 p-CBL:GRB2 binds p-FRS2:activated FGFR3: R-HSA-5654730
 CBL ubiquitinates FRS2 and FGFR3: R-HSA-5654679
 Signaling by FGFR4: R-HSA-5654743
@@ -14249,7 +14538,7 @@ Activated FGFR4:p-FRS2:p-PPTN11 binds GRB2:GAB1:PI3KR1: R-HSA-5654667
 Activated FGFR4:p-FRS2:p-PPTN11:GRB2:GAB1:PIK3R1binds PIK3CA: R-HSA-5654669
 FGFR4- and PTPN11-associated PI3K phosphorylates PIP2 to PIP3: R-HSA-5654714
 Negative regulation of FGFR4 signaling: R-HSA-5654733
-Activated ERK1/2 threonine-phosphorylates FGFR4-associated FRS2.: R-HSA-5654566
+Activated ERK1/2 threonine-phosphorylates FGFR4-associated FRS2: R-HSA-5654566
 p-CBL:GRB2 binds p-FRS2:activated FGFR4: R-HSA-5654734
 CBL ubiquitinates FRS2 and FGFR4: R-HSA-5654684
 Signaling by NTRKs: R-HSA-166520
@@ -14451,12 +14740,6 @@ Insulin receptor signalling cascade: R-HSA-74751
 Binding of SHC1 to insulin receptor: R-HSA-74740
 Phosphorylation of SHC1: R-HSA-74742
 Dissociation of p-Y427-SHC1 from insulin receptor: R-HSA-74743
-GRB2-1:SOS1 binds p-Y427-SHC1: R-HSA-74746
-GRB2:SOS:p-Y427-SHC1 mediated nucleotide exchange of RAS: R-HSA-109807
-IRS activation: R-HSA-74713
-Binding of IRS to insulin receptor: R-HSA-74707
-Phosphorylation of IRS: R-HSA-74711
-Dissociation of IRS-P from insulin receptor: R-HSA-74712
 IRS-mediated signalling: R-HSA-112399
 p-Y-IRS1,p-Y-IRS2 bind PI3K: R-HSA-74737
 PI3K Cascade: R-HSA-109704
@@ -14472,6 +14755,12 @@ p-S295-PDE3B hydrolyses cAMP to AMP: R-HSA-162425
 SOS-mediated signalling: R-HSA-112412
 GRB2-1:SOS1 binds p-IRS1,p-IRS2: R-HSA-74736
 GRB2:SOS1:p-Y-IRS1,p-Y-IRS2 mediated nucleotide exchange of RAS: R-HSA-109817
+GRB2-1:SOS1 binds p-Y427-SHC1: R-HSA-74746
+GRB2:SOS:p-Y427-SHC1 mediated nucleotide exchange of RAS: R-HSA-109807
+IRS activation: R-HSA-74713
+Binding of IRS to insulin receptor: R-HSA-74707
+Phosphorylation of IRS: R-HSA-74711
+Dissociation of IRS-P from insulin receptor: R-HSA-74712
 Signal attenuation: R-HSA-74749
 Dephosphorylation of p-Y-IRS1,p-Y-IRS2: R-HSA-74747
 De-phosphorylation of p-Y427-SHC1: R-HSA-74748
@@ -14646,7 +14935,7 @@ Activated PKC phosphorylates SHC1: R-HSA-8934446
 SHC1 binds PTPN12: R-HSA-8934465
 GRB2 events in ERBB2 signaling: R-HSA-1963640
 GRB2:SOS1 complex binds phosphorylated EGFR:ERBB2 heterodimer: R-HSA-1250488
-RAS guanyl-nucleotide exchange mediated by SOS1 in complex with GRB2 and phosphorylated EGFR:ERBB2 heterodimers.: R-HSA-1250498
+RAS guanyl-nucleotide exchange mediated by SOS1 in complex with GRB2 and phosphorylated EGFR:ERBB2 heterodimers: R-HSA-1250498
 GRB2:SOS1 complex binds phosphorylated ERBB4:ERBB2 heterodimers: R-HSA-1306969
 RAS guanyl nucleotide exchange mediated by SOS1 bound to GRB2 in complex with phosphorylated ERBB4:ERBB2 heterodimers: R-HSA-1306972
 PI3K events in ERBB2 signaling: R-HSA-1963642
@@ -14655,7 +14944,7 @@ PIP2 to PIP3 conversion by PI3K bound to phosphorylated heterodimer of ERBB2 and
 Binding of PI3K to p-ERBB2:p-ERBB4 CYT-1 heterodimers: R-HSA-1250346
 PIP2 to PIP3 conversion by PI3K bound to phosphorylated heterodimer of ERBB2 and ERBB4 CYT1: R-HSA-1306979
 Binding of GRB2:GAB1 to p-ERBB2:p-EGFR: R-HSA-1306963
-Binding of PI3K to GRB2:GAB1 in complex with phosphorylated heterodimer of ERBB2 and EGFR.: R-HSA-1306965
+Binding of PI3K to GRB2:GAB1 in complex with phosphorylated heterodimer of ERBB2 and EGFR: R-HSA-1306965
 PIP2 to PIP3 conversion by PI3K bound to GRB2:GAB1 in complex with phosphorylated heterodimer of ERBB2 and EGFR: R-HSA-1306957
 PLCG1 events in ERBB2 signaling: R-HSA-1251932
 PLCG1 binds to p-ERBB2:p-EGFR: R-HSA-1251944
@@ -14956,6 +15245,35 @@ Phosphorylation of SMAD2,3 by Activin:Activin Receptor: R-HSA-1549526
 Antagonism of Activin by Follistatin: R-HSA-2473224
 FSTL3 binds Activin: R-HSA-2473186
 Follistatin (FST) binds Activin: R-HSA-2473184
+Signaling by TGFBR3: R-HSA-9839373
+TGFBR3 expression: R-HSA-9839394
+TGFBR3 transcription: R-HSA-9839371
+TGFBR3 translation: R-HSA-9839396
+Binding of ATRA to TGFBR3 gene promoter: R-HSA-9860125
+Binding of MyoD to TGFBR3 gene promoter: R-HSA-9860169
+Binding of SP1 to TGFBR3 gene promoter: R-HSA-9860130
+MIR-Let7-a1 microRNA binds 3'UTR of TGFBR3 mRNA: R-HSA-9860160
+MIR23B microRNA binds 3'UTR of TGFBR3 mRNA: R-HSA-9860168
+MIR27B microRNA binds 3'UTR of TGFBR3 mRNA: R-HSA-9860139
+TGFBR3 PTM regulation: R-HSA-9839383
+TGFBR3 translocation to plasma membrane: R-HSA-9839388
+TGFBR3_mem cleavage by MMPs: R-HSA-9839367
+TGFBR3(784-851) degradation: R-HSA-9839376
+TGFBR3 regulates TGF-beta signaling: R-HSA-9839389
+TGFB1,TGFB2 bind TGFBR3: R-HSA-9839377
+TGFBR3 complex binds to TGFBR2: R-HSA-9839390
+TGFBR3 phosphorylation by TGFBR2 complex: R-HSA-9839363
+TGFBR3 binding to ARRB1/2: R-HSA-9839378
+Endocytosis of TGFBR3:ARRB complex: R-HSA-9839358
+TGFBR3 binding to GIPC1: R-HSA-9839402
+TGFBR3 degradation: R-HSA-9839401
+TGFBR3(1-783) binds to TGFB1,TGFB2: R-HSA-9839368
+TGFBR3 regulates activin signaling: R-HSA-9839406
+Inhibin-A binding to TGFBR3: R-HSA-9839384
+InhibinA-TGFBR3 binding to ACVR2A: R-HSA-9839405
+TGFBR3 regulates FGF2 signaling: R-HSA-9839397
+TGFBR3 binding to FGF2: R-HSA-9839379
+FGF2:TGFBR3 binding to GIPC1: R-HSA-9839381
 Signaling by GPCR: R-HSA-372790
 GPCR ligand binding: R-HSA-500792
 Class A/1 (Rhodopsin-like receptors): R-HSA-373076
@@ -16565,7 +16883,7 @@ TNF:TNFR1:TRADD:TRAF2:RIPK1 binds LUBAC: R-HSA-5357904
 TNF:TNFR1:TRADD:TRAF2:K63polyUb-RIPK1:BIRC2/3:LUBAC recruits TAK1 complex: R-HSA-5357860
 TNF:TNFR1:TRADD:TRAF2:K63polyUb-RIPK1:BIRC2,3:LUBAC recruits IKKA:IKBKB:IKBKG: R-HSA-5357776
 TNFR1-induced proapoptotic signaling: R-HSA-5357786
-TRADD:TRAF2:RIP1 complex dissociates from the TNF-α:TNF-R1 complex.: R-HSA-83582
+TRADD:TRAF2:RIP1 complex dissociates from the TNF-α:TNF-R1 complex: R-HSA-83582
 TRADD:TRAF2:RIP1 complex binds FADD: R-HSA-140978
 TRADD:TRAF2:RIP1:FADD complex binds Pro-Caspase 8  : R-HSA-75240
 TNFR1-mediated ceramide production: R-HSA-5626978
@@ -16717,6 +17035,7 @@ ABC-family proteins mediated transport: R-HSA-382556
 HCO3- transport through ion channel: R-HSA-383190
 ABC transporters in lipid homeostasis: R-HSA-1369062
 ABCAs mediate lipid efflux: R-HSA-1369028
+ABCG1-mediated transport of intracellular cholesterol to the cell surface: R-HSA-266082
 ABCAs mediate lipid influx: R-HSA-1369052
 ABCA12 transports lipids from cytosol to extracellular region: R-HSA-5682285
 ABCA5 transports CHOL from lysosomal lumen to cytosol: R-HSA-8848053
@@ -16724,7 +17043,6 @@ ABCA7:Apo1A-mediated phospholipid efflux: R-HSA-382553
 PEX-19 docks ABCD1/D2/D3 to peroximal membrane: R-HSA-382613
 ABCD1-3 dimers transfer LCFAs from cytosol to peroxisomal matrix: R-HSA-382575
 ABCG5:ABCG8 transports sterols from cytosol to extracellular region: R-HSA-265783
-ABCG1-mediated transport of intracellular cholesterol to the cell surface: R-HSA-266082
 ABCG4 may mediate cholesterol efflux: R-HSA-1454928
 Mitochondrial ABC transporters: R-HSA-1369007
 ABC7, mABC1 and mABC2 mediate heme transport: R-HSA-382560
@@ -16782,12 +17100,10 @@ SLC38A4 (ATA3)-mediated uptake of arginine and lysine: R-HSA-352136
 SLC38A5-mediated uptake of glutamine, histidine, asparagine, and serine: R-HSA-352182
 SLC43A1 (LAT3)-mediated uptake of large neutral amino acids: R-HSA-352103
 SLC43A2 (LAT4)-mediated uptake of large neutral amino acids: R-HSA-352107
-SLC6A6-mediated uptake of taurine and beta-alanine: R-HSA-351987
-SLC6A14 cotransports SLC6A14 ligands, Cl-, 2Na+ from extracellular region to cytosol: R-HSA-375487
 SLC6A15-mediated amino acid uptake: R-HSA-352059
 SLC6A18 transports Gly from extracellular region to cytosol: R-HSA-351963
-SLC6A19 cotransports neutral amino acids, Na+ from extracellular region to cytosol: R-HSA-375473
 SLC6A20 cotransports L-Pro, Na+ from the extracellular region to cytosol: R-HSA-352052
+SLC6A6-mediated uptake of taurine and beta-alanine: R-HSA-351987
 SLC7A8-mediated uptake of neutral amino acids: R-HSA-352191
 SLC1A4-mediated exchange of extracellular alanine for cytosolic serine, threonine, or cysteine: R-HSA-352364
 SLC1A4-mediated exchange of extracellular cysteine for cytosolic alanine, serine, or threonine: R-HSA-352354
@@ -16796,6 +17112,8 @@ SLC1A4-mediated exchange of extracellular threonine for cytosolic alanine, serin
 SLC1A5-mediated exchange of alanine and glutamine across the plasma membrane: R-HSA-352379
 SLC1A5-mediated exchange of glutamine and alanine across the plasma membrane: R-HSA-352385
 SLC36A4 transports extracellular L-Pro to the cytosol: R-HSA-8870354
+SLC6A14 cotransports SLC6A14 ligands, Cl-, 2Na+ from extracellular region to cytosol: R-HSA-375487
+SLC6A19 cotransports neutral amino acids, Na+ from extracellular region to cytosol: R-HSA-375473
 SLC7A1 (CAT-1)-mediated uptake of cationic amino acids: R-HSA-375776
 SLC7A2, isoform A (CAT-2A)-mediated uptake of cationic amino acids: R-HSA-375790
 SLC7A2, isoform B (CAT-2B)-mediated uptake of cationic amino acids: R-HSA-375768
@@ -16811,17 +17129,17 @@ Organic anion transporters: R-HSA-428643
 SLC17A6,7,8 exchange cytosolic L-Glu for synaptic vesicle H+: R-HSA-428052
 Type I Na+-coupled phosphate co-transport: R-HSA-428609
 SLC5A5 cotransports Na+ with I- from extracellular region to cytosol: R-HSA-429591
-Passive I- efflux mediated by SMCT1: R-HSA-429767
+Passive I- efflux mediated by SLC5A8: R-HSA-429767
 SLC25A10 mediates exchange of malate and phosphate: R-HSA-372843
 SLC25A1 exchanges CIT and MAL: R-HSA-75849
 SLC25A1 may exchange mitochondrial PEP for cytosolic anion: R-HSA-372449
 SLC25A11 exchanges malate and alpha-ketoglutarate (2-oxoglutarate) across the inner mitochondrial membrane: R-HSA-198440
 Proton-coupled neutral amino acid transporters: R-HSA-428559
+CTNS cotransports CySS-, H+ from lysosomal lumen to cytosol: R-HSA-5340130
 Proton/oligopeptide cotransporters: R-HSA-427975
-Proton-coupled di- and tri-peptide cotransport: R-HSA-427998
+SLC25A1 transports di-/tri-peptides and peptide-like drugs: R-HSA-427998
 Proton-coupled histidine and di-peptide cotransport: R-HSA-428007
 Vesicular inhibitory amino acid transport: R-HSA-428625
-CTNS cotransports CySS-, H+ from lysosomal lumen to cytosol: R-HSA-5340130
 SLC25A26 exchanges cytosolic AdoMet for mitochondrial AdoHcy: R-HSA-8855062
 Cellular hexose transport: R-HSA-189200
 GLUT1 (SLC2A1) tetramer transports Glc from extracellular region to cytosol: R-HSA-5339524
@@ -16885,7 +17203,7 @@ SLC6A5,9 cotransport Gly, Cl-, Na+ from extracellular region to cytosol: R-HSA-4
 PROT mediates L-proline uptake: R-HSA-444100
 VMAT1/2 can mediate the transport of biogenic amines: R-HSA-444160
 HUT2 and HUT11 mediate urea transport in kidney and erythrocytes respectively: R-HSA-444126
-Rhesus glycoproteins mediate ammonium transport.: R-HSA-444411
+Rhesus glycoproteins mediate ammonium transport: R-HSA-444411
 RHAG transports NH4+ from cytosol to extracellular region (red blood cells): R-HSA-444416
 RhBG mediates ammonium effflux out of kidney collecting duct cells: R-HSA-444419
 RhBG mediates ammonium influx into kidney collecting duct cells: R-HSA-446278
@@ -17186,6 +17504,7 @@ Myoglobin binds oxygen: R-HSA-8981606
 Myoglobin:oxygen dissociates: R-HSA-8981622
 Neuroglobin binds oxygen: R-HSA-8981610
 Neuroglobin:oxygen dissociates: R-HSA-8981621
+CYGB binds O2: R-HSA-5340214
 CYGB:O2 dissociates: R-HSA-8982617
 Glycosphingolipid transport: R-HSA-9845576
 Vesicles transport GSL from Golgi to plasma membrane: R-HSA-9850731

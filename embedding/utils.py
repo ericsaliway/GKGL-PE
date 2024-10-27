@@ -101,7 +101,7 @@ def save_stid_to_csv(graph, save_dir):
 
 def create_embedding_with_markers(p_value=0.05, save=True, data_dir='embedding/data/emb'):
     # Read symbols from the CSV file
-    csv_path = 'gat/data/genes_pathways.csv'
+    csv_path = 'embedding_clustering/data/genes_pathways.csv'
     data = pd.read_csv(csv_path)
     symbols = data['symbol'].tolist()
     
